@@ -1,83 +1,0 @@
-10
-
-dir
-26
-https://subversion.assembla.com/svn/tuwien-private-repo/verteilte-systeme/DSLAB2/build
-https://subversion.assembla.com/svn/tuwien-private-repo
-
-
-
-2011-03-31T20:33:55.879282Z
-26
-patrickf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6e01b4e7-9c23-4629-a55e-25cc9f16828e
-
-task
-dir
-
-interfaces
-dir
-
-registry.properties
-file
-
-
-
-
-2009-11-25T15:29:17.542118Z
-18b0ca650550e378818d9aae2d4b6a30
-2011-03-31T20:33:55.879282Z
-26
-patrickf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-258
-
-Entities
-dir
-
-bsp2
-dir
-
-server
-dir
-
-error
-dir
-
-client
-dir
-

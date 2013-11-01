@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
-  <endpoint implementation="services.SupplierServiceImpl1" name="SupplierServiceImpl1" url-pattern="/SupplierServiceImpl1"/>
-  <endpoint implementation="services.SupplierServiceImpl2" name="SupplierServiceImpl2" url-pattern="/SupplierServiceImpl2"/>
-  <endpoint implementation="services.WarehouseServiceImpl" name="WarehouseServiceImpl" url-pattern="/WarehouseServiceImpl"/>
-  <endpoint implementation="services.CustomerWrapperServiceImpl" name="CustomerWrapperServiceImpl" url-pattern="/CustomerWrapperServiceImpl"/>
-  <endpoint implementation="services.RegistryServiceImpl" name="RegistryServiceImpl" url-pattern="/RegistryServiceImpl"/>
-  <endpoint implementation="services.ShippingServiceImpl" name="ShippingServiceImpl" url-pattern="/ShippingServiceImpl"/>
-</endpoints>
