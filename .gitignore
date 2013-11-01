@@ -4,3 +4,15 @@
 *.jar
 *.war
 *.ear
+
+**/.svn/
+.svn
+
+**/bin/
+**/build/
+**/out/
+
+.settings
+**/.settings/
+.metadata
+**/.metadata/
