@@ -1,0 +1,27 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 34
+/svn/tuwien-private-repo/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tuwien-private-repo/!svn/ver/105/dst/dst2_0426099/2_messaging/server
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/96/dst/dst2_0426099/2_messaging/server/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tuwien-private-repo/!svn/ver/86/dst/dst2_0426099/2_messaging/server/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/109/dst/dst2_0426099/2_messaging/server/build.xml
+END

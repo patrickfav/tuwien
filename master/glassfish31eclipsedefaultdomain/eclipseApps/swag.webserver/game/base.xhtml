@@ -1,0 +1,42 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	template="/templates/game.xhtml">
+
+	<!-- content -->
+	<ui:define name="content">
+	    <div id="content">
+	    	<h:form prependId="false">
+	   			<p:dataGrid var="square" value="#{sessionManager.base.squares}" columns="#{sessionManager.map.config.baseSquares}" paginator="false">
+	    			<p:column>
+	    				<p:commandLink update="infobox">
+	    					<p:graphicImage value="../images/base/resources/resource_wood.png" width="100" height="100" hspace="0" vspace="0" border="0" align="left" rendered="#{square.resource.type=='WOOD'}"/>
+	    					<p:graphicImage value="../images/base/resources/resource_iron.png" width="100" height="100" hspace="0" vspace="0" border="0" align="left" rendered="#{square.resource.type=='ORE'}"/>
+	    					<p:graphicImage value="../images/base/resources/resource_stone.png" width="100" height="100" hspace="0" vspace="0" border="0" align="left" rendered="#{square.resource.type=='STONE'}"/>
+	    					<p:graphicImage value="../images/base/resources/resource_field.png" width="100" height="100" hspace="0" vspace="0" border="0" align="left" rendered="#{square.resource == null and square.building == null}"/>
+	    				</p:commandLink>
+		  	    	</p:column>
+	  			</p:dataGrid>
+	  		</h:form>
+	    </div>
+	    <div id="footer" class="info_field">
+	    <p:outputPanel id="infobox">
+	    	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	    		<tr>
+	    			<td width="200"><p:graphicImage value="../images/info/map_landscape_empty.png" width="200" height="200" hspace="0" vspace="0" border="0" align="left"/></td>
+	    			<td width="105"><img src="../images/template/info_left.png" width="105" height="200" /></td>
+	       			<td>
+	       				<p:growl id="messages" showDetail="true" />
+	      	 		</td>
+	      	 		<td width="105"><img src="../images/template/info_right.png" width="105" height="200" hspace="0" vspace="0" border="0" /></td>
+	        	</tr>
+	        </table>
+	     </p:outputPanel>
+	    </div>
+	</ui:define>  
+	  
+</ui:composition>

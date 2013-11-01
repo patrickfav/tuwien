@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/ejb
+END
+TimerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/ejb/TimerService.java
+END
+ClientMessageBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/ejb/ClientMessageBean.java
+END
+SessionStorageBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/ejb/SessionStorageBean.java
+END

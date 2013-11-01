@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "./meta/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ticketline.db.Kategorie" table="kategorie">
+		<!-- BaseClass -->
+		<meta attribute="extra-import">ticketline.db.Entity</meta>
+		<meta attribute="extends">Entity</meta>
+
+		<meta attribute="class-description">
+			Jeder Veranstaltungssaal besteht aus mindestens einer im
+			Regelfall aber aus mehreren Kategorien. Eine Kategorie ist
+			nur mit ihrer Bezeichnung (also dem Namen der Kategorie) und
+			den Primaerschluesselfeldern des zugehoerigen Saales
+			eindeutig definiert. Fuer jede Kategorie gibt es weiters
+			einen Minimalpreis, einen Standardpreis und einen
+			Maximalpreis. Fuer jede Auffuehrung in einem Saal kann man
+			eine Preisklasse (Minimum, Standard, Maximum) festlegen. Der
+			Preis fuer die Karten berechnet sich dann aus den Preisen in
+			den Kategorien.
+		</meta>
+
+		<!-- PK, Properties -->
+		<composite-id name="comp_id" class="ticketline.db.KategorieKey"
+			unsaved-value="any">
+			<key-property name="bezeichnung" column="bezeichnung"
+				type="java.lang.String" length="30" />
+			<key-property name="saalbez" column="saalbez"
+				type="java.lang.String" length="30" />
+			<key-property name="ortbez" column="ortbez"
+				type="java.lang.String" length="30" />
+			<key-property name="ort" column="ort"
+				type="java.lang.String" length="30" />
+		</composite-id>
+
+		<property name="preismin" type="java.math.BigDecimal"
+			not-null="true">
+			<meta attribute="field-description">
+				Minimalpreis* dieser Kategorie >= 0
+			</meta>
+
+			<column name="preismin" length="10" check="preismin >= 0"
+				not-null="true" />
+		</property>
+		<property name="preisstd" type="java.math.BigDecimal"
+			not-null="true">
+			<meta attribute="field-description">
+				Standardpreis* dieser Kategorie >= 0
+			</meta>
+
+			<column name="preisstd" length="10" check="preisstd >= 0"
+				not-null="true" />
+		</property>
+		<property name="preismax" type="java.math.BigDecimal"
+			not-null="true">
+			<meta attribute="field-description">
+				Maximalpreis* dieser Kategorie >= 0
+			</meta>
+
+			<column name="preismax" length="10" check="preismax >= 0"
+				not-null="true" />
+		</property>
+
+		<!-- Associations -->
+		<!-- derived association(s) for compound key -->
+		<!-- bi-directional many-to-one association to Saal -->
+		<many-to-one name="saal" class="ticketline.db.Saal"
+			update="false" insert="false" cascade="save-update">
+			<column name="saalbez" />
+			<column name="ortbez" />
+			<column name="ort" />
+		</many-to-one>
+
+		<!-- end of derived association(s) -->
+
+		<!-- bi-directional one-to-many association to Reihe -->
+		<set name="reihen" lazy="false" inverse="true" cascade="none">
+			<key>
+				<column name="kategoriebez" />
+				<column name="saalbez" />
+				<column name="ortbez" />
+				<column name="ort" />
+			</key>
+			<one-to-many class="ticketline.db.Reihe" />
+		</set>
+
+	</class>
+</hibernate-mapping>

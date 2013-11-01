@@ -1,0 +1,86 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="content">
+
+		<div id="blatt">
+		<h:form id="AppointmentsViewerForm">
+
+			<h:messages globalOnly="false" errorClass="errorMessage"
+				fatalClass="errorMessage" infoClass="infoMessage"
+				warnClass="warningMessage" layout="list" showDetail="true"
+				showSummary="true" />
+
+			<b><h:outputText value="#{messages['label.appointments']}" /></b>
+			<div class="info">
+				<h:outputText value="#{messages['appointments.info']}" />
+			</div>
+			<p>
+				<h:outputText id="searchLabel" value="#{messages['label.search']}: " /> 
+				<h:inputText id="searchField" value="#{ViewAppointments.searchString}">
+					<a:support event="onkeyup" action="#{ViewAppointments.findAppointments}" reRender="ViewAppointmentsPanel" />
+				</h:inputText>
+				<rich:spacer width="5px" />
+				<a:commandButton id="searchButton" title="#{messages['button.reset']}" value="x" action="#{ViewAppointments.resetSearchString}" reRender="AppointmentsViewerForm" />
+				<br />
+			</p>
+			<br />
+			
+			<a:outputPanel id="ViewAppointmentsPanel">
+			<s:fragment id="ViewAppointmentsNoResultView"
+				rendered="#{appointmentsDataModel.rowCount == 0}">
+				<h:outputText value="#{messages['label.noappointments.found']}" />
+			</s:fragment>
+			<s:fragment id="ViewAppointmentsShowResultsView"
+				rendered="#{appointmentsDataModel.rowCount > 0}">
+				<rich:dataTable id="appointmentViewerTable" var="currentAppointment" value="#{appointmentsDataModel}" rows="#{ViewAppointments.ROW_COUNT}" cellpadding="0" cellspacing="0" >
+					<f:facet name="header">
+						<rich:columnGroup>
+							<rich:column><h:outputText value="#{messages['label.datetime']}" /></rich:column>
+							<rich:column><h:outputText value="#{messages['label.patient']}" /></rich:column>
+							<rich:column><h:outputText value="#{messages['label.title']}" /></rich:column>
+							<rich:column><h:outputText value="" /></rich:column>
+						</rich:columnGroup>
+					</f:facet>
+					
+					<rich:column>
+						<h:outputText value="#{currentAppointment.startDate}">
+							<s:convertDateTime type="both" pattern="dd.MM.yyyy HH:mm"/>
+						</h:outputText>
+					</rich:column>
+					<rich:column>
+						<a:commandLink id="patientEdit" action="#{ViewAppointments.selectPatient}">
+							<h:outputText value="#{currentAppointment.patient.kennnummer}" />
+						</a:commandLink>
+					</rich:column>
+					<rich:column><h:outputText value="#{currentAppointment.title}" /></rich:column>
+					<rich:column>
+						<a:commandLink id="appointmentEdit" action="#{ViewAppointments.editAppointment}">
+							<h:outputText value="#{messages['label.edit']}" />
+						</a:commandLink>
+					</rich:column>
+				</rich:dataTable>
+				<rich:datascroller for="appointmentViewerTable" maxPages="#{ViewAppointments.MAX_PAGES}" page="#{ViewAppointments.page}" />
+			</s:fragment>
+			</a:outputPanel>
+			<br />
+			<br />
+			
+			<h:commandButton id="createAppointment" styleClass="button"
+				title="#{messages['button.add']}" value="#{messages['button.add']}"
+				action="#{ViewAppointments.createAppointment}" />
+		</h:form>
+		</div>
+
+	</ui:define>
+
+</ui:composition>
+

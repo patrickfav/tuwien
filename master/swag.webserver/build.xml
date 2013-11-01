@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+
+<project name="SWAG_WEBSERVER" default="dist" basedir=".">
+    
+    <property environment="env"/>
+    <property name="glassfish.home" value="${env.GLASSFISH_HOME}"/>
+    
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
+    <property name="setup.dir" value="setup"/>
+    <property name="lib.dir" value="lib" />
+    <property name="dist.dir" value="../dist" />
+    <property name="warFile.name" value="swag.webserver"/>
+    
+    <property name="web.dir" value="WebContent" />
+	<property name="web.config.dir" value="${web.dir}/WEB-INF" />
+    <property name="web.view.dir" value="${web.dir}/view" />
+    
+    <property name="javac.debug" value="true" />
+    <property name="javac.deprecation" value="true" />
+
+    <path id="classpath">
+		<fileset dir="${dist.dir}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${glassfish.home}/lib">
+            <include name="javaee.jar"/>
+        </fileset>
+    	<fileset dir="${lib.dir}">
+    		<include name="*.jar"/>
+    	</fileset>
+    </path>
+    
+    <target name="check">
+        <fail unless="env.GLASSFISH_HOME">
+            #### You must install GlassFish V3 and set the GLASSFISH_HOME variable
+        </fail>
+    </target>
+    
+    <target name="compile">
+        <mkdir dir="${build.dir}/WEB-INF/classes" />
+        <javac classpathref="classpath"
+               srcdir="${src.dir}"
+               destdir="${build.dir}/WEB-INF/classes" 
+               debug="${javac.debug}" 
+               deprecation="${javac.deprecation}" />
+    </target>
+    
+    <target name="dist" depends="compile">
+        <mkdir dir="${dist.dir}" />
+        <copy todir="${build.dir}">
+            <fileset dir="${web.dir}">
+				<exclude name="${web.config.dir}"/>
+				<exclude name="${web.dir}/META-INF"/>
+			</fileset>
+            <fileset dir="${web.config.dir}" includes="WEB-INF/**" />
+        </copy>
+	   <copy todir="${build.dir}/WEB-INF/classes">
+			<fileset dir="${src.dir}" includes="*.properties"/>
+			<fileset dir="${web.dir}/META-INF" />
+        </copy>
+        <jar jarfile="${dist.dir}/${warFile.name}.war" basedir="${build.dir}"/>
+    </target>
+     
+    <target name="clean">
+        <delete dir="${web.build.dir}"/>
+		<delete file="${dist.dir}/${warFile.name}.war"/>
+    </target>
+    
+</project>

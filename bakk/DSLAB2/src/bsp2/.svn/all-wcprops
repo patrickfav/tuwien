@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/bsp2
+END
+RootServerStarter.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/bsp2/RootServerStarter.java
+END
+ClientStarter.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/bsp2/ClientStarter.java
+END
+FileServerStarter.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/bsp2/FileServerStarter.java
+END
+NameServerStarter.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/bsp2/NameServerStarter.java
+END

@@ -1,0 +1,173 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a="http://richfaces.org/a4j"
+	template="layout/studyDetailLayout.xhtml">
+
+
+	<ui:define name="appointmentHead">
+		<f:subview id="NewAppointmentHeaderView">
+			<h:outputText value="#{messages['label.addnewappointment']}"
+				rendered="#{empty appointment.title}" />
+			<h:outputText value="#{messages['label.editappointment']}"
+				rendered="#{not empty appointment.title}" />
+		</f:subview>
+	</ui:define>
+
+	<ui:define name="content">
+
+	<h:messages globalOnly="false" errorClass="errorMessage"
+				fatalClass="errorMessage" infoClass="infoMessage"
+				warnClass="warningMessage" layout="list" showDetail="true"
+				showSummary="true" />
+
+		<br />
+		
+		<h:form id="editAppointmentForm" enctype="multipart/form-data">
+			<div id="appointmentdata">
+			<s:validateAll>
+
+				<b><h:outputText value="#{messages['label.appointmentdata']}" /></b>
+				
+				<table cellpadding="0" cellspacing="3" border="0">
+					<tr>
+						<td>
+							<h:outputText value="#{messages['label.title']}" />:*
+						</td>
+						<td width="300">
+							<h:inputText id="title"
+								required="true"
+								value="#{appointment.title}"
+								converter="#{blankStringAwareConverter}" size="43"
+								style="width:100%" />
+						</td>
+						<td style="padding-left: 10px">
+							<h:message for="title" showDetail="true" styleClass="errorMsg" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<h:outputText value="#{messages['label.date']}"/>:*
+						</td>
+						<td>
+							<rich:calendar 
+								id="date"
+								required="true"
+								popup="true"
+								showInput="true"
+								enableManualInput="true"
+								buttonIcon="graphics/icon/calendar.gif"
+								value="#{EditAppointment.date}"
+								datePattern="#{messages['dateformat']}"
+								mode="client"
+								inputStyle="margin-right: 10px"
+								buttonStyle="vertical-align: bottom;cursor: pointer; cursor: hand;"
+								label="#{messages['label.selectdate']}"
+							/>
+						</td>
+						<td style="padding-left:10px">
+							<h:message for="date" styleClass="errorMsg" showDetail="true" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<h:outputText value="#{messages['label.time']}"/>:*
+						</td>
+						<td>
+							<h:inputText id="time"
+								required="true"
+								value="#{EditAppointment.time}"
+								size="43"
+								style="width:70px">
+								<f:convertDateTime type="time" 
+									pattern="#{messages['timeformat']}"/>
+							</h:inputText>
+						</td>
+						<td style="padding-left:10px">
+							<h:message for="time" styleClass="errorMsg" showDetail="true" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td style="vertical-align: top">
+							<h:outputText value="#{messages['label.description']}"/>:
+						</td>
+						<td width="300">
+							<h:inputTextarea id="trialFullName"
+								value="#{appointment.description}" cols="40" rows="3"
+								style="width:100%" />
+						</td>
+						<td>
+							&bnsp;
+						</td>
+					</tr>
+					
+				</table>
+
+				<br clear="all" />
+				
+				<h:commandButton id="saveAppointment" 
+					action="#{EditAppointment.save}"
+					value="#{messages['button.save']}" styleClass="button"
+					title="#{messages['button.save']}" />
+				
+				&nbsp;&nbsp;
+				
+				<a:commandButton id="deleteAppointment"
+				 	onclick="Richfaces.showModalPanel('deleteAppointmentPanel');"
+					reRender="appointmentInfoToDelete"
+					value="#{messages['button.delete']}" styleClass="button"
+					title="#{messages['button.delete']}" immediate="true" />
+
+				&nbsp;&nbsp;
+
+				<h:commandButton id="cancelAppointment"
+					action="#{EditAppointment.cancel}"
+					value="#{messages['button.cancel']}" styleClass="button"
+					title="#{messages['button.cancel']}" immediate="true" />
+
+				<rich:modalPanel id="deleteAppointmentPanel" autosized="true">
+					<f:facet name="header">
+						<h:panelGroup>
+							<h:outputText value="#{messages['label.deleteappointment']}" />
+						</h:panelGroup>
+					</f:facet>
+			    	
+					<s:div id="appointmentInfoToDelete">
+			    		<p><h:outputText value="#{messages['label.deleteappointment.question']}" /></p>
+
+						<table>
+							<tr>
+								<td>
+									<a:commandButton value="#{messages['button.delete']}"
+										title="#{messages['button.delete']}"
+										action="#{EditAppointment.delete}"
+										styleClass="button" immediate="true" />
+								</td>
+								<td>
+									<a:commandButton value="#{messages['button.cancel']}" 
+										title="#{messages['button.cancel']}"
+										onclick="Richfaces.hideModalPanel('deleteAppointmentPanel');" 
+										styleClass="button" immediate="true" />
+								</td>
+							</tr>
+						</table>
+						
+					</s:div>
+				</rich:modalPanel>
+				<br />
+				<br />
+				
+			</s:validateAll>
+			</div>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

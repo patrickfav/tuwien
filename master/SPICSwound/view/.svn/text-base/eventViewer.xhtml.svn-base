@@ -1,0 +1,109 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:s="http://jboss.com/products/seam/taglib"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+                xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+                xmlns:c="http://java.sun.com/jstl/core"
+                template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="trialHead">
+		<h:outputText value="#{messages['button.events']}" />
+	</ui:define>
+                    
+<ui:define name="content">
+        
+<div id="blatt">
+<h:form id="eventViewerForm">
+	<h1>SPICS Events</h1>
+	<p>ACHTUNG: Diese Seite verwendet Testweise den Richfaces ExtendedDataTable. Diese Komponente ist explizit noch nicht
+	auf den Produktionsbetrieb abgestimmt. Unerwartetes Verhalten ist zu erwarten! Bei Problemen kann man mit dem untenstehenden
+	Button auf die "klassische" Ansicht wechseln.</p>
+	<br />
+	<a:commandButton action="#{EventViewer.toggleExtendedDataTable}" value="#{EventViewer.useExtendedDataTable ? 'Switch to classic' : 'Switch to extended'}" reRender="eventViewerForm"/>
+  <div id="top" align="center" style="text-align: center;padding-top:20px; padding-left:20px;">
+	<p>
+	<s:fragment rendered="#{EventViewer.useExtendedDataTable}">
+	<rich:extendedDataTable id="eventViewerExtTable" value="#{eventList}" var="event" width="90%" height="550px" selectedClass="dataTableSelectedRow" sortMode="single" selectionMode="none" rowKeyVar="rkvar" tableState="#{EventViewer.tableState}">
+
+       <rich:column id="timestamp" headerClass="dataTableHeader" width="200" label="Timestamp" sortable="true" sortBy="#{event.timestamp}" sortIconAscending="dataTableAscIcon" sortIconDescending="dataTableDescIcon">
+              <f:facet name="header">
+                     <h:outputText value="Timestamp" />
+              </f:facet>
+              <h:outputText value="#{event.timestamp}">
+					<s:convertDateTime type="both" pattern="dd.MM.yyyy HH:mm"/>
+			  </h:outputText>	
+       </rich:column>
+
+       <rich:column id="username" width="200" headerClass="dataTableHeader" label="Username" sortable="true" sortBy="#{event.user.username}" sortIconAscending="dataTableAscIcon" sortIconDescending="dataTableDescIcon" filterBy="#{event.user.username}" filterEvent="onkeyup" visible="false"> 
+              <f:facet name="header"> 
+                     <h:outputText value="Username" />
+              </f:facet>
+
+              <h:outputText value="#{event.user.username}" />
+       </rich:column>
+
+       <rich:column id="type" width="150" headerClass="dataTableHeader" label="Type" sortable="true" comparator="#{EventTypeAlphabeticalComparator}" sortIconAscending="dataTableAscIcon" sortIconDescending="dataTableDescIcon" filterBy="#{event.eventtype}" filterEvent="onkeyup" visible="false">
+              <f:facet name="header">
+                     <h:outputText value="Type" />
+              </f:facet>
+              <h:outputText value="#{event.eventtype}"/>
+       </rich:column>
+
+       <rich:column id="text" width="500" headerClass="dataTableHeader" label="Text" sortable="false">
+              <f:facet name="header">
+                     <h:outputText value="Text" />
+              </f:facet>
+              <h:outputText value="#{event.eventText}" />
+       </rich:column>
+
+	</rich:extendedDataTable>
+	</s:fragment>
+	</p>
+	<p>
+	<s:fragment rendered="#{not EventViewer.useExtendedDataTable}">
+	
+	Filter:<br />
+	by Eventtype: 
+	<h:selectOneMenu value="#{EventViewer.selectedEventType}">
+		<s:selectItems var="item" value="#{EventViewer.eventtypes}" noSelectionLabel="All" label="#{item}"/>
+		<s:convertEnum />
+		<a:support event="onchange" action="#{EventViewer.filter}" reRender="eventViewerForm" />
+	</h:selectOneMenu> 
+	<p>Um die Anzeige zu Optimieren wurde die Anzahl der angezeigten Events auf maximal 300 limitiert</p>
+	<br /><br />
+	<rich:dataTable id="eventViewerTable" var="event" value="#{eventList}" rows="20" cellpadding="0" cellspacing="0" >
+		<f:facet name="header">
+			<rich:columnGroup>
+				<rich:column><h:outputText value="Date" /></rich:column>
+				<rich:column><h:outputText value="User" /></rich:column>
+				<rich:column><h:outputText value="EventType" /></rich:column>
+				<rich:column><h:outputText value="EventText" /></rich:column>
+			</rich:columnGroup>
+		</f:facet>
+		
+		<rich:column>
+			<h:outputText value="#{event.timestamp}">
+				<s:convertDateTime type="both" pattern="dd.MM.yyyy HH:mm"/>
+			</h:outputText>		
+		</rich:column>
+		<rich:column><h:outputText value="#{event.user.username}" /></rich:column>
+		<rich:column><h:outputText value="#{event.eventtype}" /></rich:column>
+		<rich:column><h:outputText value="#{event.eventText}" /></rich:column>
+	</rich:dataTable>
+	
+	<rich:datascroller for="eventViewerTable" maxPages="15" page="#{EventViewer.page}" />
+	
+	</s:fragment>
+	</p>
+  </div>
+
+</h:form>
+</div>
+
+</ui:define>
+
+</ui:composition>

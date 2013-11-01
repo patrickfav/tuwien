@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api
+END
+Tree.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Tree.java
+END
+Locator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Locator.java
+END
+Position.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Position.java
+END
+BinaryTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/BinaryTree.java
+END
+Comparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Comparator.java
+END
+CoreException.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/CoreException.java
+END
+InvalidContainerException.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InvalidContainerException.java
+END
+OrderedDictionary.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/OrderedDictionary.java
+END
+LocatorIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/LocatorIterator.java
+END
+PositionIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/PositionIterator.java
+END
+InvalidKeyException.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InvalidKeyException.java
+END
+InspectableDictionary.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InspectableDictionary.java
+END
+ObjectIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/ObjectIterator.java
+END
+Decorable.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Decorable.java
+END
+InspectableSequence.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InspectableSequence.java
+END
+EqualityComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/EqualityComparator.java
+END
+InvalidAccessorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InvalidAccessorException.java
+END
+InspectableContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InspectableContainer.java
+END
+InspectablePositionalContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InspectablePositionalContainer.java
+END
+InvalidMethodCallException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InvalidMethodCallException.java
+END
+Accessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Accessor.java
+END
+InspectableKeyBasedContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InspectableKeyBasedContainer.java
+END
+Dictionary.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Dictionary.java
+END
+Sequence.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Sequence.java
+END
+InspectableTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InspectableTree.java
+END
+HashComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/HashComparator.java
+END
+InspectableBinaryTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InspectableBinaryTree.java
+END
+EmptyContainerException.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/EmptyContainerException.java
+END
+Container.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/Container.java
+END
+InspectableOrderedDictionary.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InspectableOrderedDictionary.java
+END
+PositionalContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/PositionalContainer.java
+END
+PriorityQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/PriorityQueue.java
+END
+BoundaryViolationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/BoundaryViolationException.java
+END
+InvalidAttributeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/InvalidAttributeException.java
+END
+KeyBasedContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/KeyBasedContainer.java
+END
+NonEmptyContainerException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/api/NonEmptyContainerException.java
+END

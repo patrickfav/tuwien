@@ -1,0 +1,53 @@
+  + Franz Mueller[6712345] hinzugefuegt  + Franz Mueller[6712345] hinzugefuegt
+  + Siggi Stoeger[6812345] hinzugefuegt  + Siggi Stoeger[6812345] hinzugefuegt
+  + Dominik Fischer[6912345] hinzugefuegt  + Dominik Fischer[6912345] hinzugefuegt
+  + Michael R. Dornkasch[0826063] hinzugefuegt  + Michael R. Dornkasch[0826063] hinzugefuegt
+  + Jakob Anselm Hofer[0825489] hinzugefuegt  + Jakob Anselm Hofer[0825489] hinzugefuegt
+  + Georg Braunstein[0526819] hinzugefuegt  + Georg Braunstein[0526819] hinzugefuegt
+  + Max Mustermann[0012345] hinzugefuegt  + Max Mustermann[0012345] hinzugefuegt
+  + Franz Gruber[0112345] hinzugefuegt  + Franz Gruber[0112345] hinzugefuegt
+  + Helge Mayer[0212345] hinzugefuegt  + Helge Mayer[0212345] hinzugefuegt
+  + Silvia Vogel[0312345] hinzugefuegt  + Silvia Vogel[0312345] hinzugefuegt
+  + Hermann Gabriel[0412345] hinzugefuegt  + Hermann Gabriel[0412345] hinzugefuegt
+  + Steffi Langer[0512345] hinzugefuegt  + Steffi Langer[0512345] hinzugefuegt
+  + Maria Baum[0612345] hinzugefuegt  + Maria Baum[0612345] hinzugefuegt
+  + Moritz Freidrich[0712345] hinzugefuegt  + Moritz Freidrich[0712345] hinzugefuegt
+  + 0 [Freihaus] added  + 1 [AudiMax] added  + 2 [HS13] added  + 3 [NEU3] added  + 4 [NEU4] added  + 5 [NEU4] added  + OOP[11] hinzugefuegt  + OOP[11] hinzugefuegt
+  + TIL[18] hinzugefuegt  + TIL[18] hinzugefuegt
+  + Eprog[22] hinzugefuegt  + Eprog[22] hinzugefuegt
+  + SHIT[01] hinzugefuegt  + SHIT[01] hinzugefuegt
+Die Person mit der Personalnummer: 0826063 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0826063 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0826063 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0826063 ist zum LvaobjNr: 2 angemeldet
+  + Dummy[31337] hinzugefuegt  + Dummy[31337] hinzugefuegt
+err: Das Objekt 3 wurde noch keiner LVA zugeordnet. 
+		-->    Die LVA -31337, Dummy- wurde erstellt.err: Das Objekt 3 wurde der Dummy LVA 31337 hinzugefuegt.Die Person mit der Personalnummer: 0826063 ist zum LvaobjNr: 3 angemeldet
+Die Person mit der Personalnummer: 0825489 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0825489 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0825489 ist zum LvaobjNr: 2 angemeldet
+Die Person mit der Personalnummer: 0526819 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0526819 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0012345 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0012345 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0012345 ist zum LvaobjNr: 2 angemeldet
+Die Person mit der Personalnummer: 0112345 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0112345 ist zum LvaobjNr: 2 angemeldet
+Die Person mit der Personalnummer: 0212345 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0212345 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0312345 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0312345 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0412345 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0412345 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0512345 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0512345 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0612345 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0612345 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0712345 ist zum LvaobjNr: 0 angemeldet
+Die Person mit der Personalnummer: 0712345 ist zum LvaobjNr: 1 angemeldet
+Die Person mit der Personalnummer: 0825489 ist zum LvaobjNr: 2 angemeldet
+Die Person mit der Personalnummer: 0825489 hat sich vom LvaobjNr: 1 abgemeldet
+  - LVAobject [3] removed and backed up  - LVAobject [3] removed and backed up
+Die Anmeldung zur Pruefung 4 wurde auf T- 58 gesetztDie Person mit der Personalnummer: 0526819 ist zum LvaobjNr: 4 angemeldet
+Die Anmeldung zur Pruefung 4 wurde auf T- 59 gesetztDie Person mit der Personalnummer: 0526819 ist zum LvaobjNr: 4 angemeldet
+err: LVAobject 3 existiert nicht.Gruppen fuer das LVAobj 1 wurden erfolgreich erstellt.Gruppen fuer das LVAobj 2 wurden erfolgreich erstellt.  - LVAobject [2] removed and backed up  - LVAobject [2] removed and backed up

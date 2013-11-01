@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "./meta/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ticketline.db.Engagement" table="engagement">
+		<!-- BaseClass -->
+		<meta attribute="extra-import">ticketline.db.Entity</meta>
+		<meta attribute="extends">Entity</meta>
+
+		<meta attribute="class-description">
+			Ein Engagement beschreibt die Mitwirkung eines Kuenstlers an
+			einer Veranstaltung. Neben der Nummer des Kuenstlers und den
+			Daten fuer die Veranstaltung, welche zusammen den
+			Primaerschluessel bilden) werden noch die Funktion des
+			Kuenstlers in der Veranstaltung und seine Gage gespeichert.
+		</meta>
+
+
+		<!-- PK, Properties -->
+		<composite-id name="comp_id" class="ticketline.db.EngagementKey"
+			unsaved-value="any">
+			<key-property name="kuenstlernr" column="kuenstlernr"
+				type="int" />
+			<key-property name="bezeichnung" column="bezeichnung"
+				type="java.lang.String" length="30" />
+			<key-property name="kategorie" column="kategorie"
+				type="java.lang.String" length="30" />
+		</composite-id>
+
+		<property name="funktion" type="java.lang.String"
+			column="funktion" length="30">
+			<meta attribute="field-description">
+				Schauspieler, Regie, etc.
+			</meta>
+		</property>
+
+		<property name="gage" type="java.math.BigDecimal">
+			<meta attribute="field-description">Gage >= 0</meta>
+
+			<column name="gage" check="gage >= 0" />
+		</property>
+
+		<!-- Associations -->
+		<!-- derived association(s) for compound key -->
+		<!-- bi-directional many-to-one association to Kuenstler -->
+		<many-to-one name="kuenstler" class="ticketline.db.Kuenstler"
+			update="false" insert="false" cascade="save-update">
+			<column name="kuenstlernr" />
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to Veranstaltung -->
+		<many-to-one name="veranstaltung"
+			class="ticketline.db.Veranstaltung" update="false" insert="false"
+			cascade="save-update">
+			<column name="bezeichnung" />
+			<column name="kategorie" />
+		</many-to-one>
+
+		<!-- end of derived association(s) -->
+
+
+	</class>
+</hibernate-mapping>

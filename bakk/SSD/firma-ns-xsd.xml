@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<soft:firma  xmlns:soft="http://www.dbai.tuwien.ac.at/software/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="firma-ns.xsd" 
+ name="Favre-Bulle" nummer="e0426099">
+<soft:team>
+    <soft:mitarbeiter></soft:mitarbeiter>
+    <soft:mitarbeiter></soft:mitarbeiter>
+</soft:team>
+<soft:projekt>
+    <soft:name></soft:name>
+</soft:projekt>
+</soft:firma>

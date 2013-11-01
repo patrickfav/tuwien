@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server
+END
+GatewayServer$ServerThread.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/GatewayServer$ServerThread.class
+END
+ExternalServiceServer$ServerThread.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/ExternalServiceServer$ServerThread.class
+END
+MetaServiceServer.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/MetaServiceServer.class
+END
+MetaServiceServer$ServerThread.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/MetaServiceServer$ServerThread.class
+END
+RestServer.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/RestServer.class
+END
+LocationIndexServer.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/LocationIndexServer.class
+END
+RestServer$ServerThread.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/RestServer$ServerThread.class
+END
+GatewayServer.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/GatewayServer.class
+END
+ExternalServiceServer.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/ExternalServiceServer.class
+END
+LocationIndexServer$ServerThread.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/server/LocationIndexServer$ServerThread.class
+END

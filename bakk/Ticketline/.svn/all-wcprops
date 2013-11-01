@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/tuwien-private-repo/!svn/ver/31/sepm/Ticketline
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/ehcache.xml
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/build.xml
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/hibernate.cfg.xml
+END

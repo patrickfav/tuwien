@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing
+END
+ReferencePropertiesType.class
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReferencePropertiesType.class
+END
+ObjectFactory.class
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/ObjectFactory.class
+END
+ReplyAfterType.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReplyAfterType.class
+END
+EndpointReferenceType.class
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/EndpointReferenceType.class
+END
+Relationship.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/Relationship.class
+END
+ServiceNameType.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/ServiceNameType.class
+END
+ReferenceParametersType.class
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReferenceParametersType.class
+END
+package-info.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/package-info.class
+END
+AttributedURI.class
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/AttributedURI.class
+END
+AttributedQName.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/AttributedQName.class
+END
+RetryAfterType.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/org/xmlsoap/schemas/ws/_2004/_08/addressing/RetryAfterType.class
+END

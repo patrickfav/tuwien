@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tuwien-private-repo/!svn/ver/156/dst/dst3_0426099/2_injection/sample/src/dst3/depinj/types
+END
+ClassWithOutSimpleConstructor.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/tuwien-private-repo/!svn/ver/153/dst/dst3_0426099/2_injection/sample/src/dst3/depinj/types/ClassWithOutSimpleConstructor.java
+END
+SimpleInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/tuwien-private-repo/!svn/ver/153/dst/dst3_0426099/2_injection/sample/src/dst3/depinj/types/SimpleInterface.java
+END
+SimpleInterfaceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/tuwien-private-repo/!svn/ver/171/dst/dst3_0426099/2_injection/sample/src/dst3/depinj/types/SimpleInterfaceImpl.java
+END

@@ -1,0 +1,19 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:form>
+		<div id="left_menu_wrapper">
+			<ul>
+				<li class="spacer"></li>
+				<li class="first"><h:link outcome="home">#{m['nav_home']}</h:link></li>
+				<li><h:link outcome="/public/login" value="#{m['login_button']}" rendered="#{not sessionManager.loggedIn}"/></li>
+				<li class="last"><h:link outcome="register">#{m['nav_register']}</h:link></li>
+				<!--  <li class="corners"><div></div></li> -->
+			</ul>
+		</div>
+	</h:form>
+	
+</ui:composition>

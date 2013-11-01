@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metamodel="http://www.example.org/metamodel" xsi:schemaLocation="http://www.example.org/metamodel metamodel/metamodel.ecore">
+  <types xsi:type="metamodel:Datatype" name="Boolean"/>
+  <types xsi:type="metamodel:Datatype" name="Date"/>
+  <types xsi:type="metamodel:Datatype" name="String"/>
+  <types xsi:type="metamodel:Datatype" name="Long"/>
+  <types xsi:type="metamodel:Datatype" name="Integer"/>
+  <types xsi:type="metamodel:Entity" name="Map">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="mapSquares" type="//@types.6" annotation="OneToMany"/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="MapSquare">
+    <features name="base" type="//@types.7" annotation="OneToOne"/>
+    <features name="troops" type="//@types.10" annotation="OneToMany" mappedBy=""/>
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="x" type="//@types.4"/>
+    <features name="y" type="//@types.4"/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="Base">
+    <features name="baseSquares" type="//@types.8" annotation="OneToMany"/>
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="resources" type="//@types.13" annotation="OneToOne"/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="BaseSquare">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="building" type="//@types.9" annotation="OneToOne"/>
+    <features name="x" type="//@types.4"/>
+    <features name="y" type="//@types.4"/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="Building">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="level" type="//@types.4"/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="Troop">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="countSword" type="//@types.4"/>
+    <features name="countAxe" type="//@types.4"/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="TroopType">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="strength" type="//@types.4"/>
+    <features name="speed" type="//@types.4"/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="Player">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="username" type="//@types.2" mappedBy=""/>
+    <features name="password" type="//@types.2" mappedBy=""/>
+    <features name="fullname" type="//@types.2" mappedBy=""/>
+    <features name="online" type="//@types.0" mappedBy=""/>
+    <features name="resources" type="//@types.13" annotation="OneToOne"/>
+    <features name="messages" type="//@types.15" annotation="OneToMany" mappedBy=""/>
+    <queries methodName="findByUsername" queryString="&quot;select p from Player p where p.username='&quot; + username + &quot;'&quot;">
+      <parameters type="//@types.2" name="username"/>
+    </queries>
+  </types>
+  <types xsi:type="metamodel:Entity" name="Resources">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="countWood" type="//@types.4" mappedBy=""/>
+    <features name="countIron" type="//@types.4" mappedBy=""/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="BuildingType">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="output" type="//@types.4"/>
+  </types>
+  <types xsi:type="metamodel:Entity" name="Message">
+    <features name="id" type="//@types.3" annotation="Id"/>
+    <features name="sender" type="//@types.12" annotation="OneToOne" mappedBy=""/>
+    <features name="content" type="//@types.2"/>
+  </types>
+</metamodel:Model>

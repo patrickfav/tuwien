@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/error
+END
+NoSuchServerFound.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/error/NoSuchServerFound.java
+END
+FileServerFileNotFound.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/error/FileServerFileNotFound.java
+END
+CouldNotCreateNewServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/error/CouldNotCreateNewServer.java
+END
+ServerNameAlreadyInUse.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/error/ServerNameAlreadyInUse.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tuwien-private-repo/!svn/ver/10/spaceBased/SB_task1/client/gui/logic
+END
+DeleteEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/10/spaceBased/SB_task1/client/gui/logic/DeleteEvent.java
+END
+DeleteListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/10/spaceBased/SB_task1/client/gui/logic/DeleteListener.java
+END
+NotificationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/10/spaceBased/SB_task1/client/gui/logic/NotificationListener.java
+END

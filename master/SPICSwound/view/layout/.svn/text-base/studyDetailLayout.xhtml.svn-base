@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+<head>
+<title><ui:insert name="title">SPICS #{DeploymentAction.spicsInstance}</ui:insert></title>
+ <link rel="stylesheet" type="text/css" href="#{RuntimeConfiguration.stylesheetUrl}" />
+ <link rel="shortcut icon" type="image/x-icon" href="./graphics/icon/favicon.ico" />
+</head>
+
+<body>
+
+<ui:insert name="header">
+	<ui:include src="header.xhtml" />
+</ui:insert>
+
+<table width="98%" cellspacing="0" cellpadding="0" border="0"
+	style="margin-left: 10px; margin-right: 10px; margin-top: 15px;">
+	<tbody>
+		<tr>
+			<td></td>
+			<td><!-- BEGIN HEADER -->
+			<table width="100%" cellspacing="0" cellpadding="0" border="0"
+				id="title">
+				<tbody>
+					<tr>
+						<td width="18" class="t_left"><img
+							src="./graphics/icon/study.gif" title="#{sessionInfo.trial.localizedStatus}" height="15" width="15"/></td>
+						<td class="t_center">
+						  <ui:insert name="trialHead">
+						    <h:outputText value="#{sessionInfo.trial.name}" /> - [<h:outputText value="#{sessionInfo.trial.localizedStatus}" />]
+						  </ui:insert>
+						</td>
+						<td width="140" class="t_right"></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- END HEADER -->
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td width="135" valign="top">
+			
+			 <br />
+
+			<ui:insert name="leftmenu">
+				<ui:include src="leftmenu.xhtml" />
+			</ui:insert>
+			
+			
+			</td>
+			<td width="*" valign="top">
+			<table width="100%" height="400" cellspacing="0" cellpadding="0"
+				border="0" id="Blatt_layout">
+				<tbody>
+					<tr>
+						<td width="10"
+							style="background: transparent url(./graphics/design/window_left_top_round.png) no-repeat scroll left top; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; height: 9px;"
+							rowspan="1" colspan="1"></td>
+						<td
+							style="background: transparent url(./graphics/design/window_top_bar.png) repeat-x scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+						</td>
+						<td width="9"
+							style="background: transparent url(./graphics/design/window_right_bar.png) repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; height: 9px;"
+							rowspan="1"></td>
+					</tr>
+					<tr>
+						<td width="1"
+							style="background: transparent url(./graphics/design/window_left_bar.png) repeat-y scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+						</td>
+						<td valign="top" height="100%"
+							style="background: rgb(255, 255, 255) none repeat scroll 0%; padding-right: 10px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+
+	
+							<!-- CONTENT of BLATT --> 
+							
+							<ui:insert name="content" />
+						
+						</td>
+						<td width="9"
+							style="background: transparent url(./graphics/design/window_right_bar.png) repeat-y scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"
+							rowspan="1"></td>
+					</tr>
+					<tr>
+						<td width="9" height="9"
+							style="background: transparent url(./graphics/design/window_left_bottom_round.png) repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"
+							colspan="1"></td>
+						<td height="9"
+							style="background: transparent url(./graphics/design/window_bottom_bar.png) repeat-x scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"
+							colspan="1"></td>
+						<td width="9" height="9"
+							style="background: transparent url(./graphics/design/window_right_bottom_round.png) repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+						</td>
+					</tr>
+					<tr>
+					<td />
+					<td valign="bottom" align="center" id="trcorner" style="height: 50px;">
+						<ui:insert name="footer">
+							<ui:include src="footer.xhtml" />
+						</ui:insert>
+					</td>
+					<td />
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td width="45" valign="top" style="padding-left: 3px; padding-right: 0px;">
+			
+			<f:subview id="StudyDetailShowPartnersView" rendered="#{not trialEditor.newTrial}">
+				<ui:insert name="studyPartners">
+				  <ui:remove>
+					<ui:include src="../studyPartners.xhtml" />
+				  </ui:remove>
+				</ui:insert>
+			</f:subview>
+				
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<br />
+
+</body>
+
+</html>

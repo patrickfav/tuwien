@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SWAG_GAMESERVER" default="compile" basedir=".">
+
+    <property environment="env"/>
+    <property name="glassfish.home" value="${env.GLASSFISH_HOME}"/>
+    <property name="domain.dir" value="${glassfish.home}/domains/domain1"/>
+    <property name="admin.cli.jar" value="${glassfish.home}/modules/admin-cli.jar"/>
+	<property name="datasourceFile.name" value="swag-ds.xml"/>
+	<property name="jmsconfig.name" value="jms_config.xml"/>
+	
+    <property name="src.dir" value="ejbModule"/>
+    <property name="build.dir" value="build"/>
+    <property name="dist.dir" value="../dist"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="config.dir" value="config"/>
+    <property name="jarfile.name" value="swag.gameserver"/>
+	<property name="webserver.lib" value="${basedir}/../swag.webserver/lib"/>
+            
+    <path id="classpath">
+		<fileset dir="${lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+		<fileset dir="${dist.dir}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${glassfish.home}/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    
+	 <target name="check">
+        <fail unless="env.GLASSFISH_HOME">
+            #### You must install GlassFish V3 and set the GLASSFISH_HOME variable
+        </fail>
+    </target>
+
+    <target name="compile" depends="check">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}"
+               destdir="${build.dir}"
+               debug="on"
+               deprecation="on"
+               classpathref="classpath" />
+    </target>
+    
+    <target name="dist" depends="compile">
+        <mkdir dir="${dist.dir}"/>
+        <jar jarfile="${dist.dir}/${jarfile.name}.jar">
+            <fileset dir="${build.dir}" />
+            <fileset dir="${config.dir}"/>
+        </jar>
+    </target>
+    
+    <target name="clean">
+        <delete dir="${build.dir}"/> 
+    	<java jar="${admin.cli.jar}" fork="true" spawn="false">
+    	    <arg line="delete-jdbc-connection-pool --cascade=true swag_pool" />
+    	</java>
+    	<java jar="${admin.cli.jar}" fork="true" spawn="false">
+    	   <arg line="delete-connector-connection-pool --cascade=true swag.FactoryPool"/>
+    	</java>
+    	<java jar="${admin.cli.jar}" fork="true" spawn="false">
+    	    <arg line="delete-jms-resource topic.swag.MessagesTopic"/>
+    	</java>
+    	<java jar="${admin.cli.jar}" fork="true" spawn="false">
+    	  	<arg line="delete-jms-resource queue.swag.SendingQueue"/>
+    	</java>
+    </target>
+	
+	<target name="setup" depends="check">
+        <copy file="${lib.dir}/postgresql-8.4-701.jdbc4.jar" todir="${domain.dir}/lib/ext"/>
+	   <java jar="${admin.cli.jar}" fork="true" spawn="false">
+	       <arg line="add-resources ${config.dir}/${datasourceFile.name}"/>
+        </java>
+		<java jar="${admin.cli.jar}" fork="true" spawn="false">
+			<arg line="add-resources ${config.dir}/${jmsconfig.name}"/>
+		</java>
+    </target>
+</project>

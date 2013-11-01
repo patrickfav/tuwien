@@ -1,0 +1,52 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="content">
+
+		<div id="blatt"><h:form id="TrialDataImportViewerForm">
+
+			<h:messages globalOnly="false" errorClass="errorMessage"
+				fatalClass="errorMessage" infoClass="infoMessage"
+				warnClass="warningMessage" layout="list" showDetail="true"
+				showSummary="true" />
+
+			<b><h:outputText value="#{messages['label.importtrialdata']}" /></b>
+			<div class="info"><h:outputText
+				value="#{messages['importtrial_data.info']}" /></div>
+			<br />
+			<table cellspacing="1" cellpadding="0" border="0">
+				<tr>
+					<td width="150"><h:outputText
+						value="#{messages['label.file']}" />:</td>
+					<td><rich:fileUpload id="trialDataFormImportUpload"
+						uploadData="#{TrialDataImport.uploads}" immediateUpload="false"
+						listHeight="60" maxFilesQuantity="1" acceptedTypes="xlsx"
+						locale="#{localeSelector.locale}">
+						<a:support event="ontyperejected" action="#{TrialDataImport.typeRejected}" reRender="TrialDataImportViewerForm" />
+						</rich:fileUpload>	
+					</td>
+				</tr>
+			</table>
+			<br />
+			<h:commandButton id="backBtn" styleClass="button"
+				title="#{messages['button.back']}"
+				value="#{messages['button.back']}"
+				action="#{TrialDataImport.cancel}" />
+			<h:commandButton id="importBtn" styleClass="button"
+				title="#{messages['button.import']}"
+				value="#{messages['button.import']}"
+				action="#{TrialDataImport.importTrialData}" />
+
+		</h:form></div>
+
+	</ui:define>
+
+</ui:composition>

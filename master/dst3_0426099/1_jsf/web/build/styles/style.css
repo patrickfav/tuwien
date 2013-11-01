@@ -1,0 +1,141 @@
+/* Clear all margins and paddings
+----------------------------------------------- */
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
+pre, form, fieldset, table, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+/* Element Defaults
+----------------------------------------------- */
+
+body {
+    background-color: #fafafa;
+    color: #000;
+    font-family: 'Verdana','Arial','Helvetica',sans-serif;
+    font-size: 13px;
+    background-repeat: repeat-x;
+	margin: 0px;
+  	padding: 0px; 
+  	position: relative;
+}
+
+h1 {
+	font-size: 150%;
+	margin: 0px 0px 5px 0px;
+	color:#456881;
+}
+
+h2 {
+	font-size: 14px;
+	margin: 10px 0 10px 0;
+	color:#456881;
+}
+
+hr {
+    background-color: #CCCCCC;
+    border: 0 none;
+    clear: both;
+    color: #CCCCCC;
+    height: 1px;
+    margin: 0 auto 8px 0;
+    text-align: left;
+    width: 100%;
+}
+
+label {
+	padding-left:5px;
+	padding-right:4px;
+	display:block;
+	margin-top:7px;
+}
+
+td {
+	text-align:center;
+}
+
+/* Layout Elements
+----------------------------------------------- */
+div#header {
+	margin: 15px;
+	border-bottom: 2px gray solid;
+	padding-left:5px
+}
+	div#header div#header_link {
+		float:right;
+		margin-right:5px;
+	}
+	
+div#nav {
+	float: left;
+	margin: 0 0.5% 0 1%;
+	width: 18%;
+	
+}
+	div#nav ul {
+		margin-left:0px;
+	}
+	div#nav ul li{
+		margin-left:15px;
+		list-style: none;
+		font-size:130%;
+		padding-bottom:4px;
+	}
+div#content {
+	float: left;
+	width: 77%;
+	margin: 0 1% 0 0.5%;
+	padding: 0 6px 0 9px;
+	border-left:1px gray dotted;
+}
+
+div#footer {
+	clear: both;
+	margin-top: 25px;
+    font-size: 11px;
+    text-align: center;
+    color: gray;
+    font-style: italic;
+}
+
+/* Messages
+----------------------------------------------- */
+
+ul.message {
+	background: #fbffce;
+	border: 1px solid #cccccc;
+	margin: 10px;
+	padding: 10px;
+}
+
+ul.message li, .messages li {
+	list-style: none;
+}
+
+ul.message li.error, .messages li.error {
+	/*background: url("../img/table/icon_error.png") 0 0 no-repeat;*/
+	padding-left: 25px;
+	color: red; 
+}
+
+ul.message li.warn, .messages li.warn {
+	/*background: url("../img/table/icon_error.png") 0 0 no-repeat;*/
+	padding-left: 25px;
+	color: red; 
+}
+
+ul.message li.info, .messages li.info {
+	/*background: url("../img/table/icon_bezahlt.png") 0 0 no-repeat;*/
+	padding-left: 25px;
+	color: green;
+}
+
+/* Misc Styles
+----------------------------------------------- */
+.button {
+	display:block;
+	margin: 5px 3px 5px 3px;
+}
+.clearer {
+	clear:both;

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/exceptions
+END
+DeleteException.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/exceptions/DeleteException.java
+END
+UnsupportedSearchFieldException.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/exceptions/UnsupportedSearchFieldException.java
+END
+UpdateException.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/exceptions/UpdateException.java
+END
+DatabaseException.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/exceptions/DatabaseException.java
+END
+UnsupportedInterceptorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/exceptions/UnsupportedInterceptorException.java
+END
+HttpContentException.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/exceptions/HttpContentException.java
+END

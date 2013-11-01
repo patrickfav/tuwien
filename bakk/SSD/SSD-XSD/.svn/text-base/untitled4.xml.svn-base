@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<firma xmlns="http://www.dbai.tuwien.ac.at/software/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.dbai.tuwien.ac.at/software/ file:/C:/Users/Patick F/eclipse workspace/SSD-XSD/firma-ns.xsd" nummer="e0426099">
+    <team xmlns=""></team>
+    <xsd-test xmlns=""></xsd-test>
+</firma>

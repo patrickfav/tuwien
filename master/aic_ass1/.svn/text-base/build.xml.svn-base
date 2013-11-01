@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ass1" default="build" basedir=".">
+	<property name="src.dir" value="." />
+	<property name="build.dir" value="build" />
+	<property name="test.dir" value="test" />
+	
+	<path id="project.classpath">
+		<dirset dir="${build.dir}" />
+		<fileset id="lib" dir=".\lib">
+	   		<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<!-- Create build path -->
+	<target name="init" description="Initialize the build">
+	   <delete dir="${build.dir}" />
+	   <mkdir dir="${build.dir}"/>
+	</target>
+	
+	<!-- Compile Source -->
+	<target name="build" depends="init" description="Compile the Java source code">
+		<javac classpathref="project.classpath"
+				  srcdir="${src.dir}"
+		          destdir="${build.dir}"  
+		          deprecation="false" 
+		           nowarn="on">
+		</javac>
+		<javac classpathref="project.classpath"
+				  srcdir="${test.dir}"
+		          destdir="${build.dir}"  
+		          deprecation="false" 
+		           nowarn="on">
+		</javac>
+	</target>
+	
+	<!-- Run Services -->
+	<target name="run-services" depends="build" description="Run services.">
+		<java classname="server.Server" fork="true" classpathref="project.classpath" />
+	</target>
+	
+	<!-- Run Client -->
+	<target name="run-client" depends="build" description="Run client.">
+		<java classname="client.Client" fork="true" classpathref="project.classpath" />
+	</target>
+</project>

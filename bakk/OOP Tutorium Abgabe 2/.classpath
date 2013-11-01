@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="oop202"/>
+	<classpathentry kind="src" path="oop198"/>
+	<classpathentry kind="src" path="oop197"/>
+	<classpathentry kind="src" path="oop194"/>
+	<classpathentry kind="src" path="oop193"/>
+	<classpathentry kind="src" path="oop190"/>
+	<classpathentry kind="src" path="oop162"/>
+	<classpathentry kind="src" path="oop158"/>
+	<classpathentry kind="src" path="oop153"/>
+	<classpathentry kind="src" path="oop136"/>
+	<classpathentry kind="src" path="oop117"/>
+	<classpathentry kind="src" path="oop112"/>
+	<classpathentry kind="src" path="oop109"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

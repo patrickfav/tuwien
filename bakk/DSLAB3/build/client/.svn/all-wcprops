@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/client
+END
+Client.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/client/Client.class
+END
+ClientTCP.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/client/ClientTCP.class
+END
+ClientThread.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/client/ClientThread.class
+END
+ClientUDP.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/client/ClientUDP.class
+END

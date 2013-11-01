@@ -1,0 +1,36 @@
+/* AUTOMATICALLY GENERATED ON Wed Jun 01 15:07:35 CEST 2011*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.WebResourcePermission "/theme/META-INF/*";
+  permission javax.security.jacc.WebResourcePermission "/theme/org/*";
+  permission javax.security.jacc.WebResourcePermission "/*:/resource/*:/theme/com/*:/theme/META-INF/*:/theme/org/*", "!GET,POST";
+  permission javax.security.jacc.WebResourcePermission "/resource/*";
+  permission javax.security.jacc.WebResourcePermission "/theme/com/*";
+  permission javax.security.jacc.WebUserDataPermission "/theme/com/*";
+  permission javax.security.jacc.WebUserDataPermission "/theme/META-INF/*";
+  permission javax.security.jacc.WebUserDataPermission "/theme/org/*";
+  permission javax.security.jacc.WebUserDataPermission "/*:/resource/*:/theme/com/*:/theme/META-INF/*:/theme/org/*";
+  permission javax.security.jacc.WebUserDataPermission "/resource/*";
+};
+
+grant      principal org.glassfish.security.common.PrincipalImpl "admin" {
+  permission javax.security.jacc.WebRoleRefPermission "default", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "FacesServlet", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "ThemeServlet", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "jMaki XmlHttpProxy Servlet", "admin";
+  permission javax.security.jacc.WebResourcePermission "/*:/resource/*:/theme/com/*:/theme/META-INF/*:/theme/org/*", "GET,POST";
+};
+
+grant      principal org.glassfish.security.common.Group "asadmin" {
+  permission javax.security.jacc.WebRoleRefPermission "default", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "FacesServlet", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "ThemeServlet", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "", "admin";
+  permission javax.security.jacc.WebRoleRefPermission "jMaki XmlHttpProxy Servlet", "admin";
+  permission javax.security.jacc.WebResourcePermission "/*:/resource/*:/theme/com/*:/theme/META-INF/*:/theme/org/*", "GET,POST";
+};
+

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing
+END
+ReplyAfterType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReplyAfterType.java
+END
+EndpointReferenceType.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/EndpointReferenceType.java
+END
+Relationship.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/Relationship.java
+END
+ServiceNameType.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/ServiceNameType.java
+END
+ReferenceParametersType.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReferenceParametersType.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/package-info.java
+END
+AttributedURI.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/AttributedURI.java
+END
+AttributedQName.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/AttributedQName.java
+END
+RetryAfterType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/RetryAfterType.java
+END
+ReferencePropertiesType.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReferencePropertiesType.java
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/src/org/xmlsoap/schemas/ws/_2004/_08/addressing/ObjectFactory.java
+END

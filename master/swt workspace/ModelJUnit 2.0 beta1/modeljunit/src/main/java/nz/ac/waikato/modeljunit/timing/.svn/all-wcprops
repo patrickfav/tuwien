@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/timing
+END
+TimedModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/timing/TimedModel.java
+END
+Timeout.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/timing/Timeout.java
+END
+TimedFsmModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/timing/TimedFsmModel.java
+END
+TimedTransition.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/timing/TimedTransition.java
+END
+Time.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/timing/Time.java
+END

@@ -1,0 +1,98 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="content">
+			
+		<h:messages showSummary="true" showDetail="true" layout="summary"
+			warnClass="warningMessage" errorClass="errorMessage" infoClass="infoMessage" />
+
+		<f:facet name="header">TrialDataEditor</f:facet>
+		<div id="blatt"><h:form id="trialDataEditorForm"
+			enctype="multipart/form-data">
+
+			<b><h:outputText id="patientIDText"
+				value="#{EditTrialData.patientHeader}" /></b>
+
+			<br />
+
+			<s:validateAll>
+				<h:panelGrid id="TrialDataEditGeneratedGrid"
+					binding="#{EditTrialData.mainGrid}" />
+			</s:validateAll>
+			<br />
+
+			<f:subview id="EditTrialDataEnabledView"
+				rendered="#{EditTrialData.trialForm.fillable}">
+				<f:subview id="NormalSaveView" name="normalSave"
+					rendered="#{not EditTrialData.savedOnce}">
+					<h:commandButton id="saveBtn" styleClass="button"
+						title="#{messages['button.save']}"
+						value="#{messages['button.save']}" action="#{EditTrialData.save}" />
+				</f:subview>
+				<f:subview id="ConfirmSaveView" name="confirmSave"
+					rendered="#{EditTrialData.savedOnce}">
+					<h:commandButton id="saveBtn" styleClass="button"
+						title="#{messages['button.approve']}"
+						value="#{messages['button.approve']}"
+						action="#{EditTrialData.save}" />
+				</f:subview>
+				<h:commandButton id="chancelBtn" styleClass="button"
+					title="#{messages['button.cancel']}"
+					value="#{messages['button.cancel']}"
+					action="#{EditTrialData.chancel}" immediate="true" />
+			</f:subview>
+			<f:subview id="EditTrialDataDisabledView"
+				rendered="#{not EditTrialData.trialForm.fillable}">
+				<h:commandButton id="backBtn" styleClass="button"
+					title="#{messages['button.back']}"
+					value="#{messages['button.back']}"
+					action="#{EditTrialData.chancel}" immediate="true" />
+			</f:subview>
+
+		</h:form></div>
+		
+		<rich:modalPanel id="fileUploadMP" width="450" height="400">
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.file']}" />
+					</f:facet>
+					<f:facet name="controls">
+					</f:facet>
+					<h:form id="trialDataEditFileUpForm">
+						<h:messages for="imageCommentUpload" errorClass="errorMessage" fatalClass="errorMessage" infoClass="infoMessage" warnClass="warningMessage"/>
+						
+							<rich:fileUpload id="editTDfileUpload"
+								uploadData="#{EditTrialData.uploads}"
+								immediateUpload="true" maxFilesQuantity="5"
+								locale="#{localeSelector.locale}">
+								
+								<a:support event="onsizerejected" action="#{FileUploadUtils.sizeRejected('editTDfileUpload')}" reRender="trialDataEditFileUpForm" />	
+							</rich:fileUpload>
+
+							<br />
+							<a:commandButton
+								action="#{EditTrialData.processFileUpload}"
+								reRender="trialDataEditorForm" styleClass="button"
+								title="#{messages['button.save']}"
+								value="#{messages['button.save']}"
+								oncomplete="Richfaces.hideModalPanel('fileUploadMP')" />
+							<a:commandButton
+								action="#{EditTrialData.cancelUpload}"
+								styleClass="button"
+								title="#{messages['button.cancel']}"
+								value="#{messages['button.cancel']}" 
+								oncomplete="Richfaces.hideModalPanel('fileUploadMP')"/>
+					</h:form>
+			</rich:modalPanel>
+
+	</ui:define>
+
+</ui:composition>
+

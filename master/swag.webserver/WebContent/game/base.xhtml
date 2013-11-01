@@ -1,0 +1,158 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	template="/templates/game.xhtml">
+
+	<!-- content -->
+	<ui:define name="content">
+		<div id="sidebar">
+			<div class="container">
+				<h2>#{m['base']} #{sessionManager.base.id}</h2>
+			
+				<h:form>
+				<p:tabView id="baseTabs">  
+  
+    				<p:tab title="#{m['building_list']}">  
+        				
+       					<p:dataGrid id="buildTab" var="entry" value="#{sessionManager.base.buildingList}" columns="1" cellpadding="2">
+       						<h:panelGrid columns="2">
+       							<p:graphicImage value="../images/base/buildings/small/#{entry.building.type.smallImage}" />
+       							<h:panelGrid columns="1">
+       								<h:outputText value="#{entry.building.type.name} (Lvl: #{entry.building.level})"/>
+       								<h:panelGrid columns="2" width="150px">
+       									<div class="progressBorder">
+       										<div class="progressBar" style="width:#{progressManager.getProgress(entry.start_time, entry.end_time)}%;"></div>
+       									</div>
+       									<h:outputText value="#{progressManager.getProgress(entry.start_time, entry.end_time)}%"/>
+       								</h:panelGrid>
+       							</h:panelGrid>
+       						</h:panelGrid>
+       					</p:dataGrid>	
+        				
+        			</p:tab>
+        		
+        			<p:tab title="#{m['troop_list']}">  
+        				<p:dataGrid id="troopTab" var="entry" value="#{sessionManager.base.getTrainings()}" columns="1" cellpadding="2">
+       						<h:panelGrid columns="2">
+       							<p:graphicImage value="../images/base/units/#{entry.troop.smallImage}" />
+       							<h:panelGrid columns="1">
+       								<h:outputText value="#{entry.troop.name} (#{entry.count})"/>
+       								<h:panelGrid columns="2" width="150px">
+       									<div class="progressBorder">
+       										<div class="progressBar" style="width:#{progressManager.getProgress(entry.start_time, entry.end_time)}%;"></div>
+       									</div>
+       									<h:outputText value="#{progressManager.getProgress(entry.start_time, entry.end_time)}%"/>
+       								</h:panelGrid>
+       							</h:panelGrid>
+       						</h:panelGrid>
+       					</p:dataGrid>
+       					
+       					<h3>Troops</h3>
+       					<p:dataGrid columns="1" var="troop" value="#{sessionManager.base.getUnits()}">
+							<p:graphicImage value="../images/base/units/#{troop.miniImage}" />
+							<h:outputText value="#{sessionManager.base.unitsCount.get(troop).value}" />
+						</p:dataGrid>
+       					
+        			</p:tab>
+        		
+        		</p:tabView>
+        		<p:poll interval="#{guiConfig.getBasePollingIntervall()}" action="#{sessionManager.reloadBase()}" update="baseTabs, messages, baseMap, infoBox" />
+        		</h:form>
+			</div>
+		</div>
+	    <div id="content">
+	    	<h:form id="baseMap">
+	   			<p:dataGrid var="square" value="#{sessionManager.base.squares}" columns="#{sessionManager.map.config.baseSquares}" paginator="false">
+	    			<p:column>
+	    				<p:commandLink update=":infobox" action="#{sessionManager.setSelectedBaseSquare(square)}">
+	    					<p:graphicImage value="../images/base/buildings/#{square.building.type.image}" rendered="#{square.building!=null and !square.building.underConstruction}"/>
+	    					<p:graphicImage value="../images/base/buildings/building_construction.png" rendered="#{square.building!=null and square.building.underConstruction}"/>
+	    					<p:graphicImage value="../images/base/resources/resource_wood.png" rendered="#{square.resource.type=='WOOD'}"/>
+	    					<p:graphicImage value="../images/base/resources/resource_iron.png" rendered="#{square.resource.type=='IRON'}"/>
+	    					<p:graphicImage value="../images/base/resources/resource_stone.png" rendered="#{square.resource.type=='STONE'}"/>
+	    					<p:graphicImage value="../images/base/resources/resource_field.png" rendered="#{square.resource == null and square.building == null}"/>
+	    				</p:commandLink>
+		  	    	</p:column>
+	  			</p:dataGrid>
+	  		</h:form>
+	    </div>
+	    <div id="footer" class="info_field">
+	    <p:outputPanel id="infobox">
+	    	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	    		<tr>
+	    			<td width="200"><p:graphicImage value="../images/info/infobox_null.png" rendered="#{sessionManager.selectedBaseSquare==null}"/><p:graphicImage value="../images/info/#{sessionManager.selectedBaseSquare.building.type.image}" rendered="#{sessionManager.selectedBaseSquare.building!=null}"/><p:graphicImage value="../images/info/map_landscape_empty.png" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.resource==null and sessionManager.selectedBaseSquare.building==null}" /><p:graphicImage value="../images/info/base_wood.png" rendered="#{sessionManager.selectedBaseSquare.resource.type=='WOOD'}" /><p:graphicImage value="../images/info/base_iron.png" rendered="#{sessionManager.selectedBaseSquare.resource.type=='IRON'}" /><p:graphicImage value="../images/info/base_stone.png" rendered="#{sessionManager.selectedBaseSquare.resource.type=='STONE'}" /></td>
+	    			<td width="105"><img src="../images/template/info_left.png" width="105" height="200" /></td>
+	       			<td>
+	       				<h:form>
+	       					<p:tooltip global="true"/>
+	       					<h:outputText styleClass="infoBoxHeadline" value="#{m['resource_stone']}" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.resource.type=='STONE'}"/>
+	       					<h:outputText styleClass="infoBoxHeadline" value="#{m['resource_wood']}" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.resource.type=='WOOD'}"/>
+	       					<h:outputText styleClass="infoBoxHeadline" value="#{m['resource_iron']}" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.resource.type=='IRON'}"/>
+	       					<h:outputText styleClass="infoBoxHeadline" value="#{m['build_building']}" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.resource==null and sessionManager.selectedBaseSquare.building==null}"/>
+	       					<h:outputText styleClass="infoBoxHeadline" value="#{sessionManager.selectedBaseSquare.building.type.name}" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.resource==null and sessionManager.selectedBaseSquare.building!=null}"/>
+	       					<h:outputText styleClass="infoBoxHeadline" value=" (#{sessionManager.selectedBaseSquare.x};#{sessionManager.selectedBaseSquare.y})" rendered="#{sessionManager.selectedBaseSquare!=null}"/>
+	       					
+	       					<h:outputText styleClass="infoBoxText" value="&lt;br/&gt; #{m['resource_factor']}: +#{sessionManager.selectedBaseSquare.resource.factor}%" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.resource!=null}" escape="false"/>
+	       					<h:outputText styleClass="infoBoxText" value="&lt;br/&gt; #{m['building_under_construction']}" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.building!=null and sessionManager.selectedBaseSquare.building.underConstruction}" escape="false"/>	
+	       					
+	       					<h:panelGrid columns="5" cellpadding="5" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.building!=null and !sessionManager.selectedBaseSquare.building.underConstruction}">
+        						<h:outputText value="Level: #{sessionManager.selectedBaseSquare.building.level}"/>
+        						<h:outputText value="Points: #{sessionManager.selectedBaseSquare.building.type.points}"/>
+        						<p:commandLink ajax="true" action="#{buildingManager.upgradeBuilding(sessionManager.selectedBaseSquare, sessionManager.selectedBaseSquare.building)}" update=":baseMap, :infobox, :headerInfo, :baseTabs">
+        							<h:outputText value="Upgrade to: Level #{sessionManager.selectedBaseSquare.building.level+1}" />
+        						</p:commandLink>
+        						<h:outputText value="&lt;img src='../images/icons/ic_wood.png' /&gt; #{sessionManager.selectedBaseSquare.building.type.getCostsFor('WOOD')*(sessionManager.selectedBaseSquare.building.level+1)} &lt;img src='../images/icons/ic_stone.png' /&gt; #{sessionManager.selectedBaseSquare.building.type.getCostsFor('STONE')*(sessionManager.selectedBaseSquare.building.level+1)} &lt;img src='../images/icons/ic_iron.png' /&gt; #{sessionManager.selectedBaseSquare.building.type.getCostsFor('IRON')*(sessionManager.selectedBaseSquare.building.level+1)}" escape="false"/>
+        					</h:panelGrid>
+	       					
+	       					<p:dataGrid var="type" value="#{buildingManager.getAllBuildingTypes()}" columns="4" rendered="#{sessionManager.selectedBaseSquare!=null and sessionManager.selectedBaseSquare.resource==null and sessionManager.selectedBaseSquare.building==null}">  
+        						<p:column styleClass="buildGrid">
+        							<p:commandLink ajax="true" action="#{buildingManager.buildBuilding(sessionManager.selectedBaseSquare, type)}" update=":baseMap, :infobox, :headerInfo, :baseTabs">
+        								<h:panelGrid columns="2" cellpadding="2">
+        									<p:graphicImage value="../images/base/buildings/small/#{type.smallImage}" />
+        									<h:outputText value="#{type.name} &lt;br/&gt; &lt;img src='../images/icons/ic_wood.png' /&gt; #{type.getCostsFor('WOOD')} &lt;img src='../images/icons/ic_stone.png' /&gt; #{type.getCostsFor('STONE')} &lt;img src='../images/icons/ic_iron.png' /&gt; #{type.getCostsFor('IRON')}" escape="false"/>
+        								</h:panelGrid>
+        							</p:commandLink>
+        						</p:column>
+        					</p:dataGrid>
+        					
+        					<ui:repeat var="type" value="#{buildingManager.getMilitaryBuilding(sessionManager.selectedBaseSquare.building.type).createableMilitary}" rendered="#{sessionManager.selectedBaseSquare.building != null and buildingManager.getMilitaryBuilding(sessionManager.selectedBaseSquare.building.type) != null and !sessionManager.selectedBaseSquare.building.underConstruction}">
+        						<p:dataGrid var="unit" value="#{troopManager.getTroopsByType(type)}" columns="4">  
+        							<p:column styleClass="unitGrid">
+        								<h:panelGrid columns="4" cellpadding="5">
+        									<p:graphicImage value="../images/base/units/#{unit.smallImage}" />
+        									<h:outputText value="#{unit.name} &lt;br/&gt; Strength: #{unit.strength} Speed: #{unit.speed} Armor: #{unit.armor} &lt;br/&gt; &lt;img src='../images/icons/ic_wood.png' /&gt; #{unit.getCostsFor('WOOD')} &lt;img src='../images/icons/ic_stone.png' /&gt; #{unit.getCostsFor('STONE')} &lt;img src='../images/icons/ic_iron.png' /&gt; #{unit.getCostsFor('IRON')}" escape="false"/>
+        									<p:spinner size="3" id="minmax" value="#{troopManager.troopCount}" min="1" max="1000"/>
+        									<p:commandButton ajax="true" value="#{m['train_troops']}" action="#{troopManager.trainTroops(sessionManager.base, unit)}" update=":baseMap, :infobox, :headerInfo, :baseTabs" />
+        								</h:panelGrid>
+        							</p:column>
+        						</p:dataGrid>
+        					</ui:repeat>
+        					
+        					<ui:repeat var="type" value="#{buildingManager.getUpgradeBuilding(sessionManager.selectedBaseSquare.building.type).upgradeableMilitary}" rendered="#{sessionManager.selectedBaseSquare.building != null and buildingManager.getUpgradeBuilding(sessionManager.selectedBaseSquare.building.type) != null and !sessionManager.selectedBaseSquare.building.underConstruction}">
+        						<p:dataGrid var="unit" value="#{troopManager.getTroopsByType(type)}" columns="4">  
+        							<p:column styleClass="updateGrid">
+        								<h:panelGrid columns="4" cellpadding="5">
+        									<p:graphicImage value="../images/base/units/#{unit.smallImage}" />
+        									<h:outputText value="#{unit.name} &lt;br/&gt; Strength: +10 Speed: +10 Armor: +10 &lt;br/&gt; &lt;img src='../images/icons/ic_wood.png' /&gt; #{unit.getCostsFor('WOOD')+50} &lt;img src='../images/icons/ic_stone.png' /&gt; #{unit.getCostsFor('STONE')+50} &lt;img src='../images/icons/ic_iron.png' /&gt; #{unit.getCostsFor('IRON')+50}" escape="false"/>
+        									<p:commandButton ajax="true" value="Upgrade" action="#{upgradeManager.upgradeTroops()}" update=":baseMap, :infobox, :headerInfo, :baseTabs" />
+        								</h:panelGrid>
+        							</p:column>
+        						</p:dataGrid>
+        					</ui:repeat>
+        					
+  						</h:form>
+	       			
+	       				<p:growl id="messages" showDetail="false" />
+	      	 		</td>
+	      	 		<td width="105"><img src="../images/template/info_right.png" width="105" height="200" hspace="0" vspace="0" border="0" /></td>
+	        	</tr>
+	        </table>
+	     </p:outputPanel>
+	    </div>
+	</ui:define>  
+	  
+</ui:composition>

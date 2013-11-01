@@ -1,0 +1,45 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:spics="http://www.spics.at/customJSF"
+	template="layout/layout.xhtml">
+
+
+
+	<ui:define name="content">
+
+		<h:messages styleClass="message" />
+
+		<h:form id="convTestForm" enctype="multipart/form-data">
+		
+			<s:validateAll>
+				<spics:warningAwareDecorate>
+					<f:facet name="aroundWarningField">
+						<s:span styleClass="warn" />
+					</f:facet>
+					<f:facet name="afterWarningField">
+						<s:span styleClass="warnMsg">
+							<h:message for="testinput" />
+						</s:span>
+					</f:facet>
+					<h:inputText id="testinput" value="#{VSSTest.txt}" />
+				
+				</spics:warningAwareDecorate>
+			</s:validateAll>
+		
+			<br />
+			<h:commandButton action="#{VSSTest.print}" value="Ok" />
+		</h:form>
+
+
+
+	</ui:define>
+
+</ui:composition>

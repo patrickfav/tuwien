@@ -1,0 +1,138 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "./meta/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ticketline.db.Ort" table="ort">
+		<!-- BaseClass -->
+		<meta attribute="extra-import">ticketline.db.Entity</meta>
+		<meta attribute="extends">Entity</meta>
+
+		<meta attribute="class-description">
+			Eine Entitaet vom Typ Ort kann ein Auffuehrungsort, eine
+			Kiosk und/oder eine Verkaufsstelle sein. Die eindeutige
+			Identifizierung erfolgt durch die Bezeichnung (den Namen)
+			des Ortes und die Ortsangabe (der geographische Ort). Jeder
+			Ort faellt in eine der folgenden Kategorien: Kino,
+			Theater/Oper, Kabarett, Konzertsaal oder Location. Weiters
+			gibt es noch Attribute wie Strasse, Postleitzahl, Bundesland
+			und weiteres um den Ort naeher zu spezifizieren.
+		</meta>
+
+
+		<!-- PK, Properties -->
+		<composite-id name="comp_id" class="ticketline.db.OrtKey"
+			unsaved-value="any">
+			<key-property name="bezeichnung" column="bezeichnung"
+				type="java.lang.String" length="30" />
+			<key-property name="ort" column="ort"
+				type="java.lang.String" length="30" />
+		</composite-id>
+
+		<property name="kategorie" type="java.lang.String"
+			not-null="true">
+			<meta attribute="field-description">
+				Kino, Theater/Oper, Kabarett, Konzertsaal oder Location
+			</meta>
+
+			<column name="kategorie" length="20"
+				check="upper(kategorie) IN ('KABARETT','KINO','KONZERTSAAL','LOCATION','THEATER/OPER')"
+				not-null="true" />
+		</property>
+		<property name="strasse" type="java.lang.String"
+			column="strasse" not-null="true" length="30">
+			<meta attribute="field-description">
+				z.B.: Hauptstrasse 14
+			</meta>
+		</property>
+
+		<property name="plz" type="java.lang.String" not-null="true">
+			<meta attribute="field-description">
+				z.B.: 1100; 0000 &lt;= Postleitzahl &lt;= 9999
+			</meta>
+
+			<column name="plz" length="4" check="plz ~ '^[0-9]{4}$'"
+				not-null="true" />
+		</property>
+		<property name="bundesland" type="java.lang.String"
+			not-null="true">
+			<meta attribute="field-description">
+				z.B.: Niederoesterreich, Wien
+			</meta>
+
+			<column name="bundesland" length="20"
+				check="upper(bundesland) IN ('BURGENLAND','KÄRNTEN','NIEDERÖSTERREICH','OBERÖSTERREICH','STEIERMARK','SALZBURG','TIROL','VORARLBERG','WIEN')"
+				not-null="true" />
+		</property>
+		<property name="telnr" type="java.lang.String" column="telnr"
+			length="15">
+			<meta attribute="field-description">
+				optionale Telefonnummer
+			</meta>
+		</property>
+
+		<property name="besitzer" type="java.lang.String"
+			column="besitzer" length="30">
+			<meta attribute="field-description">
+				z.B.: Kiba Kino GmbH
+			</meta>
+		</property>
+		<property name="oeffnungszeiten" type="java.lang.String"
+			column="oeffnungszeiten" length="200">
+			<meta attribute="field-description">
+				z.B.: Fr. 18:00-23:00
+			</meta>
+		</property>
+		<property name="kiosk" type="boolean" column="kiosk"
+			not-null="true" length="1">
+			<meta attribute="field-description">
+				Ist Ort ein Kiosk? TRUE (= ja), FALSE (= nein)
+			</meta>
+		</property>
+		<property name="verkaufsstelle" type="boolean"
+			column="verkaufsstelle" not-null="true" length="1">
+			<meta attribute="field-description">
+				Ist Ort eine Verkaufsstelle? TRUE (= ja), FALSE (= nein)
+			</meta>
+		</property>
+		<property name="auffuehrungsort" type="boolean"
+			column="auffuehrungsort" not-null="true" length="1">
+			<meta attribute="field-description">
+				Ist Ort ein Auffuehrungsort? TRUE (= ja), FALSE (= nein)
+			</meta>
+		</property>
+
+		<!-- Associations -->
+		<!-- derived association(s) for compound key -->
+		<!-- end of derived association(s) -->
+
+		<!-- bi-directional one-to-many association to Ticketcard -->
+		<set name="ticketcards" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="verkaufsstelle" />
+				<column name="verkaufsort" />
+			</key>
+			<one-to-many class="ticketline.db.Ticketcard" />
+		</set>
+		<!-- bi-directional one-to-many association to Transaktion -->
+		<set name="transaktionen" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="verkaufsstelle" />
+				<column name="verkaufsort" />
+			</key>
+			<one-to-many class="ticketline.db.Transaktion" />
+		</set>
+		<!-- bi-directional one-to-many association to Saal -->
+		<set name="saele" lazy="false" inverse="true" cascade="none">
+			<key>
+				<column name="ortbez" />
+				<column name="ort" />
+			</key>
+			<one-to-many class="ticketline.db.Saal" />
+		</set>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	template="/templates/public.xhtml">
+
+	<!-- content -->
+	<ui:define name="content">
+		
+
+		
+		<h1>#{m['login_headline']}</h1>
+		<div class="standard_form_box">
+			<h:form>
+				<fieldset >  
+				<div class="entry">
+					<div class="label"><h:outputLabel for="username" value="#{m['username']}:" /></div>
+					<div class="input">
+						<h:inputText id="username" value="#{sessionManager.username}" required="#{true}" requiredMessage="#{m['username_required']}"/>
+					</div>
+				</div>
+				<div class="entry oddDark">
+					<div class="label"><h:outputLabel for="password" value="#{m['password']}:" /></div>
+					<div class="input">
+						<h:inputSecret id="password" value="#{sessionManager.password}" required="#{true}" requiredMessage="#{m['password_required']}"/>
+					</div>
+				</div>
+				<div class="entry">
+					<div class="label"><h:outputLabel for="maps" value="#{m['map']}:" /></div>
+					<div class="input">
+						<h:selectOneMenu id="maps" value="#{sessionManager.map}" converter="#{mapConverter}" required="#{true}" requiredMessage="#{m['map_required']}">
+							<f:selectItems var="map" itemLabel="#{map.name}" value="#{mapManager.getAllMaps()}" />
+						</h:selectOneMenu>
+					</div>
+				</div>
+				<p:commandButton ajax="false" style="float:right; margin-top:10px;" value="#{m['login_button']}" action="#{sessionManager.login()}" />
+				</fieldset>
+	
+	        </h:form>
+	    </div>
+	</ui:define>
+	
+</ui:composition>

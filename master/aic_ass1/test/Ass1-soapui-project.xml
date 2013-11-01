@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Ass1" resourceRoot="" soapui-version="3.6" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="ShippingServiceSoapBinding" type="wsdl" bindingName="{http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping}ShippingServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:9000/shipping?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:9000/shipping?wsdl"><con:part><con:url>http://localhost:9000/shipping?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ShippingService" targetNamespace="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping" xmlns:ns1="http://interfaces.services/" xmlns:ns2="http://schemas.xmlsoap.org/wsdl/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="http://localhost:9000/shipping?wsdl=ShippingService.wsdl" namespace="http://interfaces.services/"></wsdl:import>
+  <wsdl:binding name="ShippingServiceSoapBinding" type="ns1:ShippingService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ship_items">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ship_items">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ship_itemsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownAddressFault">
+        <soap:fault name="UnknownAddressFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownProductFault">
+        <soap:fault name="UnknownProductFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ShippingService">
+    <wsdl:port binding="tns:ShippingServiceSoapBinding" name="ShippingPT">
+      <soap:address location="http://localhost:9000/shipping"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:9000/shipping?wsdl=ShippingService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ShippingService" targetNamespace="http://interfaces.services/" xmlns:ns1="http://interfaces.services/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://interfaces.services/" xmlns:tns="http://interfaces.services/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="addresses" type="tns:addresses"/>
+      <xs:element name="item" type="tns:item"/>
+      <xs:element name="product" type="tns:product"/>
+      <xs:complexType name="item">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="product" type="tns:product"/>
+          <xs:element name="quantity" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="product">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="singleUnitPrice" type="xs:decimal"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+      </xs:complexType>
+      <xs:complexType name="addresses">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="city" type="xs:string"/>
+          <xs:element name="door" type="xs:int"/>
+          <xs:element name="house" type="xs:int"/>
+          <xs:element name="isBilling" type="xs:boolean"/>
+          <xs:element name="isOther" type="xs:boolean"/>
+          <xs:element name="isShipping" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="street" type="xs:string"/>
+          <xs:element minOccurs="0" name="zipCode" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+      </xs:complexType>
+      <xs:element name="UnknownProductFault" type="tns:UnknownProductFault"/>
+      <xs:complexType name="UnknownProductFault">
+        <xs:sequence>
+          <xs:element name="faultCode" nillable="true" type="xs:string"/>
+          <xs:element name="faultActor" nillable="true" type="xs:string"/>
+          <xs:element name="faultString" nillable="true" type="xs:string"/>
+          <xs:element name="faultNode" nillable="true" type="xs:string"/>
+          <xs:element name="faultRole" nillable="true" type="xs:string"/>
+          <xs:element name="elementQName" nillable="true" type="xs:QName"/>
+          <xs:element name="encodingStyle" nillable="true" type="xs:string"/>
+          <xs:element name="value" nillable="true" type="xs:string"/>
+          <xs:element name="nodeValue" nillable="true" type="xs:string"/>
+          <xs:element name="prefix" nillable="true" type="xs:string"/>
+          <xs:element name="textContent" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UnknownAddressFault" type="tns:UnknownAddressFault"/>
+      <xs:complexType name="UnknownAddressFault">
+        <xs:sequence>
+          <xs:element name="faultCode" nillable="true" type="xs:string"/>
+          <xs:element name="faultActor" nillable="true" type="xs:string"/>
+          <xs:element name="faultString" nillable="true" type="xs:string"/>
+          <xs:element name="faultNode" nillable="true" type="xs:string"/>
+          <xs:element name="faultRole" nillable="true" type="xs:string"/>
+          <xs:element name="elementQName" nillable="true" type="xs:QName"/>
+          <xs:element name="encodingStyle" nillable="true" type="xs:string"/>
+          <xs:element name="value" nillable="true" type="xs:string"/>
+          <xs:element name="nodeValue" nillable="true" type="xs:string"/>
+          <xs:element name="prefix" nillable="true" type="xs:string"/>
+          <xs:element name="textContent" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ship_items" type="tns:ship_items"/>
+      <xs:complexType name="ship_items">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="items" type="tns:item"/>
+          <xs:element minOccurs="0" name="address" type="tns:addresses"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ship_itemsResponse" type="tns:ship_itemsResponse"/>
+      <xs:complexType name="ship_itemsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UnknownProductFault">
+    <wsdl:part element="ns1:UnknownProductFault" name="UnknownProductFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownAddressFault">
+    <wsdl:part element="ns1:UnknownAddressFault" name="UnknownAddressFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ship_itemsResponse">
+    <wsdl:part element="ns1:ship_itemsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ship_items">
+    <wsdl:part element="ns1:ship_items" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ShippingService">
+    <wsdl:operation name="ship_items">
+      <wsdl:input message="ns1:ship_items" name="ship_items"></wsdl:input>
+      <wsdl:output message="ns1:ship_itemsResponse" name="ship_itemsResponse"></wsdl:output>
+      <wsdl:fault message="ns1:UnknownAddressFault" name="UnknownAddressFault"></wsdl:fault>
+      <wsdl:fault message="ns1:UnknownProductFault" name="UnknownProductFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:9000/shipping</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="ship_items" bindingOperationName="ship_items" type="Request-Response" outputName="ship_itemsResponse" inputName="ship_items" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request Success"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9000/shipping</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:ship_items>
+         <!--Zero or more repetitions:-->
+         <items>
+            <!--Optional:-->
+            <product id="f2ef1513-8cf2-461a-9166-0e1816cd4ce0">
+               <!--Optional:-->
+               <name>Moby Dick</name>
+               <!--Optional:-->
+               <singleUnitPrice>10</singleUnitPrice>
+            </product>
+            <quantity>5</quantity>
+         </items>
+         <!--Optional:-->
+         <address id="6988771b-5246-4596-9897-ae5248c1e43f">
+            <!--Optional:-->
+            <city>Innsbruck</city>
+            <door>30</door>
+            <house>14</house>
+            <isBilling>true</isBilling>
+            <isOther>false</isOther>
+            <isShipping>true</isShipping>
+            <!--Optional:-->
+            <street>Kuhngasse</street>
+            <!--Optional:-->
+            <zipCode>4543</zipCode>
+         </address>
+      </int:ship_items>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/ShippingService/ship_items"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Request Fail"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9000/shipping</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:ship_items>
+         <!--Zero or more repetitions:-->
+         <items>
+            <!--Optional:-->
+            <product id="?">
+               <!--Optional:-->
+               <name>?</name>
+               <!--Optional:-->
+               <singleUnitPrice>?</singleUnitPrice>
+            </product>
+            <quantity>?</quantity>
+         </items>
+         <!--Optional:-->
+         <address id="?">
+            <!--Optional:-->
+            <city>?</city>
+            <door>?</door>
+            <house>?</house>
+            <isBilling>?</isBilling>
+            <isOther>?</isOther>
+            <isShipping>?</isShipping>
+            <!--Optional:-->
+            <street>?</street>
+            <!--Optional:-->
+            <zipCode>?</zipCode>
+         </address>
+      </int:ship_items>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/ShippingService/ship_items"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="WarehouseServiceSoapBinding" type="wsdl" bindingName="{http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/}WarehouseServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:9000/warehouse?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:9000/warehouse?wsdl"><con:part><con:url>http://localhost:9000/warehouse?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WarehouseService" targetNamespace="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/" xmlns:ns1="http://interfaces.services/" xmlns:ns2="http://schemas.xmlsoap.org/wsdl/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="http://localhost:9000/warehouse?wsdl=WarehouseService.wsdl" namespace="http://interfaces.services/"></wsdl:import>
+  <wsdl:binding name="WarehouseServiceSoapBinding" type="ns1:WarehouseService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="check_availability">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="check_availability">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="check_availabilityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="order">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="order">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="orderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownProductFault">
+        <soap:fault name="UnknownProductFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WarehouseService">
+    <wsdl:port binding="tns:WarehouseServiceSoapBinding" name="WarehousePT">
+      <soap:address location="http://localhost:9000/warehouse"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:9000/warehouse?wsdl=WarehouseService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WarehouseService" targetNamespace="http://interfaces.services/" xmlns:ns1="http://interfaces.services/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://interfaces.services/" xmlns:tns="http://interfaces.services/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="product" type="tns:product"/>
+      <xs:complexType name="product">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="singleUnitPrice" type="xs:decimal"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+      </xs:complexType>
+      <xs:element name="UnknownProductFault" type="tns:UnknownProductFault"/>
+      <xs:complexType name="UnknownProductFault">
+        <xs:sequence>
+          <xs:element name="faultCode" nillable="true" type="xs:string"/>
+          <xs:element name="faultActor" nillable="true" type="xs:string"/>
+          <xs:element name="faultString" nillable="true" type="xs:string"/>
+          <xs:element name="faultNode" nillable="true" type="xs:string"/>
+          <xs:element name="faultRole" nillable="true" type="xs:string"/>
+          <xs:element name="elementQName" nillable="true" type="xs:QName"/>
+          <xs:element name="encodingStyle" nillable="true" type="xs:string"/>
+          <xs:element name="value" nillable="true" type="xs:string"/>
+          <xs:element name="nodeValue" nillable="true" type="xs:string"/>
+          <xs:element name="prefix" nillable="true" type="xs:string"/>
+          <xs:element name="textContent" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="check_availability" type="tns:check_availability"/>
+      <xs:complexType name="check_availability">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="product" type="tns:product"/>
+          <xs:element name="amount" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="check_availabilityResponse" type="tns:check_availabilityResponse"/>
+      <xs:complexType name="check_availabilityResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="order" type="tns:order"/>
+      <xs:complexType name="order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="p" type="tns:product"/>
+          <xs:element name="amount" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="orderResponse" type="tns:orderResponse"/>
+      <xs:complexType name="orderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UnknownProductFault">
+    <wsdl:part element="ns1:UnknownProductFault" name="UnknownProductFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="check_availability">
+    <wsdl:part element="ns1:check_availability" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="check_availabilityResponse">
+    <wsdl:part element="ns1:check_availabilityResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="orderResponse">
+    <wsdl:part element="ns1:orderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="order">
+    <wsdl:part element="ns1:order" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WarehouseService">
+    <wsdl:operation name="check_availability">
+      <wsdl:input message="ns1:check_availability" name="check_availability"></wsdl:input>
+      <wsdl:output message="ns1:check_availabilityResponse" name="check_availabilityResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="order">
+      <wsdl:input message="ns1:order" name="order"></wsdl:input>
+      <wsdl:output message="ns1:orderResponse" name="orderResponse"></wsdl:output>
+      <wsdl:fault message="ns1:UnknownProductFault" name="UnknownProductFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:9000/warehouse</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="check_availability" bindingOperationName="check_availability" type="Request-Response" outputName="check_availabilityResponse" inputName="check_availability" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9000/warehouse</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:check_availability>
+         <!--Optional:-->
+         <product id="?">
+            <!--Optional:-->
+            <name>?</name>
+            <!--Optional:-->
+            <singleUnitPrice>?</singleUnitPrice>
+         </product>
+         <amount>?</amount>
+      </int:check_availability>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/WarehouseService/check_availability"/></con:call></con:operation><con:operation isOneWay="false" action="" name="order" bindingOperationName="order" type="Request-Response" outputName="orderResponse" inputName="order" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9000/warehouse</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:order>
+         <!--Optional:-->
+         <p id="?">
+            <!--Optional:-->
+            <name>?</name>
+            <!--Optional:-->
+            <singleUnitPrice>?</singleUnitPrice>
+         </p>
+         <amount>?</amount>
+      </int:order>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/WarehouseService/order"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SupplierServiceSoapBinding" type="wsdl" bindingName="{http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/}SupplierServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:9000/supplier1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:9000/supplier1?wsdl"><con:part><con:url>http://localhost:9000/supplier1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SupplierService" targetNamespace="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/" xmlns:ns1="http://interfaces.services/" xmlns:ns2="http://schemas.xmlsoap.org/wsdl/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="http://localhost:9000/supplier1?wsdl=SupplierService.wsdl" namespace="http://interfaces.services/"></wsdl:import>
+  <wsdl:binding name="SupplierServiceSoapBinding" type="ns1:SupplierService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="order">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="order">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="orderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownProductFault">
+        <soap:fault name="UnknownProductFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SupplierService">
+    <wsdl:port binding="tns:SupplierServiceSoapBinding" name="SupplierPT">
+      <soap:address location="http://localhost:9000/supplier1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:9000/supplier1?wsdl=SupplierService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SupplierService" targetNamespace="http://interfaces.services/" xmlns:ns1="http://interfaces.services/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://interfaces.services/" xmlns:tns="http://interfaces.services/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="product" type="tns:product"/>
+      <xs:complexType name="product">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="singleUnitPrice" type="xs:decimal"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+      </xs:complexType>
+      <xs:element name="UnknownProductFault" type="tns:UnknownProductFault"/>
+      <xs:complexType name="UnknownProductFault">
+        <xs:sequence>
+          <xs:element name="faultCode" nillable="true" type="xs:string"/>
+          <xs:element name="faultActor" nillable="true" type="xs:string"/>
+          <xs:element name="faultString" nillable="true" type="xs:string"/>
+          <xs:element name="faultNode" nillable="true" type="xs:string"/>
+          <xs:element name="faultRole" nillable="true" type="xs:string"/>
+          <xs:element name="elementQName" nillable="true" type="xs:QName"/>
+          <xs:element name="encodingStyle" nillable="true" type="xs:string"/>
+          <xs:element name="value" nillable="true" type="xs:string"/>
+          <xs:element name="nodeValue" nillable="true" type="xs:string"/>
+          <xs:element name="prefix" nillable="true" type="xs:string"/>
+          <xs:element name="textContent" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="order" type="tns:order"/>
+      <xs:complexType name="order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="p" type="tns:product"/>
+          <xs:element name="amount" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="orderResponse" type="tns:orderResponse"/>
+      <xs:complexType name="orderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UnknownProductFault">
+    <wsdl:part element="ns1:UnknownProductFault" name="UnknownProductFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="orderResponse">
+    <wsdl:part element="ns1:orderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="order">
+    <wsdl:part element="ns1:order" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SupplierService">
+    <wsdl:operation name="order">
+      <wsdl:input message="ns1:order" name="order"></wsdl:input>
+      <wsdl:output message="ns1:orderResponse" name="orderResponse"></wsdl:output>
+      <wsdl:fault message="ns1:UnknownProductFault" name="UnknownProductFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:9000/supplier1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="order" bindingOperationName="order" type="Request-Response" outputName="orderResponse" inputName="order" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9000/supplier1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:order>
+         <!--Optional:-->
+         <p id="?">
+            <!--Optional:-->
+            <name>?</name>
+            <!--Optional:-->
+            <singleUnitPrice>?</singleUnitPrice>
+         </p>
+         <amount>?</amount>
+      </int:order>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping/SupplierService/order"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

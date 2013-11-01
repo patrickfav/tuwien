@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "./meta/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ticketline.db.Reihe" table="reihe">
+		<!-- BaseClass -->
+		<meta attribute="extra-import">ticketline.db.Entity</meta>
+		<meta attribute="extends">Entity</meta>
+
+		<meta attribute="class-description">
+			Jeder Saal eines Auffuehrungsortes besteht aus mehreren
+			Reihen, wobei die Reihen nicht direkt den Saelen zugeordnet
+			sind sondern den Kategorien in den Saelen. Jede Reihe wird
+			eindeutig durch die Primaerschluesselfelder der zugehoerigen
+			Kategorie und der eigenen Bezeichnung (dem Name) bestimmt.
+			Fuer jede Reihe wird gespeichert, wie viele Plaetze sie hat,
+			und welche Nummer der erste Platz der Reihe hat. Ausserdem
+			wird gespeichert ob es sich um eine Reihe mit Sitzplaetzen
+			oder mit Stehplaetzen handelt.
+		</meta>
+
+
+		<!-- PK, Properties -->
+		<composite-id name="comp_id" class="ticketline.db.ReiheKey"
+			unsaved-value="any">
+			<key-property name="bezeichnung" column="bezeichnung"
+				type="java.lang.String" length="30" />
+			<key-property name="kategoriebez" column="kategoriebez"
+				type="java.lang.String" length="30" />
+			<key-property name="saalbez" column="saalbez"
+				type="java.lang.String" length="30" />
+			<key-property name="ortbez" column="ortbez"
+				type="java.lang.String" length="30" />
+			<key-property name="ort" column="ort"
+				type="java.lang.String" length="30" />
+		</composite-id>
+
+		<property name="startplatz" type="int" column="startplatz"
+			not-null="true">
+
+			<meta attribute="field-description">
+				erste Platznummer der Reihe
+			</meta>
+
+		</property>
+
+		<property name="anzplaetze" type="int" not-null="true">
+			<meta attribute="field-description">
+				Anzahl der Plaetze > 0
+			</meta>
+
+			<column name="anzplaetze" check="anzplaetze > 0"
+				not-null="true" />
+		</property>
+		<property name="sitzplatz" type="boolean" column="sitzplatz"
+			not-null="true" length="1">
+			<meta attribute="field-description">
+				Sitzplatz (TRUE) oder Stehplatz (FALSE)
+			</meta>
+
+		</property>
+
+		<!-- Associations -->
+		<!-- derived association(s) for compound key -->
+		<!-- bi-directional many-to-one association to Kategorie -->
+		<many-to-one name="kategorie" class="ticketline.db.Kategorie"
+			update="false" insert="false" cascade="save-update">
+			<column name="kategoriebez" />
+			<column name="saalbez" />
+			<column name="ortbez" />
+			<column name="ort" />
+		</many-to-one>
+
+		<!-- end of derived association(s) -->
+
+		<!-- bi-directional one-to-many association to Belegung -->
+		<set name="belegungen" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="reihebez" />
+				<column name="kategoriebez" />
+				<column name="saalbez" />
+				<column name="ortbez" />
+				<column name="ort" />
+			</key>
+			<one-to-many class="ticketline.db.Belegung" />
+		</set>
+
+	</class>
+</hibernate-mapping>

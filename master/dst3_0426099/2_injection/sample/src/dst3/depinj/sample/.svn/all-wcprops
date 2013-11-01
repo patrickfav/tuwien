@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/156/dst/dst3_0426099/2_injection/sample/src/dst3/depinj/sample
+END
+ControllerWithInjectionsSingelton.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/tuwien-private-repo/!svn/ver/171/dst/dst3_0426099/2_injection/sample/src/dst3/depinj/sample/ControllerWithInjectionsSingelton.java
+END
+ControllerWithInjectionsPrototype.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/tuwien-private-repo/!svn/ver/171/dst/dst3_0426099/2_injection/sample/src/dst3/depinj/sample/ControllerWithInjectionsPrototype.java
+END

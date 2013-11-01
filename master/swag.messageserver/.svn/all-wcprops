@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/tuwien-private-repo/!svn/ver/176/swag/swag.messageserver
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tuwien-private-repo/!svn/ver/180/swag/swag.messageserver/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/180/swag/swag.messageserver/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tuwien-private-repo/!svn/ver/180/swag/swag.messageserver/build.xml
+END

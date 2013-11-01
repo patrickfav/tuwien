@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib
+END
+hibernate3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/hibernate3.jar
+END
+postgresql-8.4-701.jdbc4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/postgresql-8.4-701.jdbc4.jar
+END
+commons-collections-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/commons-collections-3.1.jar
+END
+antlr-2.7.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/antlr-2.7.6.jar
+END
+hibernate-validator-4.0.2.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/hibernate-validator-4.0.2.GA.jar
+END
+slf4j-api-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/slf4j-api-1.6.1.jar
+END
+jta-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/jta-1.1.jar
+END
+javassist-3.12.0.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/javassist-3.12.0.GA.jar
+END
+dom4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/dom4j-1.6.1.jar
+END
+hibernate-jpa-2.0-api-1.0.0.Final.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar
+END
+log4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/log4j.jar
+END
+validation-api-1.0.0.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/validation-api-1.0.0.GA.jar
+END
+mysql-connector-java-5.1.11-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/mysql-connector-java-5.1.11-bin.jar
+END
+slf4j-log4j12-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/lib/slf4j-log4j12-1.6.1.jar
+END

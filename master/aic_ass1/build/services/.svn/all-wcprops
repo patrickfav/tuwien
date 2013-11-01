@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/services
+END
+RegistryServiceImpl.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/services/RegistryServiceImpl.class
+END
+CustomerManagementService.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/services/CustomerManagementService.class
+END
+ShippingServiceImpl.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/services/ShippingServiceImpl.class
+END
+CustomerWrapperServiceImpl.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/services/CustomerWrapperServiceImpl.class
+END
+WarehouseServiceImpl.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/services/WarehouseServiceImpl.class
+END
+SupplierServiceImpl1.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/services/SupplierServiceImpl1.class
+END
+SupplierServiceImpl2.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/services/SupplierServiceImpl2.class
+END

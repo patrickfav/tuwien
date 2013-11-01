@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb
+END
+BuildingManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/BuildingManagementBean.java
+END
+MapManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/MapManagementBean.java
+END
+UserManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/UserManagementBean.java
+END
+ResourceManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/ResourceManagement.java
+END
+TroopManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/TroopManagementBean.java
+END
+MessageManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/MessageManagementBean.java
+END
+RankingManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/RankingManagementBean.java
+END
+BaseManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/BaseManagementBean.java
+END
+UtilizationManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/UtilizationManagementBean.java
+END

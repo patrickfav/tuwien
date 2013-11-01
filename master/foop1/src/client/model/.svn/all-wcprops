@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/fooprog2011/!svn/ver/30/trunk/foop1/src/client/model
+END
+Pacman.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/fooprog2011/!svn/ver/41/trunk/foop1/src/client/model/Pacman.java
+END
+Wall.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/fooprog2011/!svn/ver/41/trunk/foop1/src/client/model/Wall.java
+END
+GameBonus.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/fooprog2011/!svn/ver/41/trunk/foop1/src/client/model/GameBonus.java
+END
+GameMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/fooprog2011/!svn/ver/41/trunk/foop1/src/client/model/GameMap.java
+END
+Command.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/fooprog2011/!svn/ver/41/trunk/foop1/src/client/model/Command.java
+END

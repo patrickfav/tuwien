@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/tuwien-private-repo/!svn/ver/5/dst/dst1_0426099
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tuwien-private-repo/!svn/ver/6/dst/dst1_0426099/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/tuwien-private-repo/!svn/ver/6/dst/dst1_0426099/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/tuwien-private-repo/!svn/ver/6/dst/dst1_0426099/build.xml
+END

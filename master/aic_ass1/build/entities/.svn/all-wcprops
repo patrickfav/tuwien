@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/entities
+END
+Order.class
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/entities/Order.class
+END
+Addresses.class
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/entities/Addresses.class
+END
+Item.class
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/entities/Item.class
+END
+Product.class
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/entities/Product.class
+END
+Customer.class
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/entities/Customer.class
+END
+DeliveryStatus.class
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/8/aic/ass1/build/entities/DeliveryStatus.class
+END

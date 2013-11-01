@@ -1,0 +1,181 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a="http://richfaces.org/a4j"
+	template="layout/studyDetailLayout.xhtml">
+
+	
+    <ui:define name="trialHead">
+	  <f:subview id="StudyDetailNewTrialHeaderView" rendered="#{trialEditor.newTrial}">
+		<h:outputText value="#{messages['label.addnewstudy']}"/>
+	  </f:subview>
+	  <f:subview id="StudyDetailExistingTrialHeaderView" rendered="#{not trialEditor.newTrial}">
+		<h:outputText value="#{trialEditor.trial.name}" /> - [<h:outputText value="#{trialEditor.trial.localizedStatus}" />]
+	  </f:subview>
+    </ui:define>
+    
+    <ui:define name="leftMenu">
+      <h:commandButton id="overview" action="./" value="#{messages['button.general']}" styleClass="tab_selected" title="#{messages['button.general']}" disabled="true" style="cursor:default" />
+    </ui:define>
+	
+	<ui:define name="content">
+	  <a:loadScript src="js/tiny_mce-3.0.7/tiny_mce.js"></a:loadScript>
+		<h:form id="newTrialForm" enctype="multipart/form-data">
+			<div id="blatt">
+			<!-- removed nested form -->
+					<s:validateAll>
+						<div class="info">
+							<h:outputText value="#{messages['recommended.info']}" escape="false" />
+						</div>
+			
+						<h:messages errorClass="errorMessage" fatalClass="errorMessage" infoClass="logininfo" warnClass="warningMessage" layout="summary" showDetail="true" />
+			
+						<br />
+						<table cellpadding="0" cellspacing="3" border="0">
+							<tr>
+								<td width="150"><h:outputText value="#{messages['label.studyadmin']}"/>:</td>
+								<td><img src="graphics/icon/owner.gif"
+									style="border-style: none" /><h:outputText escape="true"
+									value="#{user.screenname}" /></td>
+								<td>&bnsp;</td>
+							</tr>
+							<tr>
+								<td width="150"><h:outputText value="#{messages['label.studyowner']}"/>:</td>
+								<td><img src="graphics/icon/owner.gif"
+									style="border-style: none" /><h:inputText id="trialsupervisor" value="#{trialEditor.trial.supervisor}" 
+									converter="#{blankStringAwareConverter}" size="43" tyle="width:100%" /></td>
+								<td>&bnsp;</td>
+							</tr>
+							<tr>
+								<td><h:outputText value="#{messages['label.shortlabel']}"/>: *</td>
+								<td width="300"><h:inputText id="trialName"
+									required="true" value="#{trialEditor.trial.name}" converter="#{blankStringAwareConverter}" size="43"
+									style="width:100%" /></td>
+								<td style="padding-left:10px"><h:message for="trialName" showDetail="true"	styleClass="errorMsg" /></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: top"><h:outputText value="#{messages['label.label']}"/>:</td>
+								<td width="300"><h:inputTextarea id="trialFullName"
+									value="#{trialEditor.trial.fullName}" cols="40" rows="3"
+									style="width:100%" /></td>
+								<td>&bnsp;</td>
+							</tr>
+							<tr>
+								<td><h:outputText value="#{messages['label.studybegin']}"/>:</td>
+								<td>
+								<rich:calendar 
+								  id="beginDate"
+								  popup="true"
+								  showInput="true"
+								  enableManualInput="true"
+								  buttonIcon="graphics/icon/calendar.gif"
+								  value="#{trialEditor.trial.beginDate}"
+								  datePattern="#{messages['dateformat']}"
+								  mode="client"
+								  inputStyle="margin-right: 10px"
+								  buttonStyle="vertical-align: bottom;cursor: pointer; cursor: hand;"
+								  label="#{messages['label.selectdate']}"
+								/>
+								</td>
+								<td style="padding-left:10px"><h:message for="beginDate" styleClass="errorMsg" showDetail="true" /></td>
+							</tr>
+							<tr>
+								<td><h:outputText value="#{messages['label.studyend']}"/>:</td>
+								<td style="vertical-align: baseline">
+								<rich:calendar 
+								  id="endDate"
+								  popup="true"
+								  showInput="true"
+								  enableManualInput="true"
+								  buttonIcon="graphics/icon/calendar.gif"
+								  value="#{trialEditor.trial.endDate}"
+								  datePattern="#{messages['dateformat']}"
+								  mode="client"
+								  inputStyle="margin-right: 10px"
+								  buttonStyle="vertical-align: bottom;cursor: pointer; cursor: hand;"
+								  label="#{messages['label.selectdate']}"
+								/>
+								</td>
+								<td style="padding-left:10px"><h:message for="endDate" styleClass="errorMsg" showDetail="true" /></td>
+							</tr>
+							<tr>
+							<td><h:outputText value="#{messages['label.status']}"/>:</td>
+							<td>
+							<h:selectOneMenu id="statusSelect"
+								value="#{trialEditor.status}" title="#{messages['label.status']}"
+								required="true" disabled="#{trialEditor.newTrial}">
+								<s:convertEnum />
+								<s:enumItem enumValue="CREATE" label="#{messages['label.status.create']}" />
+								<s:enumItem enumValue="EXECUTE" label="#{messages['label.status.execute']}" />
+								<s:enumItem enumValue="ANALYSE" label="#{messages['label.status.analyse']}" />
+							</h:selectOneMenu>
+							</td>
+							</tr>
+	
+							<tr>
+								<td colspan="2"><br />
+								<h:outputText value="#{messages['label.studydescription']}"/>:<br />
+								<h:inputTextarea id="trialDescription"
+									value="#{trialEditor.trial.description}" rows="20" cols="70"
+									style="width:100%" class="tiny_mce"></h:inputTextarea> <br />
+								<br />
+								</td><td>
+								&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<a:outputPanel id="attachmentWrapper">
+								<s:div id="attachmentListDiv" rendered="#{not empty trialEditor.trial.trialAttachments}">
+									<div class="info"><h:outputText
+										value="#{messages['existingattachment.info']}" /> <br />
+									</div>
+									<rich:dataList id="attachmentList" styleClass="downloadlist" var="att" value="#{trialEditor.trial.trialAttachments}" rowClasses="download">
+										<s:link view="/seam/resource/spicsfile/getfile.xhtml" value="#{att.fileName}">
+												<f:param name="taid" value="#{att.id}"/>
+										</s:link>
+										<rich:spacer width="7px"></rich:spacer>
+										<a:commandLink action="#{trialEditor.deleteTrialAttachment(att.id)}" onclick="if (!confirm(' #{messages['deletefile.question']} ')) return false;" reRender="attachmentWrapper">
+											<h:graphicImage id="deleteImg" alt="#{messages['button.delete']}" title="#{messages['button.delete']}" value="graphics/icon/delete.png"></h:graphicImage>
+										</a:commandLink>
+									</rich:dataList>
+								</s:div>
+								</a:outputPanel>
+						</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<h:outputText value="#{messages['label.addattachment']}"/>:<br />
+								<rich:fileUpload id="trialAttachmentUpload" 
+									uploadData="#{trialEditor.uploads}" 
+									immediateUpload="false"
+									maxFilesQuantity="5"
+									listHeight="140"
+									locale="#{localeSelector.locale}" >
+										<a:support event="onsizerejected" action="#{FileUploadUtils.sizeRejected}" reRender="newTrialForm" />
+								</rich:fileUpload>
+
+								</td><td style="padding-left:10px">
+								<rich:messages for="trialAttachmentUpload" showDetail="true" styleClass="errorMsg" />
+								</td>
+							</tr>
+						</table>
+						<h:inputHidden value="#{trialEditor.trial.id}" />
+						<br clear="all" />
+						<h:commandButton id="saveTrial" action="#{trialEditor.saveTrial}" value="#{messages['button.save']}" styleClass="button" title="#{messages['button.save']}" />
+						&nbsp;&nbsp;
+						<h:commandButton id="cancelTrial" action="#{trialEditor.cancelTrial}" value="#{messages['button.cancel']}" styleClass="button" title="#{messages['button.cancel']}" immediate="true" />
+						<br />
+						<br />
+					</s:validateAll>	
+			</div>
+		</h:form>
+		<script src="js/tiny_mce.js"></script>
+	</ui:define>
+
+</ui:composition>
+

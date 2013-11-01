@@ -1,0 +1,276 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	xmlns:c="http://java.sun.com/jstl/core"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="content">
+
+		<h:messages showDetail="true" layout="list" warnClass="warningMessage"
+			errorClass="errorMessage" infoClass="infoMessage" />
+
+		<div id="blatt"><h:form id="trialDataViewerForm">
+			<h1><h:outputText id="patientIDText2"
+				value="#{messages['label.patient']}: #{ViewTrialData.patient.kennnummer}" /></h1>
+
+			<rich:simpleTogglePanel switchType="client"
+				label="#{messages['label.patientproperties']}">
+				<div class="info"><h:outputText id="patientmetadatainfo"
+					value="#{messages['patientmetadata.info']}" /></div>
+				<div class="attributeValuePair">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td><b><h:outputText value="#{messages['label.patient']}" />:</b></td>
+						<td><h:outputText value="#{patient.kennnummer}" /></td>
+					</tr>
+					<tr>
+						<td><b><h:outputText
+							value="#{messages['label.includeinmyexport']}" />:</b></td>
+						<td><h:selectBooleanCheckbox value="#{patient.myExport}" /></td>
+					</tr>
+					<tr>
+						<td><b><h:outputText
+							value="#{messages['label.includeinfullexport']}" />:</b></td>
+						<td><h:selectBooleanCheckbox value="#{patient.export}" /></td>
+					</tr>
+				</table>
+				</div>
+
+				<br />
+				<h:commandButton action="#{ViewTrialData.updatePatientMetaData}"
+					styleClass="button" title="#{messages['button.save']}"
+					value="#{messages['button.save']}" />
+			</rich:simpleTogglePanel>
+
+			<div id="heightspaces" style="height: 10px" />
+			<br />
+
+			<rich:simpleTogglePanel switchType="client"
+				label="#{messages['label.charts']}"
+				rendered="#{DeploymentAction.showAuswertung and ViewTrialData.chartSelectItems.value.size() > 0}">
+				<div class="info"><h:outputText id="chartinginfo"
+					value="#{messages['charts.info']}" /></div>
+				<table cellspacing="1" cellpadding="0" border="0">
+					<tr>
+						<td width="150"><h:outputText
+							value="#{messages['label.noselection']}" /></td>
+						<td><h:selectOneMenu id="selectDiagramm"
+							value="#{chartProcessor.selectedChartName}">
+							<f:selectItems binding="#{ViewTrialData.chartSelectItems}" />
+						</h:selectOneMenu></td>
+						<td><h:commandButton id="chartBtn" styleClass="button"
+							value="#{messages['button.view']}"
+							title="#{messages['button.view']}"
+							action="#{ViewTrialData.showChart}" /></td>
+					</tr>
+				</table>
+			</rich:simpleTogglePanel>
+
+			<s:fragment rendered="#{DeploymentAction.showAuswertung and ViewTrialData.chartSelectItems.value.size() > 0}">
+				<div id="heightspaces" style="height: 10px" />
+				<br />
+			</s:fragment>
+
+			<c:forEach items="#{ViewTrialData.trialDataFragments}" var="fragment">
+				<ui:include id="fragmentInclude" src="#{fragment.fragmentUrl}" />
+			</c:forEach>
+
+			<h1><h:outputText value=" #{messages['label.appointments.overview']}" /></h1>
+			<div class="info"><h:outputText id="appointmentsinfo"
+				value="#{messages['appointments.patient.info']}" /></div>
+			
+			<rich:simpleTogglePanel
+				label="#{messages['label.appointments']}"
+				switchType="client" 
+				opened="#{patientAppointmentsDataModel.rowCount > 0}">
+
+				<a:outputPanel id="ViewPatientAppointmentsPanel">
+					<s:fragment id="ViewPatientAppointmentsNoResultView"
+						rendered="#{patientAppointmentsDataModel.rowCount == 0}">
+						<h:outputText value="#{messages['label.noappointments']}" />
+					</s:fragment>
+					
+					<s:fragment id="ViewPatientAppointmentsShowResultsView"
+						rendered="#{patientAppointmentsDataModel.rowCount > 0}">
+						<rich:dataTable id="patientAppointmentsViewerTable" 
+							var="currentAppointment" 
+							value="#{patientAppointmentsDataModel}"
+							cellspacing="0" 
+							cellpadding="0"
+							width="100%">
+
+							<f:facet name="header">
+								<rich:columnGroup>
+									<rich:column><h:outputText value="#{messages['label.datetime']}" /></rich:column>
+									<rich:column><h:outputText value="#{messages['label.title']}" /></rich:column>
+									<rich:column><h:outputText value="" /></rich:column>
+								</rich:columnGroup>
+							</f:facet>
+
+							<rich:column>
+								<h:outputText value="#{currentAppointment.startDate}">
+									<s:convertDateTime type="both" pattern="dd.MM.yyyy HH:mm"/>
+								</h:outputText>
+							</rich:column>
+							<rich:column>
+								<h:outputText value="#{currentAppointment.title}" />
+							</rich:column>
+							<rich:column>
+								<a:commandLink id="appointmentEdit" action="#{ViewTrialData.editAppointment}">
+									<h:outputText value="#{messages['label.edit']}" />
+								</a:commandLink>
+							</rich:column>
+							
+						</rich:dataTable>
+						
+					<br />
+					<br />
+
+					</s:fragment>
+
+					<s:div style="width: inherit;">
+						<h:commandButton id="addAppointment" styleClass="button"
+							value="#{messages['button.add']}"
+							title="#{messages['button.add']}"
+							action="#{ViewTrialData.createAppointment}" />
+					</s:div>
+				</a:outputPanel>
+
+			</rich:simpleTogglePanel>
+
+			<div id="heightspaces" style="height: 10px" />
+			<br />
+			
+			<h1><h:outputText value=" #{messages['label.overviewtrials']}" /></h1>
+			<div class="info"><h:outputText id="inserttrialoverviewinfo"
+				value="#{messages['inserttrial_overview.info']}" /></div>
+
+			<a:repeat id="trialFormsList" var="currentTF"
+				value="#{trialFormsView}">
+				<rich:simpleTogglePanel
+					label="#{currentTF.name} #{currentTF.archived ? - messages['label.archived'] : ''}"
+					switchType="client">
+
+					<div class="remark"><h:outputText id="trialFormInfo"
+						value="#{currentTF.description}" /></div>
+
+					<s:div rendered="#{currentTF.fillOnce}" styleClass="info">
+						<h:outputText id="fillOnceInfo"
+							value="#{messages['fillonce.info']}" />
+					</s:div>
+
+					<s:div styleClass="info"
+						rendered="#{empty currentTF.patientTrialData}">
+						<h:outputText id="inserttrialemptygroupinfo"
+							value="#{messages['inserttrial_emptygroup.info']}" />
+					</s:div>
+
+					<h:dataTable id="ViewTrialDataTable"
+						rendered="#{not empty currentTF.patientTrialData}" var="currentTD"
+						value="#{currentTF.patientTrialData}" headerClass="cl_header"
+						styleClass="concrete_list" rowClasses="odd_el,even_el"
+						columnClasses="cl_left,cl_left,cl_left,cl_left,cl_left"
+						preserveDataModel="true" cellspacing="0" cellpadding="0"
+						border="0" width="100%">
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="#{messages['label.createdAt']}" />
+							</f:facet>
+							<h:commandLink id="savedOn"
+								action="#{ViewTrialData.editTrialData (currentTD)}">
+								<h:outputText value="#{currentTD.savedOn}">
+									<s:convertDateTime type="both"
+										pattern="#{messages['dateformat']} #{messages['timeformat']}" />
+								</h:outputText>
+							</h:commandLink>
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="#{messages['label.createdBy']}" />
+							</f:facet>
+							<h:commandLink id="savedBy"
+								action="#{ViewTrialData.editTrialData (currentTD)}">
+								<img alt="Partner" src="./graphics/icon/owner.gif" />
+								<h:outputText value="#{currentTD.savedBy.screenname}" />
+							</h:commandLink>
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="#{messages['label.lastmodifiedAt']}" />
+							</f:facet>
+							<h:outputText value="#{currentTD.lastModified}">
+								<s:convertDateTime type="both"
+									pattern="#{messages['dateformat']} #{messages['timeformat']}" />
+							</h:outputText>
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="#{messages['label.lastmodifiedBy']}" />
+							</f:facet>
+							<img alt="Partner" src="./graphics/icon/owner.gif" />
+							<h:outputText value="#{currentTD.lastModifiedBy.screenname}" />
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value=""></h:outputText>
+							</f:facet>
+							<s:link view="/seam/resource/spicsexcel/getexcel.xhtml"
+								value="xls">
+								<f:param name="tdid" value="#{currentTD.id}" />
+							</s:link>
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value=""></h:outputText>
+							</f:facet>
+							<h:commandLink id="undo"
+								action="#{ViewTrialData.undo (currentTD)}">
+								<h:outputText value="#{messages['label.changes']}" />
+							</h:commandLink>
+						</h:column>
+					</h:dataTable>
+
+					<br />
+					<br />
+
+					<s:div style="width: inherit;"
+						rendered="#{ViewTrialData.canAddTrialData(currentTF) and s:hasPermission(ViewTrialData.patient, 'editPatient')}">
+						<h:commandButton id="addBtn" styleClass="button"
+							value="#{messages['button.add']}"
+							title="#{messages['button.add']}"
+							action="#{ViewTrialData.createTrialData}" />
+						<h:commandButton id="importBtn" styleClass="button"
+							value="#{messages['button.import']}"
+							title="#{messages['button.import']}"
+							action="#{ViewTrialData.importTrialData}" />
+					</s:div>
+
+				</rich:simpleTogglePanel>
+
+				<br />
+				<rich:spacer height="7px" />
+
+			</a:repeat>
+
+			<br />
+
+			<h:commandButton id="backBtn" styleClass="button"
+				value="#{messages['button.back']}"
+				title="#{messages['button.back']}" action="#{ViewTrialData.back}" />
+
+		</h:form></div>
+	</ui:define>
+</ui:composition>
+

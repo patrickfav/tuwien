@@ -1,0 +1,47 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="content">
+
+		<h:messages showDetail="true" layout="summary" warnClass="warningMessage" errorClass="errorMessage" />
+
+		<div id="blatt">
+		<h:form id="trialFormArchiverForm">
+
+			<h:outputText id="archiveTFInfoTxt" value="#{messages['archivetrialform.info']}" />
+
+			<br />
+			
+			<table>
+				<tr>
+				<td><h:selectBooleanCheckbox title="stillFillableCB" value="#{TrialFormArchiver.stillFillable}" /></td>
+				<td><h:outputText title="stillFillableTxt" value="#{messages['label.stillfillable']}"/></td>
+				</tr>
+			</table>
+
+			<br />
+
+			<h:commandButton id="approveBtn" styleClass="button"
+						title="#{messages['button.approve']}" value="#{messages['button.approve']}"
+						action="#{TrialFormArchiver.doArchive}" />
+
+			<h:commandButton id="chancelBtn" styleClass="button"
+					title="#{messages['button.cancel']}" value="#{messages['button.cancel']}"
+					action="#{TrialFormArchiver.cancelArchive}" immediate="true" />
+
+		
+		</h:form>
+		</div>
+
+	</ui:define>
+
+</ui:composition>
+

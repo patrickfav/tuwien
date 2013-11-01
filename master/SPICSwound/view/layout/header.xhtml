@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+
+	<f:subview id="HeaderAndMainSubView">
+		<div id="top"><ui:insert name="top">
+			<ui:include src="top.xhtml">
+			</ui:include>
+		</ui:insert></div>
+
+		<div id="mainmenu"><ui:insert name="mainmenu">
+			<ui:include src="mainmenu.xhtml" />
+		</ui:insert></div>
+	</f:subview>
+
+	<s:div id="SubMenuView" rendered="#{Menu.showSubmenu()}">
+		<ui:insert name="submenu">
+			<ui:include src="submenu.xhtml" />
+		</ui:insert>
+	</s:div>
+
+</ui:composition>

@@ -1,0 +1,99 @@
+«IMPORT metamodel»
+
+«EXTENSION template::GeneratorExtensions»
+
+«DEFINE main FOR Model»
+«EXPAND javaClass FOREACH entities()»
+«ENDDEFINE»
+
+«DEFINE javaClass FOR Entity»
+	«FILE name+"DAO.java"»
+		package daos;
+		
+		import javax.persistence.*;
+		import java.util.*;
+		
+		import util.*;
+		import exceptions.*;
+		import models.«name»;
+				
+		public abstract class «name»DAO 
+		{
+			public static void insert(«name» «name.toFirstLower()») throws NoTransactionException
+			{
+				«listenerUtil()».beforeInsert(«name».class);
+				
+				if(«databaseUtil()».getTransaction().isActive())
+				{
+					«databaseUtil()».persist(«name.toFirstLower()»);
+					«listenerUtil()».afterInsert(«name».class);
+				}
+				else
+				{
+					«listenerUtil()».afterInsert(«name».class);
+					throw new NoTransactionException();
+				}
+
+			}
+			
+			public static void update(«name» «name.toFirstLower()») throws NoTransactionException
+			{
+				«listenerUtil()».beforeUpdate(«name».class);
+				if(«databaseUtil()».getTransaction().isActive())
+				{
+					«databaseUtil()».merge(«name.toFirstLower()»);
+					«listenerUtil()».afterUpdate(«name».class);
+				}
+				else
+				{
+					«listenerUtil()».afterUpdate(«name».class);
+					throw new NoTransactionException();
+				}
+			}
+			
+			public static void delete(«name» «name.toFirstLower()») throws NoTransactionException
+			{
+				«listenerUtil()».beforeDelete(«name».class);
+				if(«databaseUtil()».getTransaction().isActive())
+				{
+					«databaseUtil()».remove(«name.toFirstLower()»);
+					«listenerUtil()».afterDelete(«name».class);
+				}
+				else
+				{
+					«listenerUtil()».afterDelete(«name».class);
+					throw new NoTransactionException();
+				}
+			}
+			
+			public static List<«name»> findAll()
+			{
+				«listenerUtil()».beforeFind(«name».class, "findAll");
+				
+				List<«name»> list = (List<«name»>)«databaseUtil()».createQuery("select x from «name» x").getResultList();
+
+				«listenerUtil()».afterFind(«name».class, "findAll");
+				
+				return list;
+			}
+			
+			«FOREACH queries AS q»
+			
+			public static List<«name»> «q.methodName»
+				(«FOREACH q.parameters AS p SEPARATOR ','»
+					«p.type.name» «p.name»
+				«ENDFOREACH»)
+			{
+				«listenerUtil()».beforeFind(«name».class, "«q.methodName»");
+				
+				List<«name»> list = (List<«name»>)«databaseUtil()».createQuery(«q.queryString»).getResultList();
+				
+				«listenerUtil()».afterFind(«name».class, "«q.methodName»");
+				
+				return list;
+			}
+			
+			«ENDFOREACH»
+		}
+	«ENDFILE»
+«ENDDEFINE»

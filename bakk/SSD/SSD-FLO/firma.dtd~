@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Dateiname: firma.dtd -->
+	
+	<!-- FIRMA -->
+	<!ELEMENT firma (team+, projekt*)>
+	<!ATTLIST firma 
+   				name NMTOKEN #REQUIRED
+   				nummer ID #FIXED 'e0604411'
+	> 
+   
+   	<!-- TEAM -->
+	<!ELEMENT team (mitarbeiter, mitarbeiter, mitarbeiter*)>
+	<!ATTLIST team 
+   				id ID #REQUIRED
+	>
+   	
+	<!-- MITARBEITER -->
+	<!ELEMENT MITARBEITER (#PCDATA)>
+	<!ATTLIST MITARBEITER 
+   				position (leiter | mitglied) 'mitglied'
+	>
+   
+   
+   	<!-- PROJEKT -->
+	<!ELEMENT PROJEKT (NAME, BESCHREIBUNG?)>
+	<!ATTLIST PROJEKT 
+   				team IDREF #REQUIRED
+   				arbeitsstunden NMTOKEN #IMPLIED
+	>
+	
+	<!-- SONSTIGE ELEMENTE -->
+	<!ELEMENT BESCHREIBUNG (#PCDATA | SCHLAGWORT)*>
+	<!ELEMENT NAME (#PCDATA)>
+	<!ELEMENT SCHLAGWORT (#PCDATA)>
+	
+

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/gsm
+END
+File.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/gsm/File.java
+END
+SimCard.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/gsm/SimCard.java
+END
+GSM11Impl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/gsm/GSM11Impl.java
+END
+GSM11ImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/gsm/GSM11ImplTest.java
+END
+SimCardAdaptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/gsm/SimCardAdaptor.java
+END

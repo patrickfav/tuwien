@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+	  
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>SWAG</title>
+		<link href="../css/styles.css" rel="stylesheet" type="text/css" />
+		<link rel="SHORTCUT ICON" href="../images/favicon.ico" />
+	</h:head>
+	
+	<body>
+		<div id="header">
+			<p:outputPanel id="headerInfo">
+	    	<table width="100%" cellpadding="0" cellspacing="0" id="header_table">
+	        	<tr>
+	           		<td>
+	    				<img src="../images/template/logo.png" width="150" height="50" alt="Logo" />
+	                </td>
+	                <td>
+	    				<h:link outcome="map">#{m['nav_map']} #{sessionManager.map.name}</h:link>	
+					</td>
+	                 <td>
+	    				<h:form>    
+	        				<h:selectOneMenu id="maps" value="#{sessionManager.base}" converter="#{baseConverter}" required="#{true}" requiredMessage="#{m['base_required']}">
+								<f:selectItems var="base" itemLabel="Base #{base.id}" value="#{sessionManager.userMap.bases}" />
+							</h:selectOneMenu>
+	        				<h:commandButton ajax="false" value="#{m['map_goto_base']}" action="#{baseManager.show()}" />
+	        			</h:form>	
+					</td>
+	                <td>
+	                	<h:form>
+	                	<img src="../images/icons/ic_wood.png" width="20" height="20" alt="Wood" align="absmiddle" />
+	                	<h:outputText id="wood_count" value="#{sessionManager.getWoodStock()}" />
+	                	<p:poll interval="#{guiConfig.getResourcePollingIntervall()}" update="wood_count" />
+	                	</h:form>
+	                </td>
+	                <td>
+	                	<h:form>
+	                	<img src="../images/icons/ic_stone.png" width="20" height="20" alt="Stone" align="absmiddle" />
+	                	<h:outputText id="stone_count" value="#{sessionManager.getStoneStock()}" />
+	                	<p:poll interval="#{guiConfig.getResourcePollingIntervall()}" update="stone_count" />
+	                	</h:form>
+	                </td>
+	                <td>
+	                	<h:form>
+	                	<img src="../images/icons/ic_iron.png" width="20" height="20" alt="Iron" align="absmiddle" />
+	                	<h:outputText id="iron_count" value="#{sessionManager.getIronStock()}" />
+	                	<p:poll interval="#{guiConfig.getResourcePollingIntervall()}" update="iron_count" />
+	                	</h:form>
+	                </td>
+	                <td>
+	                	<h:form>
+	                	<h:outputText value="Points: " />
+	                	<h:outputText id="point_count" value="#{sessionManager.user.points}" />
+	                	<p:poll interval="#{guiConfig.getPointPollingIntervall()}" update="point_count" />
+	                	</h:form>
+	                </td>
+	                <td>
+	                	<h:form>
+	                		<h:link outcome="ranking">#{m['nav_ranking']}</h:link>
+	                	</h:form>
+	                </td>
+	                <td>
+	                	<h:form>
+	                		<h:link outcome="messages">#{m['nav_messages']}</h:link>&nbsp;<h:outputText id="msg_count" value="(#{sessionManager.getNewMessagesCount()})" />
+	                		<p:poll interval="#{guiConfig.getMessagePollingIntervall()}" update="msg_count" />
+	                	</h:form>
+	                </td>
+	                <td>
+	                	<h:form>
+							<h:outputText value="#{m['logged_in_as']} #{sessionManager.user.username}" rendered="#{sessionManager.loggedIn}" />
+							<h:commandLink value="#{m['logout']}" action="#{sessionManager.logout()}" rendered="#{sessionManager.loggedIn}" />
+						</h:form>
+	                </td>
+	                <td>
+	                	<h:form>
+	                		<h:commandLink value="#{m['quit']}" action="#{sessionManager.quit()}" rendered="#{sessionManager.loggedIn}" />
+	                	</h:form>
+	                </td>
+				</tr>
+			</table>
+			</p:outputPanel>
+		</div>
+	    <ui:insert name="content"/>
+	</body>	  
+	  
+</html>

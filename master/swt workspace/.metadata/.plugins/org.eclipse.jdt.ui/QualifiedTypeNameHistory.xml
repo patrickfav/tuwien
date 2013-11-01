@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="ass0.RingBuffer"/>
+<fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+<fullyQualifiedTypeName name="RingBufferTestCoverage"/>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="org.junit.runners.Suite.SuiteClasses"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="junit.framework.TestSuite"/>
+<fullyQualifiedTypeName name="junit.extensions.abbot.ComponentTestFixture"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="java.awt.Component"/>
+<fullyQualifiedTypeName name="abbot.finder.matchers.ClassMatcher"/>
+<fullyQualifiedTypeName name="abbot.tester.JButtonTester"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="fit.ColumnFixture"/>
+<fullyQualifiedTypeName name="example23.DoubleFixture"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="fit.ActionFixture"/>
+<fullyQualifiedTypeName name="abbot.finder.BasicFinder"/>
+<fullyQualifiedTypeName name="abbot.finder.TestHierarchy"/>
+<fullyQualifiedTypeName name="JCalcFixtureHelper"/>
+<fullyQualifiedTypeName name="nz.ac.waikato.modeljunit.StopOnFailureListener"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="nz.ac.waikato.modeljunit.examples.RingBufferWithAdaptor"/>
+<fullyQualifiedTypeName name="nz.ac.waikato.modeljunit.coverage.ActionCoverage"/>
+<fullyQualifiedTypeName name="nz.ac.waikato.modeljunit.coverage.StateCoverage"/>
+</qualifiedTypeNameHistroy>

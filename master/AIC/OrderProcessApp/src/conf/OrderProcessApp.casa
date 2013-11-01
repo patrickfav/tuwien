@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://infosys.tuwien.ac.at/aic10/ass2/process" xmlns:ns2="http://infosys.tuwien.ac.at/aic10/ass1/dto/customer" xmlns:ns3="http://infosys.tuwien.ac.at/aic10/ass1/dto/warehouse" xmlns:ns4="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping" xmlns:ns5="http://infosys.tuwien.ac.at/aic10/ass1/dto/supplier" xmlns:ns6="http://enterprise.netbeans.org/bpel/OrderProcessBPEL/OrderProcess" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="OrderProcessPort" interface-name="ns1:OrderProcessPortType" name="endpoint1" service-name="ns1:OrderProcessService"/>
+        <endpoint endpoint-name="CustomerManagementPT" interface-name="ns2:CustomerWrapperService" name="endpoint2" service-name="ns2:CustomerService"/>
+        <endpoint endpoint-name="WarehousePT" interface-name="ns3:WarehouseService" name="endpoint3" service-name="ns3:WarehouseService"/>
+        <endpoint endpoint-name="ShippingPT" interface-name="ns4:ShippingService" name="endpoint4" service-name="ns4:ShippingService"/>
+        <endpoint endpoint-name="SupplierPT" interface-name="ns5:SupplierService" name="endpoint5" service-name="ns5:SupplierService"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="OrderProcessProvider_myRole" file-path="orderProcessBPEL.bpel" interface-name="ns1:OrderProcessPortType" name="endpoint6" process-name="OrderProcess" service-name="ns6:PartnerLink1"/>
+        <endpoint display-name="CustomerPartnerLink" endpoint-name="CustomerWrapperServiceRole_partnerRole" file-path="orderProcessBPEL.bpel" interface-name="ns2:CustomerWrapperService" name="endpoint7" process-name="OrderProcess" service-name="ns6:CustomerPartnerLink"/>
+        <endpoint display-name="ShippingPartnerLink" endpoint-name="ShippingServiceRole_partnerRole" file-path="orderProcessBPEL.bpel" interface-name="ns4:ShippingService" name="endpoint8" process-name="OrderProcess" service-name="ns6:ShippingPartnerLink"/>
+        <endpoint display-name="WarehousePartnerLink" endpoint-name="WarehouseServiceRole_partnerRole" file-path="orderProcessBPEL.bpel" interface-name="ns3:WarehouseService" name="endpoint9" process-name="OrderProcess" service-name="ns6:WarehousePartnerLink"/>
+        <endpoint display-name="SupplierPartnerLink2" endpoint-name="SupplierServiceRole_partnerRole" file-path="orderProcessBPEL.bpel" interface-name="ns5:SupplierService" name="endpoint10" process-name="OrderProcess" service-name="ns6:SupplierPartnerLink2"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="OrderProcessBPEL.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="OrderProcessApp-OrderProcessBPEL" unit-name="OrderProcessBPEL" unknown="false" x="136" y="99">
+            <provides endpoint="endpoint6"/>
+            <consumes endpoint="endpoint7"/>
+            <consumes endpoint="endpoint8"/>
+            <consumes endpoint="endpoint9"/>
+            <consumes endpoint="endpoint10"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="OrderProcessApp-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port x="67" y="276">
+                    <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/customerwrapperservice.wsdl#xpointer(/definitions/service[@name='CustomerService']/port[@name='CustomerManagementPT'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+                <port x="67" y="197">
+                    <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/shippingservice.wsdl#xpointer(/definitions/service[@name='ShippingService']/port[@name='ShippingPT'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint4"/>
+                    <provides endpoint="endpoint4"/>
+                </port>
+                <port x="67" y="118">
+                    <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/supplierservice2.wsdl#xpointer(/definitions/service[@name='SupplierService']/port[@name='SupplierPT'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint5"/>
+                    <provides endpoint="endpoint5"/>
+                </port>
+                <port x="67" y="39">
+                    <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/warehouseservice.wsdl#xpointer(/definitions/service[@name='WarehouseService']/port[@name='WarehousePT'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
+                </port>
+                <port x="67" y="355">
+                    <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/www.infosys.tuwien.ac.at/teaching/courses/IntAppl/OrderProcess.wsdl#xpointer(/definitions/service[@name='OrderProcessService']/port[@name='OrderProcessPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint7" provider="endpoint2" state="unchanged"/>
+        <connection consumer="endpoint1" provider="endpoint6" state="unchanged"/>
+        <connection consumer="endpoint9" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint8" provider="endpoint4" state="unchanged"/>
+        <connection consumer="endpoint10" provider="endpoint5" state="unchanged"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiServiceUnits/META-INF/OrderProcessBPEL/src/_references/_cache/localhost_9000/registryservice.wsdl#xpointer(/definitions/portType[@name='RegistryService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/customerwrapperservice.wsdl#xpointer(/definitions/portType[@name='CustomerWrapperService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/shippingservice.wsdl#xpointer(/definitions/portType[@name='ShippingService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/supplierservice2.wsdl#xpointer(/definitions/portType[@name='SupplierService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/warehouseservice.wsdl#xpointer(/definitions/portType[@name='WarehouseService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/www.infosys.tuwien.ac.at/teaching/courses/IntAppl/OrderProcess.wsdl#xpointer(/definitions/portType[@name='OrderProcessPortType'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiServiceUnits/META-INF/OrderProcessBPEL/src/_references/_cache/localhost_9000/registryservice.wsdl#xpointer(/definitions/binding[@name='RegistryServiceSoapBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/customerwrapperservice.wsdl#xpointer(/definitions/binding[@name='CustomerServiceSoapBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/shippingservice.wsdl#xpointer(/definitions/binding[@name='ShippingServiceSoapBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/supplierservice2.wsdl#xpointer(/definitions/binding[@name='SupplierServiceSoapBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/warehouseservice.wsdl#xpointer(/definitions/binding[@name='WarehouseServiceSoapBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/www.infosys.tuwien.ac.at/teaching/courses/IntAppl/OrderProcess.wsdl#xpointer(/definitions/binding[@name='OrderProcessBinding'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiServiceUnits/META-INF/OrderProcessBPEL/src/_references/_cache/localhost_9000/registryservice.wsdl#xpointer(/definitions/service[@name='RegistryService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/customerwrapperservice.wsdl#xpointer(/definitions/service[@name='CustomerService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/shippingservice.wsdl#xpointer(/definitions/service[@name='ShippingService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/supplierservice2.wsdl#xpointer(/definitions/service[@name='SupplierService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/localhost_9000/warehouseservice.wsdl#xpointer(/definitions/service[@name='WarehouseService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/OrderProcessBPEL/www.infosys.tuwien.ac.at/teaching/courses/IntAppl/OrderProcess.wsdl#xpointer(/definitions/service[@name='OrderProcessService'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>

@@ -1,0 +1,88 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:sb="http://myfaces.apache.org/sandbox"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	template="layout/studyLayout.xhtml">
+
+	<ui:define name="content">
+
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tbody>
+				<tr>
+					<td width="*" valign="top" class="contentarea"><b>Erweiterte
+					Suche </b> <br />
+					<br />
+					<div class="info">Hier können Sie eine Ihrer Studien mit
+					erweiterten Attributen suchen.</div>
+					<table cellpadding="4" border="0">
+						<tbody>
+							<tr>
+								<td align="left" scope="row">Name der Studie:</td>
+								<td><input type="text" name="search1" size="15"
+									class="search" /></td>
+							</tr>
+							<tr>
+								<td align="left" scope="row">Beschreibung der Studie:</td>
+								<td><input type="text" name="search2" size="15"
+									class="search" /></td>
+							</tr>
+							<tr>
+								<td align="left" scope="row">Studienleiter:</td>
+								<td><input type="text" name="search3" size="15"
+									class="search" /></td>
+							</tr>
+							<tr>
+								<td align="left" scope="row">Studienzeitraum</td>
+								<td>
+								<table cellspacing="0" cellpadding="1" border="0">
+									<tbody>
+										<tr>
+											<td>Von:</td>
+											<td><input type="text" class="search" name="beginn"
+												size="20" /></td>
+											<td><a href=""><img border="0"
+												title="Datum auswählen" alt="Datum auswählen"
+												src="graphics/icon/calendar.gif" /></a></td>
+										</tr>
+										<tr>
+											<td>Bis:</td>
+											<td><input type="text" class="search" name="beginn"
+												size="20" /></td>
+											<td><a href=""><img border="0"
+												title="Datum auswählen" alt="Datum auswählen"
+												src="graphics/icon/calendar.gif" /></a></td>
+										</tr>
+									</tbody>
+								</table>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" scope="row">Attributname:</td>
+								<td><input type="text" name="search5" size="15"
+									class="search" /></td>
+							</tr>
+							<tr>
+								<td align="left" scope="row">Patient:</td>
+								<td><input type="text" name="search6" size="15"
+									class="search" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<br />
+
+					<p><input type="button" title="#{messages['button.search']}" value="#{messages['button.search']}"
+						class="button" /></p>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+
+	</ui:define>
+</ui:composition>

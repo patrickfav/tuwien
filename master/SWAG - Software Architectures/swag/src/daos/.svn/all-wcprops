@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/swag/!svn/ver/34/trunk/swag/src/daos
+END
+BaseSquareDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/BaseSquareDAO.java
+END
+PlayerDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/PlayerDAO.java
+END
+BuildingDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/BuildingDAO.java
+END
+MapDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/MapDAO.java
+END
+MapSquareDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/MapSquareDAO.java
+END
+BuildingTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/BuildingTypeDAO.java
+END
+TroopDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/TroopDAO.java
+END
+MessageDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/MessageDAO.java
+END
+TroopTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/TroopTypeDAO.java
+END
+BaseDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/BaseDAO.java
+END
+ResourcesDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/swag/!svn/ver/31/trunk/swag/src/daos/ResourcesDAO.java
+END

@@ -1,0 +1,112 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	template="/templates/game.xhtml">
+
+	<!-- content -->
+	<ui:define name="content">
+		
+		<div style="font-size:85%; width:90%; margin:auto;">
+		<h1>#{m['msg_headline']}</h1>
+		
+		<p:messages id="messages" showDetail="false"/>
+		<h:form id="send_box">
+			<p:fieldset legend="#{m['msg_sendfieldset']}" toggleable="true" toggleSpeed="300">  
+					<div class="entry">
+						<div class="label"><h:outputLabel for="users" value="#{m['msg_receiver']}" /></div>
+						<div class="input">
+							<h:selectOneMenu id="users" value="#{messageManager.receiver}" converter="#{userConverter}">
+								<f:selectItems var="user" itemLabel="#{user.username}" value="#{messageManager.getAllUserWithoutCurrent(sessionManager.user)}" noSelectionValue="#{m['no_selection']}" />
+							</h:selectOneMenu>
+						</div>
+					</div>
+		
+					<div class="entry oddDark">
+						<div class="label"><h:outputLabel for="subject" value="#{m['msg_subject']}" /></div>
+						<div class="input">
+							<h:inputText id="subject" size="20" value="#{messageManager.subject}" />
+						</div>
+					</div>
+					
+					<div class="entry">
+						<div class="label"><h:outputLabel for="content" value="#{m['msg_content']}" /></div>
+						<div class="input">
+							<h:inputTextarea style="width:350px; height:150px" id="content" value="#{messageManager.content}" />
+						</div>
+					</div>
+	
+					<p:commandButton style="float:right;" update=":messages,:send_box" value="#{m['button_send']}" action="#{messageManager.send(sessionManager.user)}" />
+			</p:fieldset>
+		</h:form>
+		
+		<p:spacer height="25" />
+		
+		<div>
+			<h:form>
+				<p:dataTable id="msg_table" var="msg" value="#{sessionManager.getAllMessages()}" paginator="true" rows="10" 
+							selection="#{sessionManager.selectedMessage}" selectionMode="single"  
+	                		onRowSelectUpdate="display" onRowSelectComplete="msgDialog.show()">
+	                		
+					<p:column>  
+			            <h:graphicImage value="../images/icons/new.png" rendered="#{sessionManager.isNewMessage(msg)}"/>
+			            <h:graphicImage value="../images/icons/email.png" rendered="#{msg.sentByMail}"/>
+			        </p:column>
+			        
+					<p:column>  
+			            <f:facet name="header">  
+			                <h:outputText value="#{m['msg_sender']}" />  
+			            </f:facet>  
+			            <h:outputText value="#{msg.sender.username}" rendered="#{msg.sender != null}"/>
+			            <h:outputText value="#{m['msg_systemSender']}" rendered="#{msg.sender == null}"/> 
+			        </p:column>
+					
+					<p:column>  
+			            <f:facet name="header">  
+			                <h:outputText value="#{m['msg_subject']}" />  
+			            </f:facet>  
+			            <h:outputText value="#{msg.subject}" />  
+			        </p:column>
+				
+					<p:column sortBy="#{msg.sendDate}">  
+			            <f:facet name="header">  
+			                <h:outputText value="#{m['msg_sendDate']}" />  
+			            </f:facet>  
+			            <h:outputText value="#{msg.sendDate}" />  
+			        </p:column>
+				</p:dataTable>
+				
+				<p:dialog header="#{m['msg_headline']}" widgetVar="msgDialog" resizable="true"  
+	              width="400">  
+	  
+			        <h:panelGrid id="display" columns="2" cellpadding="4">  
+			  
+			  			<h:outputText value="#{m['msg_sender']}:" />  
+			            <h:outputText value="#{msg.sender.username}" rendered="#{msg.sender != null}"/>
+			            <h:outputText value="#{m['msg_systemSender']}" rendered="#{msg.sender == null}"/>   
+			            
+			            <h:outputText value="#{m['msg_subject']}:" />  
+			            <h:outputText value="#{sessionManager.selectedMessage.subject}" />  
+			  			
+			  			<h:outputText value="" />
+			  			<hr /> 
+			  			
+			  			<h:outputText value="" />
+			            <h:outputText value="#{sessionManager.selectedMessage.text}" />  
+			  			
+			  			<h:outputText value="" />
+			  			<p:commandButton value="#{m['button_reply']}"
+			  				oncomplete="msgDialog.hide()" update=":send_box"
+			  				action="#{messageManager.replyMessage(sessionManager.selectedMessage.sender,sessionManager.selectedMessage.subject)}"/>
+			        </h:panelGrid>  
+			    </p:dialog> 
+				
+				<p:poll interval="#{guiConfig.getMessagePollingIntervall()}" update="msg_table" />
+			</h:form>
+		</div>
+		</div>
+	</ui:define>
+	
+</ui:composition>

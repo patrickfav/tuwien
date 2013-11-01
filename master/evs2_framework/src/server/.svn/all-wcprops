@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server
+END
+RestServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/RestServer.java
+END
+LocationIndexServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/LocationIndexServer.java
+END
+GatewayServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/GatewayServer.java
+END
+ExternalServiceServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/ExternalServiceServer.java
+END
+MetaServiceServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/MetaServiceServer.java
+END

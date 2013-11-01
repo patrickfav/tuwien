@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/interfaces
+END
+IFileServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/interfaces/IFileServer.java
+END
+IServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/interfaces/IServer.java
+END
+INameServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/26/verteilte-systeme/DSLAB2/src/interfaces/INameServer.java
+END

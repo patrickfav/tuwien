@@ -1,0 +1,88 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	xmlns:c="http://java.sun.com/jstl/core"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="trialHead">
+		<h:outputText value="#{messages['button.properties']}" />
+	</ui:define>
+
+	<ui:define name="content">
+
+		<style>
+.rich-inplace-view {
+	color: #000000;
+	border: none;
+}
+
+.rich-inplace-input-view-hover {
+	color: #008cca;
+}
+</style>
+
+		<div id="blatt"><h:form id="propertyViewerForm">
+
+			<div class="info"><h:outputText
+				value="#{messages['properties.info']}" /></div>
+
+			<div id="top" align="center"
+				style="text-align: center; padding-top: 20px; padding-left: 20px;">
+
+			<a:outputPanel id="ViewUsersPanel">
+				<s:fragment id="ViewPropsNoResultView"
+					rendered="#{propertyList.rowCount == 0}">
+					<h:outputText value="#{messages['label.nothingfound']}" />
+				</s:fragment>
+
+				<s:fragment id="ViewPropsShowResultsView"
+					rendered="#{propertyList.rowCount > 0}">
+
+					<rich:panel id="messages">
+						<rich:messages errorClass="errorMessage" fatalClass="errorMessage"
+							infoClass="infoMessage" warnClass="warningMessage" layout="list"
+							showSummary="true" />
+					</rich:panel>
+
+					<rich:dataTable id="propsViewerTable" var="currentProperty"
+						value="#{propertyList}" cellpadding="0" cellspacing="0">
+						<f:facet name="header">
+							<rich:columnGroup>
+								<rich:column>
+									<h:outputText value="#{messages['label.key']}" />
+								</rich:column>
+								<rich:column>
+									<h:outputText value="#{messages['label.value']}" />
+								</rich:column>
+							</rich:columnGroup>
+						</f:facet>
+						<rich:column>
+							<h:outputText value="#{currentProperty.key}" />
+						</rich:column>
+						<rich:column>
+							<rich:inplaceInput id="id-#{currentProperty.key}"
+								value="#{currentProperty.value}"
+								required="#{currentProperty.required}" selectOnEdit="true"
+								requiredMessage="bitte fuer #{currentProperty.key} text eingeben"
+								validator="${PropertyViewer.validate}">
+
+								<a:support event="onviewactivated" reRender="ViewUsersPanel"
+									action="#{RuntimeConfiguration.notifiyListeners(currentProperty.key, currentProperty.value)}" />
+							</rich:inplaceInput>
+						</rich:column>
+					</rich:dataTable>
+
+				</s:fragment>
+			</a:outputPanel></div>
+
+		</h:form></div>
+
+	</ui:define>
+
+</ui:composition>

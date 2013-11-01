@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "./meta/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ticketline.db.Veranstaltung" table="veranstaltung">
+		<!-- BaseClass -->
+		<meta attribute="extra-import">ticketline.db.Entity</meta>
+		<meta attribute="extends">Entity</meta>
+		<meta attribute="class-description">
+			Jedes Theaterstueck, jede Oper, jeder Kinofilm usw. des
+			Systems wird in Form einer Veranstaltung gespeichert. Von
+			jeder Veranstaltung werden dann mehrere Auffuehrungen in
+			verschiedenen Saelen zu verschiedenen Zeiten verwaltet. Eine
+			Veranstaltung wird eindeutig durch ihre Bezeichnung (den
+			Namen) und ihre Kategorie (Kino, Theater...) bestimmt. Zur
+			naeheren Bestimmung der Veranstaltung wird noch eine ganze
+			Reihe an zusaetzlichen Informationen gespeichert.
+		</meta>
+
+		<!-- PK, Properties -->
+		<composite-id name="comp_id"
+			class="ticketline.db.VeranstaltungKey" unsaved-value="any">
+			<key-property name="bezeichnung" column="bezeichnung"
+				type="java.lang.String" length="30" />
+			<key-property name="kategorie" column="kategorie"
+				type="java.lang.String" length="30" />
+		</composite-id>
+
+		<property name="subkategorie" type="java.lang.String"
+			column="subkategorie" length="30">
+			<meta attribute="field-description">
+				Unterteilung von Kategorie; z.B. Thriller, Drama
+			</meta>
+		</property>
+		<property name="jahrerstellung" type="int">
+			<meta attribute="field-description">
+				Erstellungsjahr &lt;= Heuer
+			</meta>
+
+			<column name="jahrerstellung"
+				check="jahrerstellung &lt;= date_part('year', now())" />
+		</property>
+		<property name="spracheton" type="java.lang.String"
+			column="spracheton" length="30">
+			<meta attribute="field-description">
+				z.B.: Deutsch, Englisch
+			</meta>
+		</property>
+		<property name="spracheut" type="java.lang.String"
+			column="spracheut" length="30">
+			<meta attribute="field-description">
+				Sprache des Untertitels; z.B.: Deutsch, English
+			</meta>
+		</property>
+		<property name="dauer" type="int" not-null="true">
+			<meta attribute="field-description">
+				0 &lt; Dauer in Minuten &lt;= 999
+			</meta>
+
+			<column name="dauer" check="dauer BETWEEN 1 AND 999"
+				not-null="true" />
+		</property>
+		<property name="freigabe" type="java.lang.String"
+			column="freigabe" length="30">
+			<meta attribute="field-description">
+				Altersfreigabe; z.B.: ab 18
+			</meta>
+		</property>
+		<property name="abbildung" type="java.lang.String"
+			column="abbildung" length="100">
+			<meta attribute="field-description">
+				Speicherort eines Bilds zur Veranstaltung
+			</meta>
+		</property>
+		<property name="inhalt" type="java.lang.String" column="inhalt"
+			not-null="true" length="200">
+			<meta attribute="field-description">
+				kurze Inhaltsangabe zur Veranstaltung
+			</meta>
+		</property>
+		<property name="kritik" type="java.lang.String" column="kritik"
+			length="200">
+			<meta attribute="field-description">
+				kurze Kritik zur Veranstaltung
+			</meta>
+		</property>
+		<property name="bewertung" type="java.lang.String"
+			column="bewertung" length="200">
+			<meta attribute="field-description">
+				kurze Bewertung zur Veranstaltung
+			</meta>
+		</property>
+		<property name="hinweis" type="java.lang.String"
+			column="hinweis" length="200">
+			<meta attribute="field-description">
+				kurzer Hinweis zur Veranstaltung
+			</meta>
+		</property>
+
+		<!-- Associations -->
+		<!-- derived association(s) for compound key -->
+		<!-- end of derived association(s) -->
+
+		<!-- bi-directional one-to-many association to Artikel -->
+		<set name="artikel" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="veranstbez" />
+				<column name="veranstkat" />
+			</key>
+			<one-to-many class="ticketline.db.Artikel" />
+		</set>
+		<!-- bi-directional one-to-many association to Auffuehrung -->
+		<set name="auffuehrungen" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="veranstbez" />
+				<column name="veranstkat" />
+			</key>
+			<one-to-many class="ticketline.db.Auffuehrung" />
+		</set>
+		<!-- bi-directional one-to-many association to Engagement -->
+		<set name="engagements" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="bezeichnung" />
+				<column name="kategorie" />
+			</key>
+			<one-to-many class="ticketline.db.Engagement" />
+		</set>
+
+	</class>
+</hibernate-mapping>

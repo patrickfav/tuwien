@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys
+END
+ca.cert
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/ca.cert
+END
+alice.pub.pem
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/alice.pub.pem
+END
+externalservice.pem
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/externalservice.pem
+END
+server.pem
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/server.pem
+END
+metaservice.pem
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/metaservice.pem
+END
+bill.pub.pem
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/bill.pub.pem
+END
+steve.pub.pem
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/steve.pub.pem
+END
+alice.pem
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/alice.pem
+END
+location1.pub.pem
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/location1.pub.pem
+END
+location2.pub.pem
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/location2.pub.pem
+END
+bill.pem
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/bill.pem
+END
+ca.pem
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/ca.pem
+END
+steve.pem
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/steve.pem
+END
+externalservice.pub.pem
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/externalservice.pub.pem
+END
+location1.pem
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/location1.pem
+END
+location2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/location2.pem
+END
+server.pub.pem
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/server.pub.pem
+END
+metaservice.pub.pem
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/keys/metaservice.pub.pem
+END

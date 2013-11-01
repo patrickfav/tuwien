@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/indexing/entities
+END
+MethodReference.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/indexing/entities/MethodReference.class
+END
+IndexedService.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/indexing/entities/IndexedService.class
+END
+ClassReference.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/indexing/entities/ClassReference.class
+END
+RestRequest.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/indexing/entities/RestRequest.class
+END
+IndexedSearchField.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/indexing/entities/IndexedSearchField.class
+END

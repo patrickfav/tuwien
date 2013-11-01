@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "./meta/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ticketline.db.Bestellung" table="bestellung">
+		<!-- BaseClass -->
+		<meta attribute="extra-import">ticketline.db.Entity</meta>
+		<meta attribute="extends">Entity</meta>
+
+		<meta attribute="class-description">
+			Eine Bestellung dokumentiert einen Verkauf eines
+			Werbeartikels fuer eine Veranstaltung an einen Kunden. Fuer
+			jeden gekauften Artikel muss ein eigener Datensatz angelegt
+			werden, auch wenn der Kunde mehrere Artikel auf einmal
+			kauft. Die Bestellung ist durch das Datum des Verkaufs, die
+			Uhrzeit des Verkaufs, die Daten des Artikels und die Daten
+			des Kunden eindeutig bestimmt. Zu jedem bestellten Artikel
+			wird noch die gekaufte Menge und die Zahlart (also bar,
+			Ticketcard, VISA...) angegeben.
+		</meta>
+
+		<!-- PK, Properties -->
+		<composite-id name="comp_id" class="ticketline.db.BestellungKey"
+			unsaved-value="any">
+			<key-property name="datumuhrzeit" column="datumuhrzeit"
+				type="java.sql.Timestamp" length="8">
+				<meta attribute="field-description">
+					eindeutige Bestellzeit
+				</meta>
+			</key-property>
+			<key-property name="artikelnr" column="artikelnr"
+				type="int">
+				<meta attribute="field-description">
+					~Artikel.ArtikelNr
+				</meta>
+			</key-property>
+			<key-property name="kartennr" column="kartennr"
+				type="int">
+				<meta attribute="field-description">
+					~Kunde.KartenNr
+				</meta>
+			</key-property>
+		</composite-id>
+
+		<property name="menge" type="int" not-null="true">
+
+			<meta attribute="field-description">
+				Anzahl der Artikel > 0
+			</meta>
+
+			<column name="menge" check="menge > 0" not-null="true" />
+		</property>
+		<property name="zahlart" type="java.lang.String"
+			column="zahlart" not-null="true" length="20">
+			<meta attribute="field-description">
+				z.B.: bar, TicketCard, VISA, per Nachname
+			</meta>
+		</property>
+
+		<!-- Associations -->
+		<!-- derived association(s) for compound key -->
+		<!-- bi-directional many-to-one association to Artikel -->
+		<many-to-one name="artikel" class="ticketline.db.Artikel"
+			update="false" insert="false" cascade="save-update">
+			<column name="artikelnr" />
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to Kunde -->
+		<many-to-one name="kunde" class="ticketline.db.Kunde"
+			update="false" insert="false" cascade="save-update">
+			<column name="kartennr" />
+		</many-to-one>
+
+		<!-- end of derived association(s) -->
+
+
+	</class>
+</hibernate-mapping>

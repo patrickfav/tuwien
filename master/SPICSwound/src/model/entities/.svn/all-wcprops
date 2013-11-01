@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities
+END
+TrialForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/TrialForm.java
+END
+UserRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/UserRole.java
+END
+Attribute.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/Attribute.java
+END
+OrgGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/OrgGroup.java
+END
+Patient.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/Patient.java
+END
+TrialData.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/TrialData.java
+END
+Participation.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/Participation.java
+END
+Trial.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/Trial.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/User.java
+END
+TRIALSTATUS.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/TRIALSTATUS.java
+END
+AttributeGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/AttributeGroup.java
+END
+Image.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/Image.java
+END
+Property.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/184/swwe/SPICSwound/src/model/entities/Property.java
+END
+TrialAttachment.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/TrialAttachment.java
+END
+Invitation.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/Invitation.java
+END
+UserPermission.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/UserPermission.java
+END
+FileSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/FileSet.java
+END
+Appointment.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/Appointment.java
+END

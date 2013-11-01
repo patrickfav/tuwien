@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="swag.deployment">
+        <wb-resource deploy-path="/" source-path="/EarContent"/>
+        <dependent-module archiveName="swag.webserver.war" deploy-path="/" handle="module:/resource/swag.webserver/swag.webserver">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="swag.gameserver.jar" deploy-path="/" handle="module:/resource/swag.gameserver/swag.gameserver">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="swag.api.jar" deploy-path="/lib" handle="module:/resource/swag.api/swag.api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="swag.messageserver.jar" deploy-path="/" handle="module:/resource/swag.messageserver/swag.messageserver">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

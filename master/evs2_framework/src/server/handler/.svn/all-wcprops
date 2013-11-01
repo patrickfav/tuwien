@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler
+END
+AbstractRestHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/AbstractRestHandler.java
+END
+LookupStorageHttpRequestHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/LookupStorageHttpRequestHandler.java
+END
+HttpRequestHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/HttpRequestHandler.java
+END
+GatewayHttpRequestHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/GatewayHttpRequestHandler.java
+END
+ExternalHttpRequestHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/ExternalHttpRequestHandler.java
+END
+LookupLocationHttpRequestHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/LookupLocationHttpRequestHandler.java
+END

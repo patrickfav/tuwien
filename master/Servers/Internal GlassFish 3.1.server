@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="Internal GlassFish 3.1" name="Internal GlassFish 3.1" runtime-id="GlassFish 3.1" server-type="org.glassfish.jst.server.glassfish31" server-type-id="org.glassfish.jst.server.glassfish31" start-timeout="240" stop-timeout="240" timestamp="2">
+  <list key="Generic_Server_Modules_List" value0="org.eclipse.jst.jee.server:swag.deployment"/>
+  <map key="generic_server_instance_properties" sunappserver.adminname="admin" sunappserver.adminpassword="" sunappserver.adminserverportnumber="4848" sunappserver.domainpath="C:/Users/PatrickF/eclipse workspaces/master workspace/glassfish31eclipsedefaultdomain" sunappserver.keepSessions="true" sunappserver.serveraddress="localhost" sunappserver.serverportnumber="8080"/>
+  <list key="modules" value0="swag.deployment::org.eclipse.jst.jee.server:swag.deployment::jst.ear::6.0"/>
+</server>

@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:s="http://jboss.com/products/seam/taglib">
+
+<head>
+<title>SPICS #{DeploymentAction.spicsInstance}</title>
+<link rel="stylesheet" type="text/css" href="#{RuntimeConfiguration.stylesheetUrl}" />
+ <link rel="shortcut icon" type="image/x-icon" href="./graphics/icon/favicon.ico" />
+</head>
+
+<body>
+<h:form id="login">
+  <div id="top" align="center"
+    style="text-align: center;padding-top:20px;">
+  <img src="#{RuntimeConfiguration.logoUrl}" class="logoimg" width="237" height="76" alt="SPICS #{DeploymentAction.spicsInstance}" /></div>
+
+  <div id="content" align="center" style="padding-top:20px">
+  <table id="login" border="0" cellpadding="0" cellspacing="0"
+    width="500">
+    <tr>
+      <td class="header" colspan="3">
+      <h:outputFormat value="#{messages['label.spicsportal']}">
+       <f:param value="#{DeploymentAction.spicsInstance}" />
+      </h:outputFormat> 
+      </td>
+    </tr>
+    <tr>
+      <td
+        style="background: url(graphics/design/window_left_bar.png) repeat-y;"
+        width="1"></td>
+      <td valign="top" height="350"
+        style="padding-right: 10px; background: #fff;"><!-- CONTENT of BLATT -->
+      <div id="blatt" style="padding-top: 15px; align: center">
+
+      <p align="left"><h:outputFormat value="#{messages['label.welcometext']}">
+      		<f:param value="#{DeploymentAction.spicsInstance}" />
+      </h:outputFormat></p>
+      <p>&nbsp;</p>
+      <div align="center"><br />
+      <table border="0" cellpadding="5" cellspacing="0"
+        style="background: #DEEEEE; width: 70%; padding: 15px;">
+        
+        <tr>
+          <td width="120" align="left"><h:outputLabel
+            for="username"><h:outputText value="#{messages['label.username']}"/></h:outputLabel></td>
+          <td width="120" align="left"><h:inputText id="username"
+            value="#{credentials.username}" styleClass="search" size="15" /></td>
+        </tr>
+        <tr>
+          <td align="left"><h:outputLabel for="password"><h:outputText value="#{messages['label.password']}"/></h:outputLabel></td>
+          <td align="left"><h:inputSecret id="password"
+            value="#{credentials.password}" styleClass="search" size="15" /></td>
+        </tr>
+      </table>
+      <br />
+
+      <br />
+      <h:commandButton value="#{messages['button.login']}" action="#{identity.login}"
+        styleClass="button"  title="#{messages['button.login']}" id="login" /> <br />
+      </div>    
+      <br />
+      <div style="height:50px">
+      	<h:messages styleClass="logininfo" errorClass="errorMessage" fatalClass="errorMessage" infoClass="errorMessage" warnClass="warningMessage" layout="list"/>
+      </div>
+      <br />
+      </div>
+      <div class="info" style="text-align:justify">
+      	<h:outputText value="#{messages['login.info']}" escape="false"/>
+      </div>
+      </td>
+      <td
+        style="background: url(graphics/design/window_right_bar.png) repeat-y;"
+        width="9"></td>
+    </tr>
+    <tr>
+      <td
+        style="background: url(graphics/design/window_left_bottom_round.png);"
+        width="9" height="9"></td>
+      <td
+        style="background: url(graphics/design/window_bottom_bar.png) repeat-x;"
+        height="9"></td>
+      <td
+        style="background: url(graphics/design/window_right_bottom_round.png);"
+        width="9" height="9"></td>
+    </tr>
+  </table>
+  </div>
+
+  <div align="center"
+    style="text-align: center; height: 50px; vertical-align: bottom"
+    id="trcorner">
+    
+		<ui:insert name="footer">
+			<ui:include src="layout/footer.xhtml" />
+		</ui:insert>
+  </div>
+</h:form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/util
+END
+HibernateUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/util/HibernateUtil.java
+END
+HashUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/util/HashUtil.java
+END
+Transaction.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/util/Transaction.java
+END
+ReflectionUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/util/ReflectionUtil.java
+END
+CacheManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/util/CacheManager.java
+END
+DAOManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/util/DAOManager.java
+END

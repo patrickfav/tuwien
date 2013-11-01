@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build
+END
+server.properties
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/server.properties
+END
+Config.class
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/Config.class
+END
+client.properties
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/client.properties
+END
+users.properties
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/users.properties
+END
+ca.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tuwien-private-repo/!svn/ver/28/verteilte-systeme/DSLAB3/build/ca.properties
+END

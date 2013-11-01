@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/src/interceptors
+END
+DeleteInterceptors.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/src/interceptors/DeleteInterceptors.java
+END
+UpdateInterceptors.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/src/interceptors/UpdateInterceptors.java
+END
+CreateInterceptors.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/src/interceptors/CreateInterceptors.java
+END
+ReadInterceptors.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/src/interceptors/ReadInterceptors.java
+END

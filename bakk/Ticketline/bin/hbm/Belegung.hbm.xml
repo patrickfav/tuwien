@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "./meta/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ticketline.db.Belegung" table="belegung">
+		<!-- BaseClass -->
+		<meta attribute="extra-import">ticketline.db.Entity</meta>
+		<meta attribute="extends">Entity</meta>
+
+		<meta attribute="class-description">
+			Eine Belegung gibt die Sitzplatz- beziehungsweise
+			Stehplatzbelegung einer Auffuehrung fuer eine spezielle
+			Reihe an. Die Daten fuer die Reihe und die Auffuehrung
+			bestimmen die Belegung eindeutig. Zusaetzlich wird noch die
+			Anzahl der freien, der reservierten und der verkauften
+			Plaetze der Reihe angegeben. Optional kann auch ein
+			Belegungsstring fuer die Plaetze der Reihe angegeben werden.
+			Jedes Zeichen dieses Strings steht fuer einen Platz in der
+			Reihe ('F' frei, 'R' reserviert und 'V' verkauft). Dieser
+			String ist fuer Stehplatzreihen natuerlich ueberfluessig.
+		</meta>
+
+
+		<!-- PK, Properties -->
+		<composite-id name="comp_id" class="ticketline.db.BelegungKey"
+			unsaved-value="any">
+			<key-property name="reihebez" column="reihebez"
+				type="java.lang.String" length="30">
+				<meta attribute="field-description">
+					~Reihe.Bezeichnung
+				</meta>
+			</key-property>
+
+			<key-property name="kategoriebez" column="kategoriebez"
+				type="java.lang.String" length="30">
+				<meta attribute="field-description">
+					~Kategorie.Bezeichnung
+				</meta>
+			</key-property>
+
+			<key-property name="saalbez" column="saalbez"
+				type="java.lang.String" length="30">
+				<meta attribute="field-description">
+					~Saal.Bezeichnung
+				</meta>
+			</key-property>
+			<key-property name="ortbez" column="ortbez"
+				type="java.lang.String" length="30">
+				<meta attribute="field-description">
+					~Ort.Bezeichnung
+				</meta>
+			</key-property>
+			<key-property name="ort" column="ort"
+				type="java.lang.String" length="30">
+				<meta attribute="field-description">~Ort.Ort</meta>
+			</key-property>
+			<key-property name="datumuhrzeit" column="datumuhrzeit"
+				type="java.sql.Timestamp" length="8">
+				<meta attribute="field-description">
+					~Auffuehrung.DatumUhrzeit
+				</meta>
+			</key-property>
+		</composite-id>
+
+		<property name="belegung" type="java.lang.String">
+			<meta attribute="field-description">
+				Dieses Feld beschreibt den Belegungszustand der Reihe*
+			</meta>
+			<column name="belegung" length="255"
+				check="belegung ~* '^[FRV]+$'" />
+		</property>
+		<property name="anzfrei" type="int" not-null="true">
+			<meta attribute="field-description">
+				Anzahl freier Plaetze >=0
+			</meta>
+			<column name="anzfrei" check="anzfrei >= 0" not-null="true" />
+		</property>
+		<property name="anzres" type="int" not-null="true">
+			<meta attribute="field-description">
+				Anzahl reservierter Plaetze >=0
+			</meta>
+			<column name="anzres" check="anzres >= 0" not-null="true" />
+		</property>
+		<property name="anzverk" type="int" not-null="true">
+			<meta attribute="field-description">
+				Anzahl verkaufter Plaetze >=0
+			</meta>
+			<column name="anzverk" check="anzverk >= 0" not-null="true" />
+		</property>
+
+		<!-- Associations -->
+		<!-- derived association(s) for compound key -->
+		<!-- bi-directional many-to-one association to Reihe -->
+		<many-to-one name="reihe" class="ticketline.db.Reihe"
+			update="false" insert="false" cascade="save-update">
+			<column name="reihebez" />
+			<column name="kategoriebez" />
+			<column name="saalbez" />
+			<column name="ortbez" />
+			<column name="ort" />
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to Auffuehrung -->
+		<many-to-one name="auffuehrung"
+			class="ticketline.db.Auffuehrung" update="false" insert="false"
+			cascade="save-update">
+			<column name="datumuhrzeit" />
+			<column name="saalbez" />
+			<column name="ortbez" />
+			<column name="ort" />
+		</many-to-one>
+
+		<!-- end of derived association(s) -->
+
+		<!-- bi-directional one-to-many association to Transaktion -->
+		<set name="transaktionen" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="reihebez" />
+				<column name="kategoriebez" />
+				<column name="saalbez" />
+				<column name="ortbez" />
+				<column name="ort" />
+				<column name="auffdatumuhrzeit" />
+			</key>
+			<one-to-many class="ticketline.db.Transaktion" />
+		</set>
+
+	</class>
+</hibernate-mapping>

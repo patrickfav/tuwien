@@ -1,0 +1,86 @@
+package Permissions;
+
+dialect 'mvel'
+
+import java.security.Principal;
+
+import org.jboss.seam.security.permission.PermissionCheck;
+import org.jboss.seam.security.permission.RoleCheck;
+import org.jboss.seam.security.Role;
+
+import entities.Trial;
+import entities.User;
+import entities.Patient;
+
+/*****************************************************************************************
+  The Following Rules are for Identity Management
+******************************************************************************************/
+
+rule ManageUsers
+  no-loop
+  activation-group "permissions"
+when
+  check: PermissionCheck(target == "seam.user", granted == false)
+  Role(name == "admin")
+then
+  check.grant();
+end
+
+rule ManageRoles
+  no-loop
+  activation-group "permissions"
+when
+  check: PermissionCheck(target == "seam.role", granted == false)
+  Role(name == "admin")
+then
+  check.grant();
+end
+
+/*****************************************************************************************
+  The Following Rules are for Permission Management
+******************************************************************************************/
+rule AllowAdminsEverythingOnTrials
+  no-loop
+  activation-group "permissions"
+when
+  trial: Trial()
+  check: PermissionCheck(target == trial, granted == false)
+  Role(name == "admin")
+then
+  check.grant();
+end
+
+rule AllowAdminsEverythingOnPatients
+  no-loop
+  activation-group "permissions"
+when
+  pat: Patient()
+  check: PermissionCheck(target == pat, granted == false)
+  Role(name == "admin")
+then
+  check.grant();
+end
+
+rule AllowTrialCreatorEverythingOnTrial
+  no-loop
+  activation-group "permissions"
+when
+  usr: User()
+  trial: Trial(owner : user -> (owner.equals(usr)))
+  check: PermissionCheck(target == trial, granted == false)
+  Role(name == "creator")
+then
+  check.grant();
+end
+
+rule AllowPatientCreatorEverythingOnPatient
+  no-loop
+  activation-group "permissions"
+when
+  usr: User()
+  pat: Patient(owner : savedBy -> (owner.equals(usr)))
+  check: PermissionCheck(target == pat, granted == false)
+  Role(name == "contributor")
+then
+  check.grant();
+end

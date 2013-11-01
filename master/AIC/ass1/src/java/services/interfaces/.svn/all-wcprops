@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/AIC50/!svn/ver/30/ass1/src/java/services/interfaces
+END
+ShippingService.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/AIC50/!svn/ver/31/ass1/src/java/services/interfaces/ShippingService.java
+END
+WarehouseService.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/AIC50/!svn/ver/30/ass1/src/java/services/interfaces/WarehouseService.java
+END
+SupplierService.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/AIC50/!svn/ver/31/ass1/src/java/services/interfaces/SupplierService.java
+END

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<javaee-project xmlns="http://java.sun.com/xml/ns/jbi/javaee/config/1/" xmlns:ns0="http://infosys.tuwien.ac.at/aic10/ass1/dto/supplier" xmlns:ns2="http://infosys.tuwien.ac.at/aic10/ass1/dto/shipping" xmlns:ns3="http://infosys.tuwien.ac.at/aic10/ass1/dto/customer" xmlns:ns4="http://infosys.tuwien.ac.at/aic10/ass1/dto/warehouse" xmlns:ns5="http://infosys.tuwien.ac.at/aic10/ass1/dto/registry" name="Ass2">
+    <services>
+        <provides enable-for-javaee-http="true" endpoint-name="javaee_SupplierPT" interface-name="ns0:SupplierServiceImpl2" service-name="ns0:SupplierService"/>
+        <provides enable-for-javaee-http="true" endpoint-name="javaee_SupplierPT" interface-name="ns0:SupplierServiceImpl1" service-name="ns0:SupplierService"/>
+        <provides enable-for-javaee-http="true" endpoint-name="javaee_ShippingPT" interface-name="ns1:ShippingService" service-name="ns2:ShippingService"/>
+        <provides enable-for-javaee-http="true" endpoint-name="javaee_CustomerManagementPT" interface-name="ns1:CustomerWrapperService" service-name="ns3:CustomerService"/>
+        <provides enable-for-javaee-http="true" endpoint-name="javaee_WarehousePT" interface-name="ns1:WarehouseService" service-name="ns4:WarehouseService"/>
+        <provides enable-for-javaee-http="true" endpoint-name="javaee_RegistryPT" interface-name="ns1:RegistryService" service-name="ns5:RegistryService"/>
+    </services>
+</javaee-project>

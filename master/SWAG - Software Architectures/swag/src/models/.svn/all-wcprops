@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/swag/!svn/ver/17/trunk/swag/src/models
+END
+BuildingType.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/swag/!svn/ver/4/trunk/swag/src/models/BuildingType.java
+END
+Troop.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/swag/!svn/ver/4/trunk/swag/src/models/Troop.java
+END
+Message.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/swag/!svn/ver/17/trunk/swag/src/models/Message.java
+END
+TroopType.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/swag/!svn/ver/4/trunk/swag/src/models/TroopType.java
+END
+Base.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/swag/!svn/ver/4/trunk/swag/src/models/Base.java
+END
+Resources.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/swag/!svn/ver/4/trunk/swag/src/models/Resources.java
+END
+BaseSquare.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/swag/!svn/ver/6/trunk/swag/src/models/BaseSquare.java
+END
+Player.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/swag/!svn/ver/17/trunk/swag/src/models/Player.java
+END
+Building.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/swag/!svn/ver/4/trunk/swag/src/models/Building.java
+END
+Map.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/swag/!svn/ver/4/trunk/swag/src/models/Map.java
+END
+MapSquare.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/swag/!svn/ver/4/trunk/swag/src/models/MapSquare.java
+END

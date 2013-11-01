@@ -1,0 +1,84 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	xmlns:c="http://java.sun.com/jstl/core"
+	template="../layout/pluginLayout.xhtml">
+
+	<ui:define name="trialHead">
+		<h:outputText value="Medikation" />
+	</ui:define>
+
+	<ui:define name="content">
+
+		<div id="blatt"><h:form id="medViewerForm">
+
+			<h1><h:outputText value="#{SoulMedicinePlugin.header}" /></h1>
+
+			<rich:dataTable id="medViewTable" var="curMed"
+				value="#{medicineList}" cellpadding="0" cellspacing="0">
+				<f:facet name="header">
+					<rich:columnGroup>
+						<rich:column>
+							<h:outputText value="Beginndatum" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value="Enddatum" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value="Wirkstoff" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value="Dosis" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value="Einnahme" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value="Regelmäßig" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value="Medikationsänderung" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value="Änderungsgrund" />
+						</rich:column>
+					</rich:columnGroup>
+				</f:facet>
+				<rich:column>
+					<h:outputText value="#{curMed.beginDate}" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="#{curMed.endDate}" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="#{curMed.agent}" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="#{curMed.dose}" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="#{curMed.intake}" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="#{curMed.regularly}" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="#{curMed.medChange}" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="#{curMed.changeReason}" />
+				</rich:column>
+			</rich:dataTable>
+
+			<br />
+			<h:commandButton action="#{SoulMedicinePlugin.back}"
+				styleClass="button" title="Zurück" value="Zurück" />
+		</h:form></div>
+	</ui:define>
+</ui:composition>

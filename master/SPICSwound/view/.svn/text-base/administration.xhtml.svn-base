@@ -1,0 +1,97 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="trialHead">
+		<f:subview id="StudyDetailNewTrialHeaderView">
+			<h:outputText value="#{messages['label.administration']}" />
+		</f:subview>
+	</ui:define>
+
+
+	<ui:define name="content">
+
+		<div id="blatt">
+		<h:form id="AdministrationViewerForm">
+
+			<h:messages globalOnly="false" errorClass="errorMessage"
+					fatalClass="errorMessage" infoClass="infoMessage"
+					warnClass="warningMessage" layout="list" showDetail="true"
+					showSummary="true" />
+	
+			<p>
+				<h:outputText id="searchLabel" value="#{messages['label.search']}: " />
+				<h:inputText id="searchField" value="#{Administration.searchString}">
+					<a:support event="onkeyup" action="#{Administration.findUsers}" reRender="ViewUsersPanel" />
+				</h:inputText>
+				<rich:spacer width="5px" />
+				<a:commandButton id="searchButton" title="#{messages['button.reset']}" value="x" action="#{Administration.resetSearchString}" reRender="AdministrationViewerForm" />
+				<br />
+				
+				<h:outputText id="searchEnabledLabel" value="#{messages['label.search.enabledusers']}" />
+				<h:selectBooleanCheckbox id="searchEnabled" value="#{Administration.searchEnabled}">
+					<a:support event="onclick" action="#{Administration.findUsers}" reRender="ViewUsersPanel"/>
+				</h:selectBooleanCheckbox>
+				<br />
+			</p>
+			<br />
+			
+			<a:outputPanel id="ViewUsersPanel">
+			<s:fragment id="ViewUsersNoResultView"
+				rendered="#{usersDataModel.rowCount == 0}">
+				<h:outputText value="#{messages['label.nousers.found']}" />
+			</s:fragment>
+			
+			<s:fragment id="ViewUsersShowResultsView"
+				rendered="#{usersDataModel.rowCount > 0}">
+				<rich:dataTable id="usersViewerTable" var="currentUser" value="#{usersDataModel}" rows="#{Administration.ROW_COUNT}" cellpadding="0" cellspacing="0" >
+					<f:facet name="header">
+						<rich:columnGroup>
+							<rich:column><h:outputText value="#{messages['label.name']}" /></rich:column>
+							<rich:column><h:outputText value="#{messages['label.screenname']}" /></rich:column>
+							<rich:column><h:outputText value="#{messages['label.organisation']}" /></rich:column>
+							<rich:column><h:outputText value="#{messages['label.enableuser']}" /></rich:column>
+							<rich:column><h:outputText value="#{messages['label.lastlogin']}" /></rich:column>
+							<rich:column><h:outputText value="#{messages['label.edit']}" /></rich:column>
+						</rich:columnGroup>
+					</f:facet>
+					<rich:column><h:outputText value="#{currentUser.title} #{currentUser.lastname}, #{currentUser.firstname}" /></rich:column>
+					<rich:column><h:outputText value="#{currentUser.screenname}" /></rich:column>
+					<rich:column><h:outputText value="#{currentUser.organisation}" /></rich:column>
+					<rich:column><h:selectBooleanCheckbox disabled="true" value="#{currentUser.enabled}" /></rich:column>
+					<rich:column>
+						<h:outputText value="#{Administration.getLastLoginDate(currentUser)}">
+							<s:convertDateTime type="both" pattern="dd.MM.yyyy HH:mm"/>
+						</h:outputText>
+					</rich:column>
+					<rich:column>
+						<a:commandLink id="editUser" action="#{Administration.editUser(currentUser.username)}">
+							<h:outputText value="#{messages['label.edit']}" />
+						</a:commandLink>
+					</rich:column>
+				</rich:dataTable>
+				<rich:datascroller for="usersViewerTable" maxPages="#{Administration.MAX_PAGES}" page="#{Administration.page}" />
+				
+			</s:fragment>
+			</a:outputPanel>
+			
+			<br />
+			<br />
+			
+			<h:commandButton id="createUserBtn" styleClass="button"
+				title="#{messages['button.add']}" value="#{messages['button.add']}"
+				action="#{Administration.createUser}" />
+			
+		</h:form>
+		</div>	
+		 
+	</ui:define>
+
+</ui:composition>

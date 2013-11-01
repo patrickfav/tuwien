@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="meta"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/hibernate/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/asm.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/cglib-2.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/commons-lang-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/hibernate3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/jaxen-1.1-beta-11.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/jta.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/xml-apis.jar"/>
+	<classpathentry kind="lib" path="lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="lib/jcalendar-1.3.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/rome-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/rome-fetcher-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/jh.jar"/>
+	<classpathentry kind="lib" path="lib/hsviewer.jar"/>
+	<classpathentry kind="lib" path="lib/TicketlineHelp.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/ehcache/ehcache-1.2.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

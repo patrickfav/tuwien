@@ -1,0 +1,35 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a="http://richfaces.org/a4j"
+	template="layout/studyDetailLayout.xhtml">
+
+
+	<ui:define name="trialName">
+		<h:outputText value="Auswertung (Demo)" />
+	</ui:define>
+
+	<ui:define name="trialHead">
+		<f:subview id="StudyDetailNewTrialHeaderView">
+			<h:outputText value="Auswertung (Demo)" />
+		</f:subview>
+	</ui:define>
+
+	<ui:define name="content">	
+		<h1>Auswertung</h1>
+	
+		<h:graphicImage value="/graphics/image/soul_auswertung_sample.png" />
+		
+		<br />
+		<rich:spacer height="10px" />
+		<br />
+		
+		<h:commandButton id="backButton" styleClass="button" value="#{messages['button.back']}" title="#{messages['button.back']}" action="#" onclick="history.back();"  />
+	</ui:define>
+
+</ui:composition>

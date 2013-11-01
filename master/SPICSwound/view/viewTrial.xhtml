@@ -1,0 +1,150 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	template="layout/studyDetailLayout.xhtml">
+	
+	<ui:define name="content">
+
+		<h:form id="viewTrialForm">
+
+			<div id="blatt">
+			<div class="attributeValuePair">
+			<table width="100%">
+				<tr>
+					<td>
+					<h:messages showDetail="true" layout="summary" warnClass="warningMessage" errorClass="errorMessage" />
+					<table border="0" cellpadding="0" cellspacing="1">
+						<tr>
+							<td><b><h:outputText
+								value="#{messages['label.description']}" />:</b></td>
+							<td><h:outputText value="#{sessionInfo.trial.fullName}" /></td>
+						</tr>
+						<tr>
+							<td><b><h:outputText
+								value="#{messages['label.studyowner']}" />:</b></td>
+
+							<td><img src="./graphics/icon/owner.gif" /><h:outputText
+								value="#{sessionInfo.trial.supervisor}" /></td>
+						</tr>
+						<tr>
+							<td><b><h:outputText
+								value="#{messages['label.studyadmin']}" />:</b></td>
+
+							<td><img src="./graphics/icon/owner.gif" /><h:outputText
+								value="#{sessionInfo.trial.user.screenname}" /></td>
+						</tr>
+						<tr>
+							<td><b><h:outputText
+								value="#{messages['label.studybegin']}" />:</b></td>
+							<td>
+							  <h:outputText value="#{sessionInfo.trial.beginDate}">
+							    <f:convertDateTime type="date" pattern="#{messages['dateformat']}" timeZone="#{messages['timeZone']}" />
+							  </h:outputText>
+							</td>
+
+						</tr>
+						<tr>
+							<td><b><h:outputText
+								value="#{messages['label.studyend']}" />:</b></td>
+							<td>
+							  <h:outputText value="#{sessionInfo.trial.endDate}">
+							    <f:convertDateTime type="date" pattern="#{messages['dateformat']}" timeZone="#{messages['timeZone']}" />
+							  </h:outputText>
+							</td>
+						</tr>
+						<tr>
+							<td><b><h:outputText value="#{messages['label.status']}" />:</b></td>
+							<td><h:outputText value="#{sessionInfo.trial.localizedStatus}" /></td>
+						</tr>
+						<tr>
+							<td><b><h:outputText value="#{messages['label.numberpatients']}" />:</b></td>
+							<td><h:outputText value="#{participationDAO.getPatientCount(sessionInfo.trial)}" /></td>
+						</tr>
+					</table>
+					</td>
+					<td valign="top">
+
+					</td>
+				</tr>
+			</table>
+			<br />
+
+			<br />
+			</div>
+			
+			<h1><h:outputText value="#{messages['label.studydescription']}" /></h1>
+			
+			<p style="text-align:justify; padding-left:5px;">
+				<h:outputText value="#{sessionInfo.trial.description}" escape="false"/>
+			</p>
+				
+			<br />
+			<s:fragment rendered="#{not empty sessionInfo.trial.trialAttachments}">
+				<h1><h:outputText id="attachments" value="#{messages['label.attachments']}"/></h1>
+				<rich:dataList id="attachmentList" styleClass="downloadlist" var="att" value="#{sessionInfo.trial.trialAttachments}" rowClasses="download">
+					<s:link view="/seam/resource/spicsfile/getfile.xhtml" value="#{att.fileName}">
+							<f:param name="taid" value="#{att.id}"/>
+					</s:link>
+				</rich:dataList>
+				<br />
+			</s:fragment>
+			
+			<h1><h:outputText value="#{messages['label.partner']}"/></h1>
+			<p>
+			<h:dataTable
+			  id="participations"
+			  value="#{participations}"
+			  var="p"
+			  style="width:90%; padding-left:5px;"
+			  class="concrete_list"
+			  border="0"
+			  cellpadding="0"
+			  cellspacing="0"
+			  headerClass="cl_header"
+			  rowClasses="odd_el,even_el"
+			  columnClass="cl_left">
+				  <h:column>
+				    <f:facet name="header"><h:outputText value="#{messages['label.name']}"></h:outputText></f:facet>
+				    <h:outputText value="#{p.user.screenname}"></h:outputText>
+				  </h:column>
+				
+		          <h:column>
+				    <f:facet name="header"><h:outputText value="#{messages['label.organisation']}"></h:outputText></f:facet>
+				    <h:outputText value="#{p.user.organisation}"></h:outputText>
+				  </h:column>		
+		
+				  <h:column>
+				    <f:facet name="header"><h:outputText value="#{messages['label.partnersince']}"></h:outputText></f:facet>
+				    <h:outputText value="#{p.participatingSince}">
+				      <f:convertDateTime type="date" pattern="#{messages['dateformat']}" timeZone="#{messages['timeZone']}" />
+				    </h:outputText>
+				  </h:column>
+		
+		
+		          <h:column>
+				    <f:facet name="header"><h:outputText value="#{messages['label.numberpatients']}"></h:outputText></f:facet>
+				    <h:outputText value="#{ParticipationManager.getPatientCount(p)}" />
+				  </h:column>			
+			</h:dataTable>
+			</p>
+			<br /><br />
+			
+			<s:button id="editTrialBtn" styleClass="button" 
+				title="#{messages['button.edit']}"
+				value="#{messages['button.edit']}"
+				rendered="#{s:hasPermission(sessionInfo.trial,'editTrialMetaData')}"
+				view="/editTrial.xhtml">
+					<f:param name="trialId" value="#{sessionInfo.trialID}" />
+			</s:button>
+			
+		    <br />
+		    <br />
+		    </div>
+		</h:form>
+	</ui:define>
+</ui:composition>

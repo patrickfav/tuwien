@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing
+END
+ReplyAfterType.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReplyAfterType.java
+END
+EndpointReferenceType.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/EndpointReferenceType.java
+END
+Relationship.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/Relationship.java
+END
+ServiceNameType.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/ServiceNameType.java
+END
+ReferenceParametersType.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReferenceParametersType.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/package-info.java
+END
+AttributedURI.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/AttributedURI.java
+END
+AttributedQName.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/AttributedQName.java
+END
+RetryAfterType.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/RetryAfterType.java
+END
+ReferencePropertiesType.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/ReferencePropertiesType.java
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/AIC50/!svn/ver/34/Ass2/src/java/org/xmlsoap/schemas/ws/_2004/_08/addressing/ObjectFactory.java
+END

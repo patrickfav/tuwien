@@ -1,0 +1,211 @@
+[#|2011-06-07T23:31:48.393+0200|SEVERE|glassfish3.1|global|_ThreadID=18;_ThreadName=Thread-1;|Class [ Lswag/bl/IBaseManagement; ] not found. Error while loading [ class swag.gui.convertes.BaseConverter ]|#]
+
+[#|2011-06-07T23:31:48.394+0200|SEVERE|glassfish3.1|global|_ThreadID=18;_ThreadName=Thread-1;|Class [ Lswag/bl/IUserManagement; ] not found. Error while loading [ class swag.gui.convertes.UserConverter ]|#]
+
+[#|2011-06-07T23:31:48.408+0200|SEVERE|glassfish3.1|global|_ThreadID=18;_ThreadName=Thread-1;|Class [ swag/exceptions/UserManagementException ] not found. Error while loading [ class swag.gui.SessionManager ]|#]
+
+[#|2011-06-07T23:31:48.409+0200|SEVERE|glassfish3.1|global|_ThreadID=18;_ThreadName=Thread-1;|Class [ Lswag/bl/IMapManagement; ] not found. Error while loading [ class swag.gui.MapManager ]|#]
+
+[#|2011-06-07T23:31:48.409+0200|SEVERE|glassfish3.1|global|_ThreadID=18;_ThreadName=Thread-1;|Class [ swag/exceptions/UserManagementException ] not found. Error while loading [ class swag.gui.RegisterManager ]|#]
+
+[#|2011-06-07T23:31:48.487+0200|SEVERE|glassfish3.1|javax.enterprise.system.tools.deployment.org.glassfish.deployment.common|_ThreadID=44;_ThreadName=Thread-1;|Cannot resolve reference Local ejb-ref name=swag.ejb.mdb.WebServerMDB/cmb,Local 3.x interface =swag.ejb.ClientMessageBean,ejb-link=null,lookup=,mappedName=,jndi-name=,refType=Session|#]
+
+[#|2011-06-07T23:31:48.489+0200|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=44;_ThreadName=Thread-1;|Exception while deploying the app [swag.webserver]|#]
+
+[#|2011-06-07T23:31:48.489+0200|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=44;_ThreadName=Thread-1;|Cannot resolve reference Local ejb-ref name=swag.ejb.mdb.WebServerMDB/cmb,Local 3.x interface =swag.ejb.ClientMessageBean,ejb-link=null,lookup=,mappedName=,jndi-name=,refType=Session
+java.lang.RuntimeException: Cannot resolve reference Local ejb-ref name=swag.ejb.mdb.WebServerMDB/cmb,Local 3.x interface =swag.ejb.ClientMessageBean,ejb-link=null,lookup=,mappedName=,jndi-name=,refType=Session
+	at com.sun.enterprise.deployment.util.EjbBundleValidator.accept(EjbBundleValidator.java:586)
+	at com.sun.enterprise.deployment.EjbDescriptor.visit(EjbDescriptor.java:2589)
+	at com.sun.enterprise.deployment.EjbBundleDescriptor.visit(EjbBundleDescriptor.java:734)
+	at com.sun.enterprise.deployment.Application.visit(Application.java:1768)
+	at com.sun.enterprise.deployment.archivist.ApplicationFactory.openArchive(ApplicationFactory.java:195)
+	at org.glassfish.javaee.core.deployment.DolProvider.load(DolProvider.java:180)
+	at org.glassfish.javaee.core.deployment.DolProvider.load(DolProvider.java:93)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.loadDeployer(ApplicationLifecycle.java:826)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.setupContainerInfos(ApplicationLifecycle.java:768)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:368)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:240)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$1.execute(CommandRunnerImpl.java:355)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1067)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1200(CommandRunnerImpl.java:96)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1247)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1235)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:465)
+	at com.sun.enterprise.v3.admin.AdminAdapter.service(AdminAdapter.java:222)
+	at com.sun.grizzly.tcp.http11.GrizzlyAdapter.service(GrizzlyAdapter.java:168)
+	at com.sun.enterprise.v3.server.HK2Dispatcher.dispath(HK2Dispatcher.java:117)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:234)
+	at com.sun.grizzly.http.ProcessorTask.invokeAdapter(ProcessorTask.java:822)
+	at com.sun.grizzly.http.ProcessorTask.doProcess(ProcessorTask.java:719)
+	at com.sun.grizzly.http.ProcessorTask.process(ProcessorTask.java:1013)
+	at com.sun.grizzly.http.DefaultProtocolFilter.execute(DefaultProtocolFilter.java:225)
+	at com.sun.grizzly.DefaultProtocolChain.executeProtocolFilter(DefaultProtocolChain.java:137)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:104)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:90)
+	at com.sun.grizzly.http.HttpProtocolChain.execute(HttpProtocolChain.java:79)
+	at com.sun.grizzly.ProtocolChainContextTask.doCall(ProtocolChainContextTask.java:54)
+	at com.sun.grizzly.SelectionKeyContextTask.call(SelectionKeyContextTask.java:59)
+	at com.sun.grizzly.ContextTask.run(ContextTask.java:71)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:532)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.run(AbstractThreadPool.java:513)
+	at java.lang.Thread.run(Thread.java:619)
+|#]
+
+[#|2011-06-07T23:31:48.561+0200|SEVERE|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.deployment.admin|_ThreadID=44;_ThreadName=Thread-1;|Exception while deploying the app [swag.webserver] : Cannot resolve reference Local ejb-ref name=swag.ejb.mdb.WebServerMDB/cmb,Local 3.x interface =swag.ejb.ClientMessageBean,ejb-link=null,lookup=,mappedName=,jndi-name=,refType=Session|#]
+
+[#|2011-06-07T23:31:48.702+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/IMapManagement|#]
+
+[#|2011-06-07T23:31:48.710+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/IBuildingManagement|#]
+
+[#|2011-06-07T23:31:48.717+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/ITestDataManagement|#]
+
+[#|2011-06-07T23:31:48.726+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/IBaseManagement|#]
+
+[#|2011-06-07T23:31:48.730+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/IUserManagement|#]
+
+[#|2011-06-07T23:31:48.736+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/messaging/IMessageManagement|#]
+
+[#|2011-06-07T23:31:48.737+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/IMapManagement|#]
+
+[#|2011-06-07T23:31:48.739+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/IBuildingManagement|#]
+
+[#|2011-06-07T23:31:48.740+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/ITestDataManagement|#]
+
+[#|2011-06-07T23:31:48.741+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/IBaseManagement|#]
+
+[#|2011-06-07T23:31:48.742+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/IUserManagement|#]
+
+[#|2011-06-07T23:31:48.743+0200|WARNING|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Error in annotation processing: java.lang.NoClassDefFoundError: swag/bl/messaging/IMessageManagement|#]
+
+[#|2011-06-07T23:31:48.747+0200|SEVERE|glassfish3.1|global|_ThreadID=19;_ThreadName=Thread-1;|Class [ swag/models/Message ] not found. Error while loading [ class swag.ejb.local.ClientMessageManagementBean ]|#]
+
+[#|2011-06-07T23:31:48.766+0200|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=52;_ThreadName=Thread-1;|Exception while deploying the app [swag.gameserver]|#]
+
+[#|2011-06-07T23:31:48.766+0200|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=52;_ThreadName=Thread-1;|Invalid ejb jar [swag.gameserver]: it contains zero ejb. 
+Note: 
+1. A valid ejb jar requires at least one session, entity (1.x/2.x style), or message-driven bean. 
+2. EJB3+ entity beans (@Entity) are POJOs and please package them as library jar. 
+3. If the jar file contains valid EJBs which are annotated with EJB component level annotations (@Stateless, @Stateful, @MessageDriven, @Singleton), please check server.log to see whether the annotations were processed properly.
+java.lang.IllegalArgumentException: Invalid ejb jar [swag.gameserver]: it contains zero ejb. 
+Note: 
+1. A valid ejb jar requires at least one session, entity (1.x/2.x style), or message-driven bean. 
+2. EJB3+ entity beans (@Entity) are POJOs and please package them as library jar. 
+3. If the jar file contains valid EJBs which are annotated with EJB component level annotations (@Stateless, @Stateful, @MessageDriven, @Singleton), please check server.log to see whether the annotations were processed properly.
+	at com.sun.enterprise.deployment.util.EjbBundleValidator.accept(EjbBundleValidator.java:76)
+	at com.sun.enterprise.deployment.util.ApplicationValidator.accept(ApplicationValidator.java:128)
+	at com.sun.enterprise.deployment.EjbBundleDescriptor.visit(EjbBundleDescriptor.java:730)
+	at com.sun.enterprise.deployment.Application.visit(Application.java:1768)
+	at com.sun.enterprise.deployment.archivist.ApplicationFactory.openArchive(ApplicationFactory.java:195)
+	at org.glassfish.javaee.core.deployment.DolProvider.load(DolProvider.java:180)
+	at org.glassfish.javaee.core.deployment.DolProvider.load(DolProvider.java:93)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.loadDeployer(ApplicationLifecycle.java:826)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.setupContainerInfos(ApplicationLifecycle.java:768)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:368)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:240)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$1.execute(CommandRunnerImpl.java:355)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1067)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1200(CommandRunnerImpl.java:96)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1247)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1235)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:465)
+	at com.sun.enterprise.v3.admin.AdminAdapter.service(AdminAdapter.java:222)
+	at com.sun.grizzly.tcp.http11.GrizzlyAdapter.service(GrizzlyAdapter.java:168)
+	at com.sun.enterprise.v3.server.HK2Dispatcher.dispath(HK2Dispatcher.java:117)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:234)
+	at com.sun.grizzly.http.ProcessorTask.invokeAdapter(ProcessorTask.java:822)
+	at com.sun.grizzly.http.ProcessorTask.doProcess(ProcessorTask.java:719)
+	at com.sun.grizzly.http.ProcessorTask.process(ProcessorTask.java:1013)
+	at com.sun.grizzly.http.DefaultProtocolFilter.execute(DefaultProtocolFilter.java:225)
+	at com.sun.grizzly.DefaultProtocolChain.executeProtocolFilter(DefaultProtocolChain.java:137)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:104)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:90)
+	at com.sun.grizzly.http.HttpProtocolChain.execute(HttpProtocolChain.java:79)
+	at com.sun.grizzly.ProtocolChainContextTask.doCall(ProtocolChainContextTask.java:54)
+	at com.sun.grizzly.SelectionKeyContextTask.call(SelectionKeyContextTask.java:59)
+	at com.sun.grizzly.ContextTask.run(ContextTask.java:71)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:532)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.run(AbstractThreadPool.java:513)
+	at java.lang.Thread.run(Thread.java:619)
+|#]
+
+[#|2011-06-07T23:31:48.773+0200|SEVERE|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.deployment.admin|_ThreadID=52;_ThreadName=Thread-1;|Exception while deploying the app [swag.gameserver] : Invalid ejb jar [swag.gameserver]: it contains zero ejb. 
+Note: 
+1. A valid ejb jar requires at least one session, entity (1.x/2.x style), or message-driven bean. 
+2. EJB3+ entity beans (@Entity) are POJOs and please package them as library jar. 
+3. If the jar file contains valid EJBs which are annotated with EJB component level annotations (@Stateless, @Stateful, @MessageDriven, @Singleton), please check server.log to see whether the annotations were processed properly.|#]
+
+[#|2011-06-07T23:31:48.916+0200|SEVERE|glassfish3.1|global|_ThreadID=20;_ThreadName=Thread-1;|Class [ swag/exceptions/MessagingException ] not found. Error while loading [ class swag.messaging.MailServiceBean ]|#]
+
+[#|2011-06-07T23:31:48.920+0200|SEVERE|glassfish3.1|global|_ThreadID=20;_ThreadName=Thread-1;|Class [ swag/exceptions/MessagingException ] not found. Error while loading [ class swag.messaging.mdb.MessageServerMDB ]|#]
+
+[#|2011-06-07T23:31:48.921+0200|SEVERE|glassfish3.1|global|_ThreadID=20;_ThreadName=Thread-1;|Class [ Lswag/bl/messaging/IMessageManagement; ] not found. Error while loading [ class swag.messaging.MessageStorageBean ]|#]
+
+[#|2011-06-07T23:31:48.930+0200|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=69;_ThreadName=Thread-1;|Exception while deploying the app [swag.messageserver]|#]
+
+[#|2011-06-07T23:31:48.931+0200|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=69;_ThreadName=Thread-1;|Invalid ejb jar [swag.messageserver]: it contains zero ejb. 
+Note: 
+1. A valid ejb jar requires at least one session, entity (1.x/2.x style), or message-driven bean. 
+2. EJB3+ entity beans (@Entity) are POJOs and please package them as library jar. 
+3. If the jar file contains valid EJBs which are annotated with EJB component level annotations (@Stateless, @Stateful, @MessageDriven, @Singleton), please check server.log to see whether the annotations were processed properly.
+java.lang.IllegalArgumentException: Invalid ejb jar [swag.messageserver]: it contains zero ejb. 
+Note: 
+1. A valid ejb jar requires at least one session, entity (1.x/2.x style), or message-driven bean. 
+2. EJB3+ entity beans (@Entity) are POJOs and please package them as library jar. 
+3. If the jar file contains valid EJBs which are annotated with EJB component level annotations (@Stateless, @Stateful, @MessageDriven, @Singleton), please check server.log to see whether the annotations were processed properly.
+	at com.sun.enterprise.deployment.util.EjbBundleValidator.accept(EjbBundleValidator.java:76)
+	at com.sun.enterprise.deployment.util.ApplicationValidator.accept(ApplicationValidator.java:128)
+	at com.sun.enterprise.deployment.EjbBundleDescriptor.visit(EjbBundleDescriptor.java:730)
+	at com.sun.enterprise.deployment.Application.visit(Application.java:1768)
+	at com.sun.enterprise.deployment.archivist.ApplicationFactory.openArchive(ApplicationFactory.java:195)
+	at org.glassfish.javaee.core.deployment.DolProvider.load(DolProvider.java:180)
+	at org.glassfish.javaee.core.deployment.DolProvider.load(DolProvider.java:93)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.loadDeployer(ApplicationLifecycle.java:826)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.setupContainerInfos(ApplicationLifecycle.java:768)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:368)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:240)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$1.execute(CommandRunnerImpl.java:355)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1067)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1200(CommandRunnerImpl.java:96)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1247)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1235)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:465)
+	at com.sun.enterprise.v3.admin.AdminAdapter.service(AdminAdapter.java:222)
+	at com.sun.grizzly.tcp.http11.GrizzlyAdapter.service(GrizzlyAdapter.java:168)
+	at com.sun.enterprise.v3.server.HK2Dispatcher.dispath(HK2Dispatcher.java:117)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:234)
+	at com.sun.grizzly.http.ProcessorTask.invokeAdapter(ProcessorTask.java:822)
+	at com.sun.grizzly.http.ProcessorTask.doProcess(ProcessorTask.java:719)
+	at com.sun.grizzly.http.ProcessorTask.process(ProcessorTask.java:1013)
+	at com.sun.grizzly.http.DefaultProtocolFilter.execute(DefaultProtocolFilter.java:225)
+	at com.sun.grizzly.DefaultProtocolChain.executeProtocolFilter(DefaultProtocolChain.java:137)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:104)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:90)
+	at com.sun.grizzly.http.HttpProtocolChain.execute(HttpProtocolChain.java:79)
+	at com.sun.grizzly.ProtocolChainContextTask.doCall(ProtocolChainContextTask.java:54)
+	at com.sun.grizzly.SelectionKeyContextTask.call(SelectionKeyContextTask.java:59)
+	at com.sun.grizzly.ContextTask.run(ContextTask.java:71)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:532)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.run(AbstractThreadPool.java:513)
+	at java.lang.Thread.run(Thread.java:619)
+|#]
+
+[#|2011-06-07T23:31:48.935+0200|SEVERE|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.deployment.admin|_ThreadID=69;_ThreadName=Thread-1;|Exception while deploying the app [swag.messageserver] : Invalid ejb jar [swag.messageserver]: it contains zero ejb. 
+Note: 
+1. A valid ejb jar requires at least one session, entity (1.x/2.x style), or message-driven bean. 
+2. EJB3+ entity beans (@Entity) are POJOs and please package them as library jar. 
+3. If the jar file contains valid EJBs which are annotated with EJB component level annotations (@Stateless, @Stateful, @MessageDriven, @Singleton), please check server.log to see whether the annotations were processed properly.|#]
+
+[#|2011-06-07T23:32:35.386+0200|INFO|glassfish3.1|javax.enterprise.system.tools.admin.com.sun.enterprise.v3.admin|_ThreadID=77;_ThreadName=Thread-1;|Server shutdown initiated|#]
+
+[#|2011-06-07T23:32:36.809+0200|INFO|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.server|_ThreadID=77;_ThreadName=Thread-1;|JMXStartupService: Stopped JMXConnectorServer: null|#]
+
+[#|2011-06-07T23:32:36.810+0200|INFO|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.server|_ThreadID=77;_ThreadName=Thread-1;|JMXStartupService and JMXConnectors have been shut down.|#]
+
+[#|2011-06-07T23:32:36.810+0200|INFO|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=77;_ThreadName=Thread-41;|Shutdown procedure finished|#]
+

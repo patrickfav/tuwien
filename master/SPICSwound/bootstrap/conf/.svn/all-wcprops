@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/conf
+END
+bootstrap-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/conf/bootstrap-beans.xml
+END
+jbossjta-properties.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/conf/jbossjta-properties.xml
+END
+login-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/conf/login-config.xml
+END
+jboss-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/conf/jboss-service.xml
+END

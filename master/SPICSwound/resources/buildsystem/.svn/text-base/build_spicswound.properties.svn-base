@@ -1,0 +1,5 @@
+deploy.testdata = true 
+profile= prod
+jboss.home = /usr/local/jboss-4.2.2.GA
+deploy.dir = ${jboss.home}/server/ports-02/deploy
+maven.settings = /usr/local/apache-maven/apache-maven-2.0.9/conf/settings.xml

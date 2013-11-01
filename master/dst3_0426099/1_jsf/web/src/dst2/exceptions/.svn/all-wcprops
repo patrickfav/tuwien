@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/140/dst/dst3_0426099/1_jsf/web/src/dst2/exceptions
+END
+LoginRequired.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/tuwien-private-repo/!svn/ver/140/dst/dst3_0426099/1_jsf/web/src/dst2/exceptions/LoginRequired.java
+END
+NotEnoughFreeComputers.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/140/dst/dst3_0426099/1_jsf/web/src/dst2/exceptions/NotEnoughFreeComputers.java
+END
+ComputerNotFreeAnyMore.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/140/dst/dst3_0426099/1_jsf/web/src/dst2/exceptions/ComputerNotFreeAnyMore.java
+END

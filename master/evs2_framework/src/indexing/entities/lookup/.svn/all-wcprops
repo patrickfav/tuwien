@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/indexing/entities/lookup
+END
+Storage.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/indexing/entities/lookup/Storage.java
+END
+Location.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/indexing/entities/lookup/Location.java
+END
+LookupResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/indexing/entities/lookup/LookupResponse.java
+END
+StorageLookupResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/indexing/entities/lookup/StorageLookupResponse.java
+END

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/swag/!svn/ver/13/trunk/swag/lib
+END
+hibernate3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/swag/!svn/ver/2/trunk/swag/lib/hibernate3.jar
+END
+postgresql-8.4-701.jdbc4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/swag/!svn/ver/13/trunk/swag/lib/postgresql-8.4-701.jdbc4.jar
+END
+commons-collections-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/swag/!svn/ver/2/trunk/swag/lib/commons-collections-3.1.jar
+END
+antlr-2.7.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/swag/!svn/ver/2/trunk/swag/lib/antlr-2.7.6.jar
+END
+hibernate-validator-4.0.2.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/swag/!svn/ver/2/trunk/swag/lib/hibernate-validator-4.0.2.GA.jar
+END
+slf4j-api-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/swag/!svn/ver/2/trunk/swag/lib/slf4j-api-1.6.1.jar
+END
+jta-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/swag/!svn/ver/2/trunk/swag/lib/jta-1.1.jar
+END
+javassist-3.12.0.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/swag/!svn/ver/2/trunk/swag/lib/javassist-3.12.0.GA.jar
+END
+dom4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/swag/!svn/ver/2/trunk/swag/lib/dom4j-1.6.1.jar
+END
+hibernate-jpa-2.0-api-1.0.0.Final.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/swag/!svn/ver/2/trunk/swag/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar
+END
+log4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/swag/!svn/ver/2/trunk/swag/lib/log4j.jar
+END
+validation-api-1.0.0.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/swag/!svn/ver/2/trunk/swag/lib/validation-api-1.0.0.GA.jar
+END
+mysql-connector-java-5.1.11-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/swag/!svn/ver/2/trunk/swag/lib/mysql-connector-java-5.1.11-bin.jar
+END
+slf4j-log4j12-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/swag/!svn/ver/2/trunk/swag/lib/slf4j-log4j12-1.6.1.jar
+END

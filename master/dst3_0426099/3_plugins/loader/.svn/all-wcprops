@@ -1,0 +1,27 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 34
+/svn/tuwien-private-repo/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tuwien-private-repo/!svn/ver/163/dst/dst3_0426099/3_plugins/loader
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/165/dst/dst3_0426099/3_plugins/loader/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/163/dst/dst3_0426099/3_plugins/loader/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tuwien-private-repo/!svn/ver/165/dst/dst3_0426099/3_plugins/loader/build.xml
+END

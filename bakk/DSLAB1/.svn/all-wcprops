@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/tuwien-private-repo/!svn/ver/23/verteilte-systeme/DSLAB1
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tuwien-private-repo/!svn/ver/24/verteilte-systeme/DSLAB1/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/24/verteilte-systeme/DSLAB1/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tuwien-private-repo/!svn/ver/24/verteilte-systeme/DSLAB1/build.xml
+END

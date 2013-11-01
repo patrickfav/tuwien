@@ -1,0 +1,520 @@
+# Language File Ticketline
+# EN (United Kingdom)
+
+
+# STYLE GUIDE #####################
+# 
+# LBL_X..........JLabel for X
+# BTN_X..........JButton for X
+# DDL_X_1........JComboBox (Dropdownlist) for X option 1
+# RB_X_1.........Radiobutton for X option 1
+# CB_X...........Checkbox for X
+# TXT_X..........for long text
+# TTL_X..........Frame Titel for X
+# PNL_X..........Panel Titel for X
+
+#####PLACEHOLDER###################
+
+BTN_PH = Button
+LBL_PH = Label
+DDL_PH = DDL Option
+RB_PH = Radiobutton Option
+TXT_PH = Long Text
+TTL_PH = Frame Title
+PNL_PH = Panel Title
+CB_PH = CheckBox
+
+OPH_UNIMPLEMENTED = Not Available
+OPT_UNIMPLEMENTED = This Feature is not available in the current Version
+LBL_CURRENCY = Pound(s)
+
+##### TopTenAnzeigenGui.java ######
+
+BTN_TOPTEN_RESBUY = Reservation / Sell
+BTN_TOPTEN_RESBUY_SELECT = Reservation / Sell [{0}]
+
+###### AllgemeinTab.java ######
+
+LBL_GENERAL_FREESEATS = Free Seats
+LBL_GENERAL_TOPACTS = Most visited Shows
+LBL_GENERAL_SEARCHARTIST = Search Artist
+
+BTN_GENERAL_SEARCH = Search
+BTN_GENERAL_NEWS = Show News
+BTN_GENERAL_WEB = Register Webaccount
+BTN_GENERAL_TOPTEN = Top Ten
+BTN_GENERAL_EFFICENCY = Hall Efficency
+
+PNL_GENERAL_INFORMATION = Information
+PNL_GENERAL_ONLINE = Online
+PNL_GENERAL_STATISTIC = Statistics
+
+###### AuffuehrungenSuchenGui.java ######
+
+PNL_SEARCHACT = Choose an Event Performance
+PNL_SEARCHACTRESULTS = Results
+
+LBL_SEARCHACT_FROM = From:
+LBL_SEARCHACT_TO = To:
+LBL_SEARCHACT_DATE = Date:
+LBL_SEARCHACT_TIME = Time:
+LBL_SEARCHACT_STORNO = Rescind:
+LBL_SEARCHACT_PRICE = Price:
+LBL_SEARCHACT_EVENT = Event:
+LBL_SEARCHACT_ACT = Show:
+LBL_SEARCHACT_HALL = Hall
+LBL_SEARCHACT_EVENTLOC = Eventlocation:
+LBL_SEARCHACT_FREESEATS = Free Seats:
+
+RB_SEARCHACT_YES = No
+RB_SEARCHACT_NO = Yes
+RB_SEARCHACT_BOTH = Both
+
+TCN_SEARCHACT_ACT = Act
+TCN_SEARCHACT_DATE = Date
+TCN_SEARCHACT_HALL = Hall
+TCN_SEARCHACT_EVENTLOC = Eventlocation
+TCN_SEARCHACT_LOCATION = Location
+TCN_SEARCHACT_FREESEAT = Free Seats
+
+
+BTN_SEARCHACT_SELECT = Select
+BTN_SEARCHACT_SEARCH = Search
+BTN_SEARCHACT_BACK = Back: Select Customer
+BTN_SEARCHACT_NEXT_PROMO = Next: Select Advertisment
+BTN_SEARCHACT_NEXT = (choose show first) Next
+BTN_SEARCHACT_NEXT_CAT = Next: Select category [Hall: {0}]
+
+
+OPT_SEARCHACT_SEARCHERROR = No Results found
+OPH_SEARCHACT_SEARCHERROR = No Results found
+
+###### Gui.java ######
+
+BTN_GUI_LOGIN = Login
+BTN_GUI_LOGOUT = Logout
+BTN_GUI_EXIT = Exit
+
+BTN_GUI_GENERAL = General
+BTN_GUI_SELLER = Selling
+
+TXT_GUI_LOGOUT = You are logged out!
+
+###### KategorieWaehlen.java ######
+
+PNL_SELECTCATEGORY = Select Category
+
+BTN_SELECTCATEGORY_NEXT = (choose category first) Next
+BTN_SELECTCATEGORY_BACK = Back: Select Show
+BTN_SELECTCATEGORY_NEXTSELECTSEAT = Next: Select Seat [Category: {0} ]
+
+LBL_SELECTCATEGORY_NAME = Category
+LBL_SELECTCATEGORY_MIN = MinPrice
+LBL_SELECTCATEGORY_MAX = MaxPrice
+LBL_SELECTCATEGORY_STD = StdPrice
+LBL_SELECTCATEGORY_SEATS = Free Seats
+
+###### KuenstlerSuchen.java ######
+OPH_SEARCHART_SEARCHERROR = Fehler bei der Suche
+OPT_SEARCHART_SEARCHERROR = Es ist ein Fehler beim Suchen aufgetreten.
+
+###### KundeAendernGui.java ######
+
+PNL_CUSTOMER_EDIT = Edit Customer
+BTN_CUSTOMER_EDIT = Edit
+
+OPH_EDITCOSTUMER_SUCCESS = Costumer edited successfully.
+OPT_EDITCOSTUMER_SUCCESS2 = Costumer edited successfully.
+
+###### KundeAnlegen.java ######
+
+PNL_CUSTOMER_CREATE = Apply new Customer
+BTN_CUSTOMER_CREATE = Apply
+
+OPH_CREATECOSTUMER_INPUTERROR = Input error
+OPT_CREATECOSTUMER_INPUTERROR_NUMBER = Input error. Please numbers only.
+OPH_CREATECOSTUMER_SUCCESS = Customer added successfully.
+OPT_CREATECOSTUMER_SUCCESS2 = Customer added successfully.
+
+###### KundeGui.java ######
+
+LBL_CUSTOMER_CARDNUMBER = Cardnumber
+LBL_CUSTOMER_EMPLOYEE = Employee
+LBL_CUSTOMER_FIRSTNAME = Firstname(*)
+LBL_CUSTOMER_SURNAME = Surname(*)
+LBL_CUSTOMER_GENDER = Gender
+LBL_CUSTOMER_BIRTHDAY = Birthday(*)
+LBL_CUSTOMER_STREET = Street
+LBL_CUSTOMER_PLZ = PLZ
+LBL_CUSTOMER_MAIL = Email
+LBL_CUSTOMER_LOCATION = Location
+LBL_CUSTOMER_PHONE = Phone
+LBL_CUSTOMER_TCNUMBER = TickedCardnummer
+LBL_CUSTOMER_ACCOUNT = Accountnumber(*)
+LBL_CUSTOMER_BALANCE = Balance(*)
+LBL_CUSTOMER_REDUCTION = Reduction(*)
+LBL_CUSTOMER_VALIDDATE = Valid date(*)
+LBL_CUSTOMER_PIN = PIN
+LBL_CUSTOMER_LOCKED = Locked
+LBL_CUSTOMER_PREFERENCES = Preferences
+
+RB_CUSTOMER_MALE = Male
+RB_CUSTOMER_FEMALE = Female
+
+BTN_CUSTOMER_RESET = Reset
+
+###### KundeSuchenGui.java ######
+PNL_SEARCHCUSTOMERHITS = Hits
+PNL_SEARCHCUSTOMER = Search Customer
+PNL_SEARCHCUSTOMERRESULTS = Results
+
+LBL_SEARCHCUSTOMER_NNAME = Surname:
+LBL_SEARCHCUSTOMER_VNAME = Firstname:
+LBL_SEARCHCUSTOMER_GENDER = Gender:
+LBL_SEARCHCUSTOMER_CARDNR = Cardnumber:
+LBL_SEARCHCUSTOMER_PIN = Pin:
+LBL_SEARCHCUSTOMER_DISCOUNT = Reduction:
+LBL_SEARCHCUSTOMER_SHOP = Shop:
+LBL_SEARCHCUSTOMER_STREET = Street:
+LBL_SEARCHCUSTOMER_PLZ = PLZ:
+LBL_SEARCHCUSTOMER_LOCATION = Location:
+
+RB_SEARCHCUSTOMER_MALE = Male
+RB_SEARCHCUSTOMER_FEMALE = Female
+RB_SEARCHCUSTOMER_BOTH = Both
+
+BTN_SEARCHCUSTOMER_EDIT = Edit
+BTN_SEARCHCUSTOMER_SAVE = Save
+BTN_SEARCHCUSTOMER_SEARCH = Search
+BTN_SEARCHCUSTOMER_NEXTSELECTACT = Next: Select Show
+BTN_SEARCHCUSTOMER_NEXT = Next: Buy/Reservation
+BTN_SEARCHCUSTOMER_NEXT2 = Next: Search Tickets/Res.
+BTN_SEARCHCUSTOMER_COST_INFO = (choose customer first)
+BTN_SEARCHCUSTOMER_BACK = Back
+BTN_SEARCHVUSTOMER_PROMO = Next: Select Articles
+
+TCN_SEARCHCUSTOMER_NR = CNo.
+TCN_SEARCHCUSTOMER_NAME = Surname
+TCN_SEARCHCUSTOMER_FIRSTNAME = Firstname
+TCN_SEARCHCUSTOMER_BD = Birthday
+TCN_SEARCHCUSTOMER_PLZ = PLZ
+
+
+OPH_SEARCHCUSTOMER_INFO = Info
+OPT_SEARCHCUSTOMER_NOFOUND = There are no matches to your search.
+OPH_SEARCHCUSTOMER_INPUTERROR = Input error
+OPT_SEARCHCUSTOMER_INPUTERROR_NUMBER = Input error. Please numbers only.
+OPH_SEARCHCUSTOMER_SEARCHERROR = Error while searching.
+OPT_SEARCHCUSTOMER_SEARCHERROR = An error occurred while trying to search.
+
+###### LoginGui.java ######
+
+TTL_LOGINGUI = Login
+
+LBL_LOGIN_USER = User:
+LBL_LOGIN_PASS = Password:
+LBL_LOGIN_ERROR = Login Error
+
+BTN_LOGIN_LOGIN = Login
+
+TXT_LOGIN_ERROR_MSG = Can't connect to database.
+
+###### NewsAnzeigen.java ######
+
+PNL_NEWS = News
+
+###### OrtSuchenGui.java ######
+
+PNL_LOCATION = Search Location
+PNL_LOCATIONRESULTS = Results
+
+LBL_LOCATION_EVENT = Event
+LBL_LOCATION_NAME = Location
+LBL_LOCATION_STREET = Street
+LBL_LOCATION_PLZ = PLZ
+LBL_LOCATION_SALELOCATION = Shop
+LBL_LOCATION_STATE = State
+LBL_LOCATION_DESCRIPTION = Description
+LBL_LOCATION_EVENTLOCATION = Eventlocation
+LBL_LOCATION_KIOSK = Kiosk
+
+TCN_LOCATION_NAME = Eventlocation
+TCN_LOCATION_DESCRIPTION = Location
+TCN_LOCATION_STREET = Street
+TCN_LOCATION_OPTIONS = S./E./K.
+
+BTN_LOCATION_SEARCH = Search
+BTN_LOCATION_BACK = Back
+BTN_LOCATION_SELECT = Select
+
+OPH_LOCATION_INPUTERROR = Input Error
+OPT_LOCATION_INPUTERROR_NUMBER = Input error. Please numbers only.
+OPH_LOCATION_INFO = Info
+OPT_LOCATION_NOFOUND = There are no matches to your search.
+OPH_LOCATION_SEARCHERROR = Error while searching.
+OPT_LOCATION_SEARCHERROR = An error occurred while trying to search.
+
+###### ReservierungTicketsSuchenBearbeitenGui.java ######
+
+PNL_RESERVATIONSEARCH = Search Reservation
+PNL_RESTICK_RESULTS = Results
+PNL_RESTICK_RESULT = Hits
+
+LBL_TICKET = Tickets
+LBL_RESERVATION = Reservation
+LBL_BOTH = Either
+
+LBL_RESTICK_NUMBER = ReservationNr.:
+LBL_RESTICK_DATE = Date:
+LBL_RESTICK_TIME = Time:
+LBL_RESTICK_ROW = Row:
+LBL_RESTICK_CATEGORY = Category:
+LBL_RESTICK_HALL = Haal:
+LBL_RESTICK_LOCDESCRIPTION = Location Description:
+LBL_RESTICK_LOCATION = Location:
+LBL_RESTICK_NROFSEATS = NrOfSeats
+LBL_RESTICK_EVENT = Event
+
+BTN_RESTICK_SEARCH = Search
+BTN_RESTICK_SELL = Sell
+BTN_RESTICK_RESCIND = Rescind
+BTN_RESTICK_EDIT = Edit
+
+OPH_SEARCHRESTICK_INPUTERROR = Input error
+OPT_SEARCHRESTICK_INPUTERROR_NUMBER = Input error. Positive Whole Numbers greater than 0 only please.
+OPH_SEARCHRESTICK_INFO = Info
+OPT_SEARCHRESTICK_NOFOUND = There are no matches to your search.
+OPH_RESTICK_STORNOYESNO = Canceled
+OPT_RESTICK_STORNOYESNO_RES = Are you sure that you want to cancel the Reservation?
+OPT_RESTICK_STORNOYESNO_TICKET = Are you sure that you want to cancel the Ticket?
+OPT_TICK_STORNOYESNO = Are you sure that you want to cancel the Ticket?
+OPH_RESTICK_BUYYESNO = Buy
+OPT_RESTICK_BUYYESNO = Are you sure that you want to buy the reservation? The cost is 
+
+###### SaalSuchenGui.java ######
+
+PNL_SEARCHHALL = Search Hall
+PNL_SEARCHHALLRESULTS = Results
+
+LBL_SEARCHHALL_BEZ = Description:
+LBL_SEARCHHALL_TYPE = Type:
+LBL_SEARCHHALL_PLACE = Location:
+LBL_SEARCHHALL_SEAT = Number of Seats:
+
+TCN_SEARCHHALL_BEZ = Hall
+TCN_SEARCHHALL_TYPE = Type
+TCN_SEARCHHALL_PLACE = Location
+TCN_SEARCHHALL_PLACEBEZ = Eventlocation
+TCN_SEARCHHALL_COUNTSEATS = Seats
+
+BTN_SEARCHHALL_SEARCH = Search
+BTN_SEARCHHALL_SELECT = Select
+BTN_SEARCHHALL_BACK = Back
+BTN_SEARCHHALL_SELECTPLACE = Select
+
+OPH_SEARCHHALL_INPUTERROR = Input error
+OPT_SEARCHHALL_INPUTERROR_NUMBER = Input error. Numbers only please.
+OPH_SEARCHHALL_INFO = Info
+OPT_SEARCHHALL_NOFOUND = There are no matches to your search.
+OPH_SEARCHHALL_SEARCHERROR = Error while searching.
+OPT_SEARCHHALL_SEARCHERROR = An error occurred while trying to search.
+
+###### SitzplatzWaehlenGui.java ######
+
+PNL_SELECTSEATS = Select Seats
+PNL_SELECTSEATS_LEGEND = Caption
+
+LBL_SELECTSEATS_MARKED = Marked
+LBL_SELECTSEATS_FREE = Free
+LBL_SELECTSEATS_RESERVED = Reserved
+LBL_SELECTSEATS_SOLD = Sold
+
+BTN_SELECTSEATS_BACK = Back: Select Category
+BTN_SELECTSEATS_BACK_RES = Back to Reservation Search
+BTN_SELECTSEATS_RESERVATION = Reserve
+BTN_SELECTSEATS_BUY = Buy
+
+MSG_SUM = Bill: 
+MSG_SUM_W = EURO
+MSG_SUM_TITLE = Amount
+
+MSG_RES = Reservationnumbers:
+MSG_RES_TITLE = Reservation numbers
+
+MSG_SEL_SEATS = Please, select seats!
+MSG_SEL_SEATS_TITLE = Hint
+
+MSG_OK = OK
+MSG_CANCEL = Cancel
+
+###### TopTenAnzeigenGui.java ######
+
+PNL_TOPTEN = TopTen
+
+###### VeranstaltungSuchenGui.java ######
+
+PNL_SEARCHEVENT = Search Event
+PNL_SEARCHEVENTRESULTS = Results
+
+LBL_SEARCHEVENT_BEZ = Description:
+LBL_SEARCHEVENT_CAT = Category:
+LBL_SEARCHEVENT_LAST = Duration:
+LBL_SEARCHEVENT_CONTENT = Content:
+
+BTN_SEARCHEVENT_SEARCH = Search
+BTN_SEARCHEVENT_SELECT = Select
+BTN_SEARCHEVENT_BACK = Back
+
+TCN_SEARCHEVENT_DESCRIPTION = Description
+TCN_SEARCHEVENT_CATEGORY = Category
+TCN_SEARCHEVENT_LENGTH = Length (min)
+
+OPH_SEARCHEVENT_INPUTERROR = Input error
+OPT_SEARCHEVENT_INPUTERROR_NUMBER = Input error. Numbers only please.
+OPH_SEARCHEVENT_INFO = Info
+OPT_SEARCHEVENT_NOFOUND = There are no matches to your search.
+OPH_SEARCHEVENT_SEARCHERROR = Error while searching.
+OPT_SEARCHHEVENT_SEARCHERROR = An error occurred while trying to search.
+
+###### VerkaeuferTab.java ######
+
+PNL_SALERES = Sell Tickets
+PNL_SELLER_SEARCHEDIT = Tickets/Reservations
+PNL_SELLER_ADVERTISMENT = Advertising
+PNL_SELLER_CUSTOMER = Customer
+PNL_SELLER_CUSTOMERNEW = New Customer
+
+BTN_SELLER_DOIT = Execute
+BTN_SELLER_TICKET = Tickets
+BTN_SELLER_RESERV = Reservations
+BTN_SELLER_SELL = Sell
+BTN_SELLER_SEARCH = Search/Edit
+BTN_SELLER_NEW = Apply new Customer
+
+
+
+###### WebAccountAnmelden.java ######
+
+PNL_WEBACCOUNT = Register Webaccount
+
+BTN_WEB_REGISTER = Apply
+
+LBL_WEB_PASSWORD = Password
+LBL_WEB_PASSWORD2 =  Password again
+LBL_WEB_CARDNUMBER = Cardnumber
+
+OPT_CREATE_CUSTOMERSUCESS = Registered User already in use!
+OPH_CREATE_CUSTOMERSUCESS2 = Information
+
+OPT_CREATE_CUSTOMERFAIL = Cardnumber not in use!
+OPH_CREATE_CUSTOMERFAIL2 = Warning
+
+OPT_CREATE_CUSTOMERFAILONLINEPWD = Cardnumber has already a Online password, registration not allowed!
+OPH_CREATE_CUSTOMERFAILONLINEPWD = Error!
+
+OPT_SEARCH_FAILLETTER = Correct your Cardnumber Input(just letters and not blank)!
+OPH_SEARCH_FAILLETTER2 = Warning
+
+OPT_CREATE_PASSWORDFAIL = Passwords have to be equal and not blank!
+OPH_CREATE_PASSWORDFAIL = Warning
+
+OPT_CREATE_PASSWORDLENGTHFAIL = Password must be 4 digits long!
+OPH_CREATE_PASSWORDLENGTHFAIL = Attention
+
+###### WerbematerialWaehlen.java ######
+
+PNL_PROMOTIONALMATERIALSSTEP2 = PromotionMaterial step 2
+PNL_PROMOTIONALMATERIALSCHOOSE = Material Selection
+
+PNL_SELECTARTICLE = Select Article
+PNL_SELECTARTICLE_BILL = Selected Articles
+
+BTN_SELECTARTICLE_NEXT = (choose article first) Sale
+BTN_SELECTARTICLE_SCANNER = Use Scanner
+BTN_SELECTARTICLE_BACK = Back to Costumer Search
+BTN_SELECTARTICLE_NEXTSELECTARTICLE = Select [Article: {0} ]
+BTN_SELECTARTICLE_REMOVE = Remove
+BTN_SELECTARTICLE_RESET = Reset
+BTN_SELECTARTICLE_FINISH = Finish sale
+
+
+OPH_SELECTARTICLE_QUESTION = Question:
+OPT_SELECTARTICLE_QUESTION = The sum is {0} Pounds. Execute the sale?
+
+OPH_SELECTARTICLE_SOLD = Information:
+OPT_SELECTARTICLE_SOLD = The sale was conducted.
+OPT_SELECTARTICLE_PRINT = Print Bill
+OPT_SELECTARTICLE_FINISH = Finish
+
+LBL_SELECTARTICLE_NUMBER = ArticleNr
+LBL_SELECTARTICLE_SHORTDESC = ShortDescription
+LBL_SELECTARTICLE_CATEGORY = Category
+LBL_SELECTARTICLE_DESC = Description
+LBL_SELECTARTICLE_PRICE = Price
+
+LBL_SELECTARTICLE_SUM = Sum
+
+###### Menue.java ######
+
+MENU_LANG = Language
+MENU_GERMAN = German
+MENU_ENGLISH = English
+MENU_HELP = Help
+MENU_HELP_BOOK = Manual
+MENU_HELP_ABOUT = About Ticketline...
+
+###### KuenstlerSuchen.java ######
+
+PNL_SEARCHARTIST = Search Artist
+PNL_SEARCHARTISTRESULTS = Results
+
+LBL_ARTIST_VNAME = Firstname
+LBL_ARTIST_NNAME = Surname
+LBL_ARTIST_SEX = Gender
+
+RB_ARTIST_MALE = Male
+RB_ARTIST_FEMALE = Female
+RB_ARTIST_BOTH = Both
+
+BTN_ARTIST_SEARCH = Search
+BTN_ARTIST_NEXT = Next
+BTN_ARTIST_RESET = Clear
+
+OPT_SEARCHART_NOTFOUND = 0 results found!
+OPH_SEARCHART_NOTFOUND = Attention
+
+###### SaalAuslastungGui.java ######
+
+PNL_EFFICIENCY_FORM = Hall Efficency
+PNL_EFFICIENCY_CHART = Results
+
+LBL_EFFICIENCY_HALL = Hall:
+LBL_EFFICIENCY_SHOW = Event:
+LBL_EFFICIENCY_FROM = From:
+LBL_EFFICIENCY_TO = To:
+
+BTN_EFFICIENCY_EXECUTE = Execute
+BTN_EFFICIENCY_EXPORT = Export
+BTN_EFFICIENCY_SELECT_HALL = Select
+BTN_EFFICIENCY_SELECT_SHOW = Select
+
+RB_EFFICIENCY_DEFINED = Defined Timespan
+RB_EFFICIENCY_CUSTOM = Custom Timespan
+
+CB_EFFICIENCY_LAST_YEAR = last Year
+CB_EFFICIENCY_LAST_QUARTER = last Quarter
+CB_EFFICIENCY_LAST_MONTH = last Month
+CB_EFFICIENCY_LAST_WEEK = last Week
+
+LBL_RESERVED = Reserved Seats
+LBL_BOUGHT = Sold Seats
+LBL_FREE = Free Seats
+
+OPH_HALLCALC_NOINPUT = No User Input
+OPT_HALLCALC_NOINPUT = You must select at least a Hall
+
+OPH_HALLCALC_RESULT = No Results
+OPT_HALLCALC_RESULT = There are no matches to your search.
+
+OPH_HALLCALC_WRONGDATE = Incorrect Date
+OPT_HALLCALC_WRONGDATE = You must enter the Date in one of the following ways:\nYYYY\nYYYY-MM\nYYYY-MM-DD

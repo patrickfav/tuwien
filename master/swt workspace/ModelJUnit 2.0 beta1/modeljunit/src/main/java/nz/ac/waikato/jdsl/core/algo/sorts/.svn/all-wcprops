@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/algo/sorts
+END
+ArrayQuickSort.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/algo/sorts/ArrayQuickSort.java
+END
+ListMergeSort.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/algo/sorts/ListMergeSort.java
+END
+HeapSort.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/algo/sorts/HeapSort.java
+END
+ArrayMergeSort.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/algo/sorts/ArrayMergeSort.java
+END
+SortObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/core/algo/sorts/SortObject.java
+END

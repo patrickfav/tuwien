@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://www.infosys.tuwien.ac.at/teaching/courses/IntAppl/OrderProcess.wsdl" uri="src/www.infosys.tuwien.ac.at/teaching/courses/IntAppl/OrderProcess.wsdl"/>
+    <system systemId="http://www.infosys.tuwien.ac.at/teaching/courses/IntAppl/OrderProcess.xsd" uri="src/www.infosys.tuwien.ac.at/teaching/courses/IntAppl/OrderProcess.xsd"/>
+    <system systemId="http://localhost:9000/shippingservice?wsdl" uri="src/localhost_9000/shippingservice.wsdl"/>
+    <system systemId="http://localhost:9000/supplierservice2?wsdl" uri="src/localhost_9000/supplierservice2.wsdl"/>
+    <system systemId="http://localhost:9000/warehouseservice?wsdl" uri="src/localhost_9000/warehouseservice.wsdl"/>
+    <nextCatalog catalog="nbproject/private/cache/retriever/catalog.xml"/>
+    <system systemId="http://localhost:9000/customerwrapperservice?wsdl" uri="src/localhost_9000/customerwrapperservice.wsdl"/>
+</catalog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

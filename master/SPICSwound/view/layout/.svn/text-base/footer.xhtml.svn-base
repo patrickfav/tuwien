@@ -1,0 +1,12 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+
+		<a href="mailto:#{RuntimeConfiguration.supportEmail}"><h:outputText value="#{messages['label.contact']}"/></a>
+		<br />
+		<h:outputText value="#{messages['label.version']} "/> 
+		<h:outputText value="#{DeploymentAction.buildNumber}"/>
+
+</ui:composition>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/aic_ass2/!svn/ver/10/OrderProcessBPEL/src/localhost_9000
+END
+shippingservice.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/aic_ass2/!svn/ver/10/OrderProcessBPEL/src/localhost_9000/shippingservice.wsdl
+END
+warehouseservice.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/aic_ass2/!svn/ver/10/OrderProcessBPEL/src/localhost_9000/warehouseservice.wsdl
+END
+customerwrapperservice.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/aic_ass2/!svn/ver/21/OrderProcessBPEL/src/localhost_9000/customerwrapperservice.wsdl
+END
+supplierservice2.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/aic_ass2/!svn/ver/10/OrderProcessBPEL/src/localhost_9000/supplierservice2.wsdl
+END

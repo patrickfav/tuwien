@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/src/db/dao
+END
+InterfaceDaoManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/src/db/dao/InterfaceDaoManager.java
+END
+TaxiManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/src/db/dao/TaxiManager.java
+END
+InterfaceTaxiManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/src/db/dao/InterfaceTaxiManager.java
+END
+DriverManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/src/db/dao/DriverManager.java
+END
+InterfaceDriverManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/src/db/dao/InterfaceDriverManager.java
+END
+GeneralManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/src/db/dao/GeneralManager.java
+END

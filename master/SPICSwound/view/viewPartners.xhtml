@@ -1,0 +1,78 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:s="http://jboss.com/products/seam/taglib"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+                xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+                template="layout/studyDetailLayout.xhtml">
+                       
+<ui:define name="content">
+        
+        <div id="blatt">
+		<h:form id="PartnerViewerForm">
+		<b><h:outputText value="#{messages['label.partner']}"/></b>
+		<div class="info">
+			<h:outputText value="#{messages['partner.info']}"/>
+		</div>
+		<br />
+		
+		<rich:dataTable id="PartnerViewerTable" var="p" value="#{participations}" rows="#{ParticipationManager.MAX_ROWS}" cellpadding="0" cellspacing="0" >
+			<f:facet name="header">
+				<rich:columnGroup>
+					<rich:column><h:outputText value="#{messages['label.name']}" /></rich:column>
+					<rich:column><h:outputText value="#{messages['label.organisation']}" /></rich:column>
+					<rich:column><h:outputText value="#{messages['label.partnersince']}" /></rich:column>
+					<rich:column><h:outputText value="#{messages['label.numberpatients']}" /></rich:column>
+					<rich:column><h:outputText value="" /></rich:column>
+				</rich:columnGroup>
+			</f:facet>
+			
+			<rich:column>#{p.user.screenname}</rich:column>
+			<rich:column>#{p.user.organisation}</rich:column>
+			<rich:column>
+				<h:outputText value="#{p.participatingSince}" >
+					<s:convertDateTime type="both" pattern="#{messages['dateformat']} #{messages['timeformat']}" />
+				</h:outputText>
+			</rich:column>
+			<rich:column>#{ParticipationManager.getPatientCount(p)}</rich:column>
+			<rich:column rendered="#{s:hasPermission(sessionInfo.trial,'partnerManagement')}">
+				 <a:commandLink id="deactivateParticipation#{p.id}" rendered="#{p.active and not identity.equalsLoggedInUser(p.user.username)}" value="#{messages['label.deactivate']}" action="#{ParticipationManager.deaktivateParticipation(p)}" reRender="PartnerViewerTable" />
+  				 <a:commandLink id="activateParticipation#{p.id}" rendered="#{! p.active and not identity.equalsLoggedInUser(p.user.username)}" value="#{messages['label.activate']}" action="#{ParticipationManager.aktivateParticipation(p)}" reRender="PartnerViewerTable" />
+			</rich:column>
+			<rich:column rendered="#{DeploymentAction.patientVisibilityEnabled and s:hasPermission(sessionInfo.trial,'partnerManagement')}">
+				<f:facet name="header">
+					<rich:column><h:outputText value="" /></rich:column>
+				</f:facet>
+			  	<h:selectBooleanCheckbox value="#{p.canViewAllPatients}" disabled="#{identity.equalsLoggedInUser(p.user.username)}">
+  					<a:support event="onchange" action="#{ParticipationManager.toggleViewAllPatients(p)}" reRender="PartnerViewerTable" />
+			  	</h:selectBooleanCheckbox>
+			</rich:column>	
+		</rich:dataTable>
+		<rich:datascroller for="PartnerViewerTable" maxPages="#{ParticipationManager.MAX_PAGES}" page="#{ParticipationManager.page}" />
+	
+		<s:div rendered="#{s:hasPermission(sessionInfo.trial,'partnerManagement')}">
+			<br />	
+			<b><h:outputText value="#{messages['label.partneradd']}"/></b>
+			<div class="info">
+				<h:outputText value="#{messages['partneradd.info']}"/>
+			</div>
+			
+			<s:fragment id="userSelectFrag" rendered="#{not empty ParticipationManager.allUsers}">
+				<h:selectOneMenu id="userSelect" value="#{ParticipationManager.selectedUsername}">
+					<f:selectItems id="userSelectItems" value="#{ParticipationManager.allUsers}"/>
+				</h:selectOneMenu>
+				
+				<a:commandButton id="addPartnerBtn" action="#{ParticipationManager.addParticipation}" reRender="PartnerViewerForm" styleClass="button" title="#{messages['button.add']}" value="#{messages['button.add']}"  />
+			</s:fragment>
+		</s:div>
+      	<br clear="all" />  
+        </h:form>
+        </div>
+
+</ui:define>
+
+</ui:composition>
+

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui
+END
+MessageManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/MessageManager.java
+END
+ProgressManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/ProgressManager.java
+END
+RegisterManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/RegisterManager.java
+END
+UpgradeManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/UpgradeManager.java
+END
+RankingManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/RankingManager.java
+END
+BaseManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/BaseManager.java
+END
+BuildingManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/BuildingManager.java
+END
+MapManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/MapManager.java
+END
+SessionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/SessionManager.java
+END
+TroopManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/181/swag/swag.webserver/src/swag/gui/TroopManager.java
+END

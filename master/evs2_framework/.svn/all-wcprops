@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/tuwien-private-repo/!svn/ver/185/evs/evs2_framework
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build.xml
+END

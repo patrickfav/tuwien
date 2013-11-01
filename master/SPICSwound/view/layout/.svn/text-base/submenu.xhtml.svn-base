@@ -1,0 +1,15 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:s="http://jboss.com/products/seam/taglib">
+
+<h:form id="submenu" rendered="#{s:hasRole('creator')}">      
+<h:panelGrid columns="3" cellspacing="0" cellpadding="0" border="0">
+      <h:commandButton class="#{Menu.overviewStyleClass}" id="overview" target="_top" action="#{Menu.setOverview}" title="#{messages['button.overview']}" value="#{messages['button.overview']}"/> 
+      <h:commandButton class="#{Menu.newTrialStyleClass}" id="newTrial" target="_top" action="#{trialEditor.createTrial}" title="#{messages['button.newstudy']}" value="#{messages['button.newstudy']}"/> 
+      <h:commandButton onclick="alert('Nicht implementiert!');return false;" class="#{Menu.extSearchStyleClass}" id="extSearch" target="_top" action="#{Menu.setExtSearch}" title="#{messages['button.extsearch']}" value="#{messages['button.extsearch']}"/> 
+</h:panelGrid>
+</h:form>
+      
+</ui:composition>

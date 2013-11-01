@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/fooprog2011/!svn/ver/32/trunk/foop1/src/client/gui
+END
+CreateGameGui.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/fooprog2011/!svn/ver/34/trunk/foop1/src/client/gui/CreateGameGui.java
+END
+PacmanGui.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/fooprog2011/!svn/ver/41/trunk/foop1/src/client/gui/PacmanGui.java
+END
+GameSelctorGui.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/fooprog2011/!svn/ver/34/trunk/foop1/src/client/gui/GameSelctorGui.java
+END

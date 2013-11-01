@@ -1,0 +1,90 @@
+
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	template="/templates/public.xhtml">
+
+	<!-- content -->
+	<ui:define name="content">
+
+
+
+		<h1>#{m['register_headline']}</h1>
+
+		<div class="standard_form_box">
+			<h:form>
+				<fieldset>
+					<div class="entry">
+						<div class="label">
+							<h:outputLabel for="username" value="#{m['username']}:" />
+						</div>
+						<div class="input">
+							<h:inputText id="username" value="#{registerManager.user.username}"
+									required="#{true}" requiredMessage="#{m['username_required']}" />
+						</div>
+					</div>
+
+					<div class="entry oddDark">
+						<div class="label">
+							<h:outputLabel for="password" value="#{m['password']}:" />
+						</div>
+						<div class="input">
+							<h:inputSecret id="password" value="#{registerManager.user.password}"
+									required="#{true}" requiredMessage="#{m['password_required']}" />
+						</div>
+					</div>
+
+					<div class="entry">
+						<div class="label">
+							<h:outputLabel for="mail" value="#{m['mail']}:" />
+						</div>
+						<div class="input">
+							<h:inputText id="mail" value="#{registerManager.user.mail}"
+									required="#{true}" requiredMessage="#{m['mail_required']}" />
+						</div>
+					</div>
+
+					<div class="entry oddDark">
+						<div class="label">
+							<h:outputLabel for="fname" value="#{m['firstname']}:" />
+						</div>
+						<div class="input">
+							<h:inputText id="fname" value="#{registerManager.user.firstName}"
+									required="#{true}" requiredMessage="#{m['firstname_required']}" />
+						</div>
+					</div>
+
+					<div class="entry">
+						<div class="label">
+							<h:outputLabel for="lname" value="#{m['lastname']}:" />
+						</div>
+						<div class="input">
+							<h:inputText id="lname" value="#{registerManager.user.lastName}"
+									required="#{true}" requiredMessage="#{m['lastname_required']}" />
+						</div>
+					</div>
+
+					<div class="entry oddDark">
+						<div class="label">
+							<h:outputLabel for="address" value="#{m['address']}:" />
+						</div>
+						<div class="input">
+							<h:inputText id="address" value="#{registerManager.user.address}"
+									required="#{false}"
+									requiredMessage="#{m['firstname_required']}" />
+						</div>
+					</div>
+
+					<p:commandButton ajax="false" style="float:right; margin-top:10px;"
+						value="#{m['register_button']}"
+						action="#{registerManager.register}" />
+
+				</fieldset>
+			</h:form>
+		</div>
+	</ui:define>
+
+</ui:composition>

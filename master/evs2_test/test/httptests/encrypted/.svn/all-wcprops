@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/encrypted
+END
+DeleteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/encrypted/DeleteTest.java
+END
+UpdateTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/encrypted/UpdateTest.java
+END
+CreateTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/encrypted/CreateTest.java
+END
+ReadTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/encrypted/ReadTest.java
+END

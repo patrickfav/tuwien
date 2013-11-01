@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/graph/ref
+END
+EdgeIteratorAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/graph/ref/EdgeIteratorAdapter.java
+END
+IncidenceListGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/graph/ref/IncidenceListGraph.java
+END
+AbstractGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/graph/ref/AbstractGraph.java
+END
+VertexIteratorAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/graph/ref/VertexIteratorAdapter.java
+END
+ToString.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/jdsl/graph/ref/ToString.java
+END

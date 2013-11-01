@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/134/dst/dst2_0426099/1_ejb/server/src/dst2/ejb
+END
+GeneralManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/tuwien-private-repo/!svn/ver/134/dst/dst2_0426099/1_ejb/server/src/dst2/ejb/GeneralManagementBean.java
+END
+PriceManagamentBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/tuwien-private-repo/!svn/ver/127/dst/dst2_0426099/1_ejb/server/src/dst2/ejb/PriceManagamentBean.java
+END
+TestingBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/tuwien-private-repo/!svn/ver/132/dst/dst2_0426099/1_ejb/server/src/dst2/ejb/TestingBean.java
+END
+AuditInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/134/dst/dst2_0426099/1_ejb/server/src/dst2/ejb/AuditInterceptor.java
+END
+TimerSessionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/134/dst/dst2_0426099/1_ejb/server/src/dst2/ejb/TimerSessionBean.java
+END
+JobManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/tuwien-private-repo/!svn/ver/134/dst/dst2_0426099/1_ejb/server/src/dst2/ejb/JobManagementBean.java
+END

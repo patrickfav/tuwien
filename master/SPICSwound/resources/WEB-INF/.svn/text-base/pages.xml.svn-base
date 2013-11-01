@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages xmlns="http://jboss.com/products/seam/pages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jboss.com/products/seam/pages http://jboss.com/products/seam/pages-2.1.xsd"
+	no-conversation-view-id="/trialManager.xhtml" login-view-id="/login.xhtml">
+
+	<page view-id="*" login-required="true">
+		<navigation>
+			<rule if-outcome="about">
+				<redirect view-id="/about.xhtml" />
+			</rule>
+			<rule if-outcome="administration">
+				<redirect view-id="/administration.xhtml" />
+			</rule>
+			<rule if-outcome="archiveTrialForm">
+				<redirect view-id="/archiveTrialForm.xhtml" />
+			</rule>
+			<rule if-outcome="editAG">
+				<redirect view-id="/editAttributeGroup.xhtml" />
+			</rule>
+			<rule if-outcome="editTrial">
+				<redirect view-id="/editTrial.xhtml" />
+			</rule>
+			<rule if-outcome="erwSuche">
+				<redirect view-id="/contentErweiterteSuche.xhtml" />
+			</rule>
+			<rule if-outcome="home">
+				<redirect view-id="/trialManager.xhtml" />
+			</rule>
+			<rule if-outcome="newTrial">
+				<redirect view-id="/editTrial.xhtml" />
+			</rule>
+			<rule if-outcome="profile">
+				<redirect view-id="/profileEdit.xhtml" />
+			</rule>
+			<rule if-outcome="start">
+				<redirect view-id="/contentStart.xhtml" />
+			</rule>
+			<rule if-outcome="trialManager">
+				<redirect view-id="/trialManager.xhtml" />
+			</rule>
+			<rule if-outcome="viewImportExport">
+				<redirect view-id="/viewImportExport.xhtml" />
+			</rule>
+			<rule if-outcome="viewPartners">
+				<redirect view-id="/viewPartners.xhtml" />
+			</rule>
+			<rule if-outcome="viewPatients">
+				<redirect view-id="/viewPatients.xhtml" />
+			</rule>
+			<rule if-outcome="viewQuick">
+				<redirect view-id="/viewQuick.xhtml" />
+			</rule>
+			<rule if-outcome="viewTrial">
+				<redirect view-id="/viewTrial.xhtml" />
+			</rule>
+			<rule if-outcome="viewTrialForm">
+				<redirect view-id="/viewTrialForms.xhtml" />
+			</rule>
+			<rule if-outcome="viewAppointments">
+				<redirect view-id="/viewAppointments.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+
+	<page view-id="/administration.xhtml">
+		<restrict>#{s:hasRole('admin')}</restrict>
+		<navigation>
+			<rule if-outcome="administrationEdit">
+				<redirect view-id="/administrationEditUser.xhtml" />
+			</rule>
+			<rule if-outcome="administrationCreate">
+				<redirect view-id="/administrationEditUser.xhtml" />
+			</rule>
+			<rule if-outcome="viewEvents">
+				<redirect view-id="/eventViewer.xhtml" />
+			</rule>
+			<rule if-outcome="viewProperties">
+				<redirect view-id="/viewProperties.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+
+	<page view-id="/administrationEditUser.xhtml">
+		<restrict>#{s:hasRole('admin')}</restrict>
+		<navigation>
+			<rule if-outcome="administration">
+				<end-conversation />
+				<redirect view-id="/administration.xhtml" />
+			</rule>
+			<rule if-outcome="viewEvents">
+				<redirect view-id="/eventViewer.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+
+	<page view-id="/editAttributeGroup.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="editTrialForm">
+				<redirect view-id="/editTrialForm.xhtml" />
+			</rule>
+			<rule if-outcome="finishEditTrialSpecificTF">
+				<redirect view-id="/viewTrialForms.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+	
+	<page view-id="/editTrialData.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="finishEditTD">
+				<redirect view-id="/viewTrialData.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+	
+	<page view-id="/importTrialData.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="finishEditTD">
+				<redirect view-id="/viewTrialData.xhtml" />
+			</rule>
+			<rule if-outcome="editTD">
+				<redirect view-id="/editTrialData.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+	
+	<page view-id="/undoChanges.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="editPatientTD">
+				<redirect view-id="/viewTrialData.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+
+	<page view-id="/viewPatients.xhtml" login-required="true">
+		<action execute="#{ViewPatients.loadPatientsAppointment}"/>
+		<navigation>
+			<rule if-outcome="editPatientTD">
+				<redirect view-id="/viewTrialData.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+
+	<page view-id="/viewProperties.xhtml">
+		<restrict>#{s:hasRole('admin')}</restrict>
+		<navigation>
+			<rule if-outcome="viewEvents">
+				<redirect view-id="/eventViewer.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+	
+	<page view-id="/viewQuick.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="editPatientTD">
+				<redirect view-id="/viewTrialData.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+
+	<page view-id="/viewTrial.xhtml">
+		<action execute="#{trialManager.setTrialByRequestParameter}" />
+	</page>
+	
+	<page view-id="/viewTrialForms.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="editTrialForm">
+				<redirect view-id="/editTrialForm.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+	
+	<page view-id="/viewAppointments.xhtml" login-required="true">
+		<navigation>
+			<rule if-outcome="editAppointment">
+				<redirect view-id="/editAppointment.xhtml">
+					<param name="origin" value="viewAppointments"/>
+				</redirect>
+			</rule>
+			<rule if-outcome="editPatientTD">
+				<redirect view-id="/viewTrialData.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+	
+	<page view-id="/editAppointment.xhtml" login-required="true">
+		<action execute="#{EditAppointment.init}"/>
+		<navigation>
+			<rule if-outcome="viewTrialData">
+				<redirect view-id="/viewTrialData.xhtml" />
+			</rule>
+			<rule if-outcome="viewAppointments">
+				<redirect view-id="/viewAppointments.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+
+	<!-- Exception Handling Section -->
+
+	<exception class="org.jboss.seam.framework.EntityNotFoundException">
+		<redirect view-id="/error.xhtml">
+			<message severity="error">
+				#{messages['org.jboss.seam.exception.EntityNotFound']}
+			</message>
+		</redirect>
+	</exception>
+
+	<exception class="javax.persistence.EntityNotFoundException">
+		<redirect view-id="/error.xhtml">
+			<message severity="error">
+				#{messages['org.jboss.seam.exception.EntityNotFound']}
+			</message>
+		</redirect>
+	</exception>
+
+	<exception class="javax.persistence.OptimisticLockException">
+		<end-conversation />
+		<redirect view-id="/error.xhtml">
+			<message severity="error">
+				#{messages['org.jboss.seam.exception.OptimisticLock']}
+			</message>
+		</redirect>
+	</exception>
+
+	<exception class="org.jboss.seam.security.AuthorizationException">
+		<redirect view-id="/error.xhtml">
+			<message severity="error">
+				#{messages['org.jboss.seam.exception.Authorization']}
+			</message>
+		</redirect>
+	</exception>
+
+	<exception class="org.jboss.seam.security.NotLoggedInException">
+		<redirect view-id="/login.xhtml">
+			<message severity="warn">
+				#{messages['org.jboss.seam.exception.NotLoggedIn']}
+			</message>
+		</redirect>
+	</exception>
+
+	<exception class="javax.faces.application.ViewExpiredException">
+		<redirect view-id="/login.xhtml">
+			<message severity="warn">
+				#{messages['org.jboss.seam.exception.ViewExpired']}
+			</message>
+		</redirect>
+	</exception>
+
+	<exception>
+		<redirect view-id="/error.xhtml">
+			<message severity="error">
+				#{messages['org.jboss.seam.exception.Other']}
+			</message>
+		</redirect>
+	</exception>
+
+</pages>

@@ -1,0 +1,57 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 34
+/svn/tuwien-private-repo/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/tuwien-private-repo/!svn/ver/184/swwe/SPICSwound
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/.project
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/tuwien-private-repo/!svn/ver/184/swwe/SPICSwound/.gitignore
+END
+build-dev.properties
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/build-dev.properties
+END
+Testinput.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/Testinput.xsd
+END
+build-prod.properties
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/build-prod.properties
+END
+hibernate-console.properties
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/hibernate-console.properties
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tuwien-private-repo/!svn/ver/184/swwe/SPICSwound/build.xml
+END

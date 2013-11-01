@@ -1,0 +1,41 @@
+<!-- Delegating build script, used by cruisecontrol to build MY_PROJECT_1.
+     Note that the basedir is set to the checked out project -->
+<project name="SPICS_WOUND_NIGHTLY"
+        default="build"
+        basedir="checkout/spicswound/HEAD">
+    <target name="build" depends="svnup">
+    
+	<!-- copy the serverspecific buildproperties -->
+	<exec executable="cp">
+		<arg line="/etc/cruisecontrol/build_spicswound.properties /etc/cruisecontrol/checkout/spicswound/HEAD/build.properties" />
+	</exec>
+
+	<!-- clean up first -->
+	<ant antfile="build.xml" target="clean" />
+
+	<!-- Call the target that does everything -->
+          <ant antfile="build.xml" target="deploy"/>
+	
+	<!-- install jar in local repository -->
+	<ant antfile="build.xml" target="install"/>
+	
+	<!-- everything below is not used atm - needed to run integration tests etc -->
+       <!-- <copy file="/etc/cruisecontrol/checkout/spicssoul/spicssoul.war"  
+	todir="/usr/local/jboss-4.0.5.GA/server/default/deploy"/> 
+	-->
+	<waitfor maxwait="60" maxwaitunit="second">
+        <and>
+            <http url="https://127.0.0.1:8643/SPICSwound"/>
+        </and>	
+	</waitfor>
+   	<ant antfile="build.xml" target="htmlunit" />
+   </target>
+   
+   <target name="svnup">
+      	<!-- Get the latest from svn -->
+   	<exec executable="svn">
+		<arg line="up"/>
+	</exec>
+   </target>
+</project>
+	

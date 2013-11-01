@@ -1,0 +1,55 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	template="/templates/game.xhtml">
+
+	<!-- content -->
+	<ui:define name="content">
+	    <div id="content">
+	    	<h:form prependId="false">
+	   			<p:dataGrid var="square" value="#{sessionManager.map.squares}" columns="#{sessionManager.map.config.numberOfSquares}" paginator="false" cellpadding="0" cellspacing="0" border="0">
+	    			<p:column>
+	    				<p:commandLink update="infobox" action="#{mapManager.setSelectedSquare(square)}">
+	    					<p:graphicImage value="../images/map/map_landscape_EMPTY.png" width="150" height="150" hspace="0" vspace="0" border="0" align="left" rendered="#{square.landscape=='EMPTY'}"/>
+	    					<p:graphicImage value="../images/map/map_landscape_LAKE.png" width="150" height="150" hspace="0" vspace="0" border="0" align="left" rendered="#{square.landscape=='LAKE'}"/>
+	    					<p:graphicImage value="../images/map/map_landscape_FORESTS.png" width="150" height="150" hspace="0" vspace="0" border="0" align="left" rendered="#{square.landscape=='FORESTS'}"/>
+	    					<p:graphicImage value="../images/map/map_landscape_ORE_MOUNTAIN.png" width="150" height="150" hspace="0" vspace="0" border="0" align="left" rendered="#{square.landscape=='ORE_MOUNTAIN'}"/>
+	    					<p:graphicImage value="../images/map/map_landscape_STONE_MOUNTAIN.png" width="150" height="150" hspace="0" vspace="0" border="0" align="left" rendered="#{square.landscape=='STONE_MOUNTAIN'}"/>
+	    					<p:graphicImage value="../images/map/map_base_1.png" width="150" height="150" hspace="0" vspace="0" border="0" align="left" rendered="#{square.base != null and square.landscape == null}"/>
+	    				</p:commandLink>
+		  	    	</p:column>
+	  			</p:dataGrid>
+	  		</h:form>
+	    </div>
+	    <div id="footer" class="info_field">
+	    <p:outputPanel id="infobox">
+	    	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	    		<tr>
+	    			<td width="200"><p:graphicImage value="../images/info/map_base_1.png" width="200" height="200" hspace="0" vspace="0" border="0" align="left" rendered="#{mapManager.selectedSquare.base!=null}"/><p:graphicImage value="../images/info/infobox_null.png" width="200" height="200" hspace="0" vspace="0" border="0" align="left" rendered="#{mapManager.selectedSquare==null}"/><p:graphicImage value="../images/info/map_landscape_forrest.png" width="200" height="200" hspace="0" vspace="0" border="0" align="left" rendered="#{mapManager.selectedSquare.landscape=='FORESTS'}"/><p:graphicImage value="../images/info/map_landscape_mountain.png" width="200" height="200" hspace="0" vspace="0" border="0" align="left" rendered="#{mapManager.selectedSquare.landscape=='STONE_MOUNTAIN'}"/><p:graphicImage value="../images/info/map_landscape_lake.png" width="200" height="200" hspace="0" vspace="0" border="0" align="left" rendered="#{mapManager.selectedSquare.landscape=='LAKE'}"/><p:graphicImage value="../images/info/map_landscape_hill.png" width="200" height="200" hspace="0" vspace="0" border="0" align="left" rendered="#{mapManager.selectedSquare.landscape=='ORE_MOUNTAIN'}"/><p:graphicImage value="../images/info/map_landscape_empty.png" width="200" height="200" hspace="0" vspace="0" border="0" align="left" rendered="#{mapManager.selectedSquare.landscape=='EMPTY'}"/></td>
+	    			<td width="105"><img src="../images/template/info_left.png" width="105" height="200" /></td>
+	       			<td>
+	       				<h:outputText styleClass="infoBoxHeadline" value="#{m['map_forests']}" rendered="#{mapManager.selectedSquare.landscape=='FORESTS'}"/>
+	       				<h:outputText styleClass="infoBoxHeadline" value="#{m['map_lake']}" rendered="#{mapManager.selectedSquare.landscape=='LAKE'}"/>
+	       				<h:outputText styleClass="infoBoxHeadline" value="#{m['map_hill']}" rendered="#{mapManager.selectedSquare.landscape=='ORE_MOUNTAIN'}"/>
+	       				<h:outputText styleClass="infoBoxHeadline" value="#{m['map_mountain']}" rendered="#{mapManager.selectedSquare.landscape=='STONE_MOUNTAIN'}"/>
+	       				<h:outputText styleClass="infoBoxHeadline" value="#{m['map_empty']}" rendered="#{mapManager.selectedSquare.landscape=='EMPTY'}"/>
+	       				<h:outputText styleClass="infoBoxHeadline" value="Base #{mapManager.selectedSquare.base.id}" rendered="#{mapManager.selectedSquare.base!=null}"/>
+	       				<br/>
+	       				<h:outputText styleClass="infoBoxText" value="#{m['map_desc_landscape']}" rendered="#{mapManager.selectedSquare.landscape!='EMPTY' and mapManager.selectedSquare.landscape != null}"/>
+	       				<h:outputText styleClass="infoBoxText" value="#{m['map_desc_base']}" rendered="#{mapManager.selectedSquare.landscape=='EMPTY'}"/>
+	       				<h:outputText styleClass="infoBoxText" value="#{mapManager.selectedSquare.base.user.username}" rendered="#{mapManager.selectedSquare.base != null}"/>
+	       				<h:outputText styleClass="infoBoxText" value=" | #{m['map_goto_base']}" rendered="#{mapManager.selectedSquare.base != null and mapManager.selectedSquare.base.user.equals(sessionManager.user)}"/>
+	       				<p:growl id="messages" showDetail="true" />
+	      	 		</td>
+	      	 		<td width="105"><img src="../images/template/info_right.png" width="105" height="200" hspace="0" vspace="0" border="0" /></td>
+	        	</tr>
+	        </table>
+	     </p:outputPanel>
+	    </div>
+	</ui:define>  
+	  
+</ui:composition>

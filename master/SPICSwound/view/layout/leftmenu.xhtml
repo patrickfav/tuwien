@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:s="http://jboss.com/products/seam/taglib"
+      xmlns:a="https://ajax4jsf.dev.java.net/ajax">
+
+<h:form id="leftMenu">
+		<br/>
+		<ui:insert name="leftMenu">
+
+			<a:repeat id="leftMenuRepeat" 
+				value="#{Menu.subConfiguration.menuItems}" 
+				var="mi">
+					<h:commandButton id="menuItem"
+							action="#{Menu.subConfiguration.setActiveMenuItem(mi.itemId)}" 
+							value="#{mi.label}" title="#{mi.label}" 
+							class="#{mi.activeStyleClass}" />
+			</a:repeat>	
+			
+		</ui:insert>
+</h:form>
+      
+</ui:composition>

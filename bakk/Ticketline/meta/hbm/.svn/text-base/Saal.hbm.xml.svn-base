@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "./meta/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ticketline.db.Saal" table="saal">
+		<!-- BaseClass -->
+		<meta attribute="extra-import">ticketline.db.Entity</meta>
+		<meta attribute="extends">Entity</meta>
+
+		<meta attribute="class-description">
+			Jeder Auffuehrungsort muss mindestens einen Saal
+			beherbergen. Auffuehrungen finden in Saelen statt. Jeder
+			Saal ist weiters in Kategorien und diese wiederum in Reihen
+			eingeteilt. Ein Saal ist eindeutig durch seine Bezeichnung
+			(dem Namen) und den Primaerschluesselfeldern des
+			zugehoerigen Ortes bestimmt. Jeder Saal hat einen
+			zugeordneten Typ wie Kino, Oper, Halle... und zusaetzlich
+			werden noch die Kosten pro Tag fuer die Benutzung und die
+			Maximalzahl der Plaetze gespeichert.
+		</meta>
+
+		<!-- PK, Properties -->
+		<composite-id name="comp_id" class="ticketline.db.SaalKey"
+			unsaved-value="any">
+			<key-property name="bezeichnung" column="bezeichnung"
+				type="java.lang.String" length="30" />
+			<key-property name="ortbez" column="ortbez"
+				type="java.lang.String" length="30" />
+			<key-property name="ort" column="ort"
+				type="java.lang.String" length="30" />
+		</composite-id>
+
+		<property name="typ" type="java.lang.String" column="typ"
+			not-null="true" length="30">
+
+			<meta attribute="field-description">z.B.: Kino, Halle</meta>
+
+		</property>
+		<property name="anzplaetze" type="int" not-null="true">
+			<meta attribute="field-description">
+				Anzahl der Plaetze > 0
+			</meta>
+
+			<column name="anzplaetze" check="anzplaetze > 0"
+				not-null="true" />
+		</property>
+		<property name="kostenprotag" type="java.math.BigDecimal">
+			<meta attribute="field-description">
+				Kosten pro Tag >= 0
+			</meta>
+
+			<column name="kostenprotag" length="10"
+				check="kostenprotag >= 0" />
+		</property>
+
+		<!-- Associations -->
+		<!-- derived association(s) for compound key -->
+		<!-- bi-directional many-to-one association to Ort -->
+		<many-to-one name="ort" class="ticketline.db.Ort" update="false"
+			insert="false" cascade="save-update">
+			<column name="ortbez" />
+			<column name="ort" />
+		</many-to-one>
+
+		<!-- end of derived association(s) -->
+
+		<!-- bi-directional one-to-many association to Auffuehrung -->
+		<set name="auffuehrungen" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="saalbez" />
+				<column name="ortbez" />
+				<column name="ort" />
+			</key>
+			<one-to-many class="ticketline.db.Auffuehrung" />
+		</set>
+		<!-- bi-directional one-to-many association to Kategorie -->
+		<set name="kategorien" lazy="false" inverse="true"
+			cascade="none">
+			<key>
+				<column name="saalbez" />
+				<column name="ortbez" />
+				<column name="ort" />
+			</key>
+			<one-to-many class="ticketline.db.Kategorie" />
+		</set>
+
+	</class>
+</hibernate-mapping>

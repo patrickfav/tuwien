@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tuwien-private-repo/!svn/ver/12/spaceBased/SB_task2/src/dao/interfaces
+END
+ITeddybearDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/12/spaceBased/SB_task2/src/dao/interfaces/ITeddybearDao.java
+END
+IStorageDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/12/spaceBased/SB_task2/src/dao/interfaces/IStorageDAO.java
+END
+IPartDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/12/spaceBased/SB_task2/src/dao/interfaces/IPartDao.java
+END

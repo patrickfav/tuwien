@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deployers
+END
+jboss-aspect-library-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deployers/jboss-aspect-library-beans.xml
+END
+aspect-deployer-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deployers/aspect-deployer-beans.xml
+END
+metadata-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deployers/metadata-beans.xml
+END
+ejb-deployer-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deployers/ejb-deployer-beans.xml
+END
+jca-deployers-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deployers/jca-deployers-beans.xml
+END
+ejb3-deployers-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deployers/ejb3-deployers-beans.xml
+END
+security-deployer-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deployers/security-deployer-beans.xml
+END

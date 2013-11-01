@@ -1,0 +1,52 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	template="/templates/template.xhtml">
+
+	<!-- content -->
+	<ui:define name="content">
+		<h2>#{m['result_header']}: #{searchManager.text}</h2>
+		<h:form>
+			<h:dataTable value="#{searchManager.resultList}" cellpadding="2" var="jobDTO" rules="rows" width="50%">
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{m['jobDTO_id']}" />
+					</f:facet>
+
+					<h:outputText value="#{jobDTO.id}"></h:outputText>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{m['jobDTO_start']}" />
+					</f:facet>
+
+					<h:outputText value="#{jobDTO.start}"></h:outputText>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{m['jobDTO_finish']}" />
+					</f:facet>
+
+					<h:outputText value="#{jobDTO.finish}"></h:outputText>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{m['jobDTO_usr']}" />
+					</f:facet>
+
+					<h:outputText value="#{jobDTO.username}">
+					</h:outputText>
+				</h:column>
+				
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>

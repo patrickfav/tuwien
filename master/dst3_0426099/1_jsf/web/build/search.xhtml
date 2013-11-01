@@ -1,0 +1,23 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	template="/templates/template.xhtml">
+
+	<!-- content -->
+	<ui:define name="content">
+		<h2>#{m['search_header']}</h2>
+		<h:form>
+			<h:outputLabel for="search">
+				<h:outputText value="#{m['search_grid']}" />
+			</h:outputLabel>
+			<h:inputText id="search" size="40" value="#{searchManager.text}" required="true">
+			</h:inputText>
+			
+			<h:commandButton styleClass="button" value="#{m['button.search']}" action="#{searchManager.findJobs()}"/>
+		</h:form>
+	</ui:define>
+</ui:composition>

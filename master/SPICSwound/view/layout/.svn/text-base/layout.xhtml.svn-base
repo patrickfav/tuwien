@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:s="http://jboss.com/products/seam/taglib">
+<head>
+  <title><ui:insert name="title">SPICS #{DeploymentAction.spicsInstance}</ui:insert></title>
+  <link rel="stylesheet" type="text/css" href="#{RuntimeConfiguration.stylesheetUrl}"/>
+  <link rel="shortcut icon" type="image/x-icon" href="./graphics/icon/favicon.ico" />
+</head>
+
+<body>
+
+    <ui:insert name="header">
+    	<ui:include src="header.xhtml"/>
+    </ui:insert>
+	
+	
+	<div id="content">
+		<table cellspacing="0" cellpadding="0" border="0" width="98%">
+			<tr>
+				<td class="left" valign="top">
+					<ui:insert name="left"/>
+				</td>
+				<td class="center" width="*" valign="top">
+					<ui:insert name="content"/>
+				</td>
+				
+				<td class="right" valign="top" >
+					<ui:insert name="right"/>
+				</td>
+			</tr>
+			<tr>
+				<td />
+				<td valign="bottom" align="center" id="trcorner" style="height: 50px;">
+					<ui:insert name="footer">
+						<ui:include src="footer.xhtml" />
+					</ui:insert>
+				</td>
+				<td />
+			</tr>
+		</table>
+	</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;RingBuffer.java&apos; to &apos;ModelJUnit 2.0 beta1/modeljunit/src/main/java/nz.ac.waikato.modeljunit.examples&apos;&#x0D;&#x0A;- Original project: &apos;Exercise3-2&apos;&#x0D;&#x0A;- Destination element: &apos;ModelJUnit 2.0 beta1/modeljunit/src/main/java/nz.ac.waikato.modeljunit.examples&apos;&#x0D;&#x0A;- Original element: &apos;randoop.RingBuffer.java&apos;" description="Copy compilation unit" destination="=ModelJUnit 2.0 beta1/modeljunit\/src\/main\/java&lt;nz.ac.waikato.modeljunit.examples" element1="/src&lt;randoop{RingBuffer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1307035917586" units="1" version="1.0"/>
+</session>

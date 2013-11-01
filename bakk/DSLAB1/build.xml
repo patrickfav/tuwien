@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="DSLAB1" default="compile" basedir=".">
+    
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="bin"/>
+    
+    <path id="project.classpath" >
+        <pathelement location="${build.dir}"/>
+    </path>
+    
+    <target name="compile" description="Compile project.">
+        <mkdir dir="${build.dir}"/>
+
+        <javac srcdir="${src.dir}" destdir="${build.dir}"
+               classpathref="project.classpath"
+               debug="true" deprecation="true"
+               includeantruntime="false"/>
+        <copy todir="${build.dir}">
+            <fileset dir="${src.dir}">
+                <include name="*.properties" />
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="run-server" depends="compile" description="Run server.">
+        <!-- Replace "your.Server" with the qualified class name of your server implementation. -->
+
+        <java classname="bsp1.ServerConsoleStarter" fork="true" classpathref="project.classpath">
+            <!-- Replace these parameters with real values such as 12500. -->
+            <arg value="12040" /><!-- tcpPort -->
+            <arg value="12040" /><!-- udpPort -->
+        </java>
+    </target>
+    
+    <target name="run-client1" depends="compile" description="Run client1.">
+        <!-- Replace "your.Client" with the qualified class name of your client implementation. -->
+        <java classname="bsp1.ClientConsoleStarter" fork="true" classpathref="project.classpath">
+
+            <!-- Replace these parameters with real values such as 12501. -->
+            <arg value="12041" /><!-- clientUDPPort -->
+            <arg value="localhost" /><!-- serverHost -->
+            <arg value="12040" /><!-- serverTCPPort -->
+            <arg value="12040" /><!-- serverUDPPort -->
+        </java>
+    </target>
+    
+    <target name="run-client2" depends="compile" description="Run client2.">
+        <!-- Replace "your.Client" with the qualified class name of your client implementation. -->
+
+        <java classname="bsp1.ClientConsoleStarter" fork="true" classpathref="project.classpath">
+            <!-- Replace these parameters with real values such as 12502. -->
+            <arg value="12042" /><!-- clientUDPPort -->
+            <arg value="localhost" /><!-- serverHost -->
+            <arg value="12040" /><!-- serverTCPPort -->
+            <arg value="12040" /><!-- serverUDPPort -->
+        </java>
+    </target>
+    
+    <target name="run-client3" depends="compile" description="Run client3.">
+
+        <!-- Replace "your.Client" with the qualified class name of your client implementation. -->
+        <java classname="bsp1.ClientConsoleStarter" fork="true" classpathref="project.classpath">
+            <!-- Replace these parameters with real values such as 12503. -->
+            <arg value="12043" /><!-- clientUDPPort -->
+            <arg value="localhost" /><!-- serverHost -->
+            <arg value="12040" /><!-- serverTCPPort -->
+            <arg value="12040" /><!-- serverUDPPort -->
+        </java>
+    </target>
+
+    
+    <target name="clean" description="Clean build products.">
+        <delete dir="${build.dir}"/>
+    </target>
+    
+    <target name="rebuild" depends="clean, compile" description="Clean and build products." />
+</project>

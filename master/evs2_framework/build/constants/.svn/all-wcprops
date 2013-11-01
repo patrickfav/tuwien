@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/constants
+END
+CRUDAction.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/constants/CRUDAction.class
+END
+SearchFieldType.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/constants/SearchFieldType.class
+END
+ContentType.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/constants/ContentType.class
+END
+InterceptorType.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/build/constants/InterceptorType.class
+END

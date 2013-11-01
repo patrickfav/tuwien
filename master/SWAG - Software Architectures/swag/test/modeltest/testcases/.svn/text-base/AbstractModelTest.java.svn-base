@@ -1,0 +1,6 @@
+package modeltest;
+
+public abstract class AbstractModelTest {
+	
+
+}

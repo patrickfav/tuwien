@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models
+END
+BuildingType.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/BuildingType.java
+END
+Troop.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/Troop.java
+END
+ResourceBuilding.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/ResourceBuilding.java
+END
+Config.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/Config.java
+END
+UpgradeBuilding.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/UpgradeBuilding.java
+END
+UpgradeListEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/UpgradeListEntry.java
+END
+UserGameMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/UserGameMap.java
+END
+GameMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/GameMap.java
+END
+MilitaryBuilding.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/MilitaryBuilding.java
+END
+Base.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/Base.java
+END
+BuildListEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/BuildListEntry.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/User.java
+END
+TroopMovementWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/TroopMovementWrapper.java
+END
+Message.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/Message.java
+END
+Resource.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/Resource.java
+END
+Upgrade.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/Upgrade.java
+END
+UpgradeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/UpgradeType.java
+END
+BaseSquare.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/BaseSquare.java
+END
+MilitaryCreateListEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/MilitaryCreateListEntry.java
+END
+LongEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/LongEntity.java
+END
+Building.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/Building.java
+END
+MapSquare.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/models/MapSquare.java
+END

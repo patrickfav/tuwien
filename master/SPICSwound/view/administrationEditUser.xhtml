@@ -1,0 +1,189 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a="http://richfaces.org/a4j"
+	template="layout/studyDetailLayout.xhtml">
+
+
+	<ui:define name="trialHead">
+		<f:subview id="StudyDetailNewTrialHeaderView">
+			<h:outputText value="#{messages['label.addnewuser']}"
+				rendered="#{empty selectedUser.username}" />
+			<h:outputText value="#{messages['label.edituser']}"
+				rendered="#{not empty selectedUser.username}" />
+		</f:subview>
+	</ui:define>
+
+	<ui:define name="content">
+
+	<h:messages globalOnly="false" errorClass="errorMessage"
+				fatalClass="errorMessage" infoClass="infoMessage"
+				warnClass="warningMessage" layout="list" showDetail="true"
+				showSummary="true" />
+
+		<br />
+		<h:form id="editUserForm" enctype="multipart/form-data">
+			<div id="userdata"><s:validateAll>
+
+				<b><h:outputText value="#{messages['label.userdata']}" /></b>
+				<div class="info"><h:outputText
+					value="#{messages['newuser.info']}" /></div>
+				<table cellpadding="0" cellspacing="3" border="0">
+					<tr>
+						<td><h:outputText value="#{messages['label.username']}" />:
+						*</td>
+						<td width="300"><h:inputText id="username" required="true"
+							value="#{selectedUser.username}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" disabled="#{not empty selectedUser.username}" /></td>
+						<td style="padding-left: 10px"><h:message for="username"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.title']}" />:</td>
+						<td width="300"><h:inputText id="title" required="false"
+							value="#{selectedUser.title}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" /></td>
+						<td style="padding-left: 10px"><h:message for="title"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.firstname']}" />:
+						*</td>
+						<td width="300"><h:inputText id="firstname" required="true"
+							value="#{selectedUser.firstname}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" /></td>
+						<td style="padding-left: 10px"><h:message for="firstname"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.lastname']}" />:
+						*</td>
+						<td width="300"><h:inputText id="lastname" required="true"
+							value="#{selectedUser.lastname}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" /></td>
+						<td style="padding-left: 10px"><h:message for="lastname"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.organisation']}" />:
+						*</td>
+						<td width="300"><h:inputText id="organisation"
+							required="true" value="#{selectedUser.organisation}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" /></td>
+						<td style="padding-left: 10px"><h:message for="organisation"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.screenname']}" />:
+						*</td>
+						<td width="300"><h:inputText id="screenname" required="true"
+							value="#{selectedUser.screenname}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" /></td>
+						<td style="padding-left: 10px"><h:message for="screenname"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.email']}" />: *</td>
+						<td width="300"><h:inputText id="email" required="true"
+							value="#{selectedUser.email}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" /></td>
+						<td style="padding-left: 10px"><h:message for="email"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText
+							value="#{messages['label.preferredLanguage']}" />:</td>
+						<td width="300"><h:selectOneMenu
+							value="#{selectedUser.preferredLocale}">
+							<f:selectItems value="#{localeSelector.supportedLocales}" />
+						</h:selectOneMenu></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.notifyappointment.browser']}" />:</td>
+						<td width="300">
+							<h:selectBooleanCheckbox value="#{selectedUser.notifyAppointmentBrowser}" />
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.notifyappointment.mail']}" />:</td>
+						<td width="300">
+							<h:selectBooleanCheckbox value="#{selectedUser.notifyAppointmentMail}" />
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.enableuser']}" />:</td>
+						<td width="300"><h:selectBooleanCheckbox
+							value="#{selectedUser.enabled}"
+							
+							disabled="#{identity.equalsLoggedInUser(selectedUser.username)}" 
+							></h:selectBooleanCheckbox></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.roles']}" />:</td>
+						<td width="300">
+							<h:selectManyCheckbox id="roles" value="#{Administration.roles}">
+                				<s:selectItems value="#{identityManager.listRoles()}" var="role" label="#{role}"/>
+              				</h:selectManyCheckbox>
+              			</td>
+					</tr>
+
+					<s:fragment rendered="#{not empty selectedUser.username}">
+						<tr>
+							<td colspan="2"><br />
+							<div class="info"><h:outputText
+								value="#{messages['optionalpw.info']}" /></div>
+							</td>
+						</tr>
+					</s:fragment>
+					<tr>
+						<td><h:outputText value="#{messages['label.newpassword']}" />:
+						*</td>
+						<td width="300"><h:inputSecret id="newpassword"
+							required="#{empty selectedUser.username}"
+							value="#{Administration.newPassword}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" /></td>
+						<td style="padding-left: 10px"><h:message for="newpassword"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.newpassword2']}" />:
+						*</td>
+						<td width="300"><h:inputSecret id="newpassword2"
+							required="#{empty selectedUser.username}"
+							value="#{Administration.newPassword2}"
+							converter="#{blankStringAwareConverter}" size="43"
+							style="width:100%" /></td>
+						<td style="padding-left: 10px"><h:message for="newpassword2"
+							showDetail="true" styleClass="errorMsg" /></td>
+					</tr>
+				</table>
+
+				<br clear="all" />
+				<h:commandButton id="saveTrial" action="#{Administration.saveUser}"
+					value="#{messages['button.save']}" styleClass="button"
+					title="#{messages['button.save']}" />
+						&nbsp;&nbsp;
+						<h:commandButton id="cancelTrial"
+					action="#{Administration.cancelEditing}"
+					value="#{messages['button.cancel']}" styleClass="button"
+					title="#{messages['button.cancel']}" immediate="true" />
+				<br />
+				<br />
+			</s:validateAll></div>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

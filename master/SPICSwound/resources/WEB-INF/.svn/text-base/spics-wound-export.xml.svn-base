@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<spicswoundStudBlatt>
+<model>
+	<blattInfo>
+		<tr >
+			<attrib name="exporttypBeschr" label_de="Exporttyp" />
+			<attrib name="exporttyp" />
+		</tr>
+		
+		<tr >
+			<attrib name="StudieBezBeschr" label_de="Studie" />
+			<attrib name="studieBez" />
+		</tr>
+		
+		<tr >
+			<attrib name="StudienleiterBeschr" label_de="Studienleiter" />
+			<attrib name="studienleiter" />
+		</tr>
+		
+		<tr >
+			<attrib name="exportiertVonBeschr" label_de="Exportiert von" />
+			<attrib name="exportiertVon" />
+		</tr>
+		
+		<tr >
+			<attrib name="exportDatumBeschr" label_de="ExportDatum" />
+			<attrib name="exportDatum" />
+		</tr>
+		
+		<tr >
+			<attrib name="exportUhrzeitBeschr" label_de="ExportUhrzeit" />
+			<attrib name="exportUhrzeit" />
+		</tr>
+		
+		<tr >
+			<attrib name="spracheBeschr" label_de="Deutsch" />
+			<attrib name="sprache" />
+		</tr>
+		
+		<tr >
+			<attrib name="anzahlGruppenBeschr" label_de="Anzahl Gruppen" />
+			<attrib name="anzahlGruppen" />
+		</tr>
+		
+		<tr >
+			<attrib name="anzahlAttributeBeschr" label_de="Anzahl Attribute" />
+			<attrib name="anzahlAttribute" />
+		</tr>
+		
+	</blattInfo>
+	
+	<blattGruppen>
+	
+		<uebersichtsHeader>
+			<attrib name="GruppennameBeschr" label_de="Gruppenname" />
+			<attrib name="BezeichnungBeschr" label_de="Bezeichnung" />
+			<attrib name="FormulartypBeschr" label_de="Formulartyp" />
+			<attrib name="DatentypBeschr" label_de="Datentyp" />
+			<attrib name="EinheitBeschr" label_de="Einheit" />
+			<attrib name="ReferezwertBeschr" label_de="Referezwert" />
+			<attrib name="EmpfohlenBeschr" label_de="Empfohlen" />
+			<attrib name="AuswahllisteBeschr" label_de="Auswahlliste" />
+		</uebersichtsHeader>
+	
+		<repeat>
+			<gruppen>
+				<tr>
+					<attrib name="Gruppenname"/>
+				</tr>
+				<repeat>
+					<tr>
+						<attrib name="empty" label_de="" />	
+						<attrib name="Bezeichnung"  />
+						<attrib name="Formulartyp"  />
+						<attrib name="Datentyp" />
+						<attrib name="Einheit" />
+						<attrib name="Referezwert" />
+						<attrib name="Empfohlen" />
+						<attrib name="Auswahlliste"/>	
+					</tr>
+				</repeat>
+			</gruppen>
+			</repeat>
+
+	
+	</blattGruppen>
+</model>
+</spicswoundStudBlatt>
+
+

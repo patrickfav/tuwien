@@ -1,0 +1,112 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:s="http://jboss.com/products/seam/taglib"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+                xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+                xmlns:c="http://java.sun.com/jstl/core"
+                template="layout/studyDetailLayout.xhtml">
+
+             
+<ui:define name="content">
+        
+	<div id="blatt">
+	<h:form id="ImportExportViewerForm">
+        
+      <h:messages globalOnly="false" errorClass="errorMessage" fatalClass="errorMessage" infoClass="infoMessage" warnClass="warningMessage" layout="list" showDetail="true" showSummary="true" />
+      
+      <h1>#{messages['button.importexport']}</h1>
+      
+      <rich:simpleTogglePanel label="#{messages['label.importtrial']}" rendered="#{ViewImportExport.canImportTrialForm()}" switchType="client">
+			<div class="info">
+				<h:outputText value="#{messages['importexport_impDef.info']}"/>
+			</div>
+			<br />
+			<table cellspacing="1" cellpadding="0" border="0">
+				<tr>
+					<td width="150">
+						<h:outputText value="#{messages['label.file']}"/>:
+					</td>
+					<td>
+						<rich:fileUpload id="trialFormImportUpload" 
+								uploadData="#{ViewImportExport.uploads}" 
+								immediateUpload="true"
+								listHeight="60"
+								maxFilesQuantity="1"
+								acceptedTypes="zip"
+								locale="#{localeSelector.locale}">
+							<a:support event="ontyperejected" action="#{FileUploadUtils.typeRejected('zip','trialFormImportUpload')}" reRender="ImportExportViewerForm" />
+							<a:support event="onsizerejected" action="#{FileUploadUtils.sizeRejected('trialFormImportUpload')}" reRender="ImportExportViewerForm" />
+						</rich:fileUpload>
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<h:commandButton id="importBtn" styleClass="button" title="#{messages['button.import']}" value="#{messages['button.import']}" action="#{ViewImportExport.importTrialForm}" />
+		
+		</rich:simpleTogglePanel>
+		
+		<br /><br />
+		
+		<rich:simpleTogglePanel label="#{messages['label.exporttrial']}" rendered="#{s:hasPermission(sessionInfo.trial,'exportTrialForms')}" switchType="client">
+			<div class="info">
+				<h:outputText value="#{messages['importexport_expDef.info']}"/>
+			</div>
+			<br />
+			<table cellspacing="1" cellpadding="0" border="0">
+				<tr>
+					<td width="150">
+						<h:outputText value="#{messages['label.trial']}"/>:
+					</td>
+					<td>
+						<h:selectOneMenu id="selectTrial1" value="#{ViewImportExport.trialFormExportTfId}" >
+							<f:selectItems binding="#{ViewImportExport.trialFormSelectItems}"/>
+							<a:support event="onmouseup" reRender="exportTFBtn"></a:support>
+						</h:selectOneMenu>
+	
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<s:button id="exportTFBtn" view="/seam/resource/spicsxml/getxml.xml" styleClass="button" title="#{messages['button.export']}" value="#{messages['button.export']}">
+				<f:param name="tfid" value="#{ViewImportExport.trialFormExportTfId}" />
+			</s:button>	
+		</rich:simpleTogglePanel>
+		
+		<br /><br />
+		
+		<rich:simpleTogglePanel label="#{messages['label.exporttrialdata']}" switchType="client">
+			<div class="info">
+				<h:outputText value="#{messages['exporttrialdata.info']}"/>
+			</div>
+			<br />
+			<h:commandButton id="exportAllBtn" styleClass="button" title="#{messages['button.export']}" value="#{messages['button.export']}" action="#{ViewImportExport.exportAllTrialData}" />
+			
+		</rich:simpleTogglePanel>
+		
+		<br /><br />
+		
+		<rich:simpleTogglePanel label="#{messages['label.exportowntrialdata']}" switchType="client">
+			<div class="info">
+				<h:outputText value="#{messages['exportowntrialdata.info']}"/>
+			</div>
+			<br />
+			<h:commandButton id="exportOwnBtn" styleClass="button" title="#{messages['button.export']}" value="#{messages['button.export']}" action="#{ViewImportExport.exportOwnTrialData}" />
+		</rich:simpleTogglePanel>
+		
+		<br /><br />
+		
+		<c:forEach items="#{ViewImportExport.importExportFragments}" var="fragment">
+			<ui:include id="fragmentInclude" src="#{fragment.fragmentUrl}" />
+		</c:forEach>
+
+	</h:form>
+	</div>
+
+</ui:define>
+
+</ui:composition>
+

@@ -1,0 +1,151 @@
+<cruisecontrol>
+    <project name="SPICS_JSF" buildafterfailed="true">
+  
+	<plugin name="svn" classname="net.sourceforge.cruisecontrol.sourcecontrols.SVN"/>
+	<plugin name="svnbootstrapper" classname="net.sourceforge.cruisecontrol.bootstrappers.SVNBootstrapper"/>
+      
+          <!-- Bootstrappers are run every time the build runs, *before* the modification checks -->
+	<bootstrappers>
+		<currentbuildstatusbootstrapper file="logs/spicsjsf/buildstatus.txt"/>
+	</bootstrappers>
+	
+	<!-- Defines where cruise looks for changes, to decide whether to run the build -->
+	<modificationset quietperiod="10">
+		<svn localworkingcopy="checkout/spics.jsf"
+		     repositoryLocation="svn://192.168.4.123/svnprojects/spics/modules/spics.jsf"
+		     username="svnadmin"
+		     password="svn!IsItANadmin"/>
+	</modificationset>
+	
+	<schedule interval="3600">
+		<composite>
+			<ant antscript="/usr/share/ant/bin/ant"
+			   buildfile="build_spicsjsf.xml"
+			   target="svnup"
+			   uselogger="true"
+			   usedebug="false"/>
+			
+			<maven2 mvnhome="/usr/local/apache-maven/apache-maven-2.0.9"
+			   pomfile="checkout/spics.jsf/pom.xml"
+			   goal="clean install"/>
+		</composite>
+	</schedule>
+	
+	<!-- directory to write build logs to -->
+	<log dir="logs/spicsjsf" />
+    
+    </project>  
+    
+
+  <project name="SPICS_WOUND_NIGHTLY" buildafterfailed="true">
+    
+    <plugin name="svn" classname="net.sourceforge.cruisecontrol.sourcecontrols.SVN"/>
+    <plugin name="svnbootstrapper" classname="net.sourceforge.cruisecontrol.bootstrappers.SVNBootstrapper"/>
+    
+
+
+    <!-- Bootstrappers are run every time the build runs,
+        *before* the modification checks -->
+    <bootstrappers>
+      <currentbuildstatusbootstrapper file="logs/spicswound/buildstatus.txt"/>
+    </bootstrappers>
+
+    <!-- Defines where cruise looks for changes, to decide whether to run the build -->
+    <modificationset quietperiod="10">
+        <svn localworkingcopy="checkout/spicswound"
+             repositoryLocation="svn://192.168.4.123/svnprojects/spics/HEAD"
+             username="svnadmin"
+             password="svn!IsItANadmin"/>
+    </modificationset>
+
+    <!-- Configures the actual build loop, how often and which build file/target -->
+    <schedule interval="3600">
+      <ant antscript="/usr/share/ant/bin/ant"
+           buildfile="build_spicswound.xml"
+           target="build"
+           uselogger="true"
+           usedebug="false"/>
+
+    <!-- <ant antscript="/usr/share/ant/bin/ant"
+          buildfile="build_spicswound.xml"
+          target="test"
+          uselogger="true"
+          usedebug="false"/> -->
+
+    </schedule>
+
+    <!-- directory to write build logs to -->
+    <log dir="logs/spicswound">
+        <merge dir="checkout/spicswound/HEAD/testresults/" />
+    </log>
+   
+    <!-- more recent versions of CC should use the listener below, instead of the
+         currentbuildstatusbootstrapper, currentbuildstatuspublisher combination.
+         NOTE: Must match filename in CC reporting/jsp - override.properties: user.build.status.file -->
+    <!--
+    <listeners>
+        <currentbuildstatuslistener file="logs/spicswound/buildstatus.txt"/>
+    </listeners>
+    -->
+
+    <!-- Publishers are run *after* a build completes -->
+    <publishers>
+      <artifactspublisher dir="checkout/spicswound/HEAD/dist" dest="artifacts/spicswound"/>
+      <currentbuildstatuspublisher file="logs/spicswound/buildstatus.txt"/>
+    </publishers>
+  </project>
+  
+  <!-- This project is just for building the _kunde test branch/tag -->
+   <project name="SPICS_WOUND_KUNDE" buildafterfailed="true">
+    
+    <plugin name="svn" classname="net.sourceforge.cruisecontrol.sourcecontrols.SVN"/>
+    <plugin name="svnbootstrapper" classname="net.sourceforge.cruisecontrol.bootstrappers.SVNBootstrapper"/>
+    
+
+
+    <!-- Bootstrappers are run every time the build runs,
+        *before* the modification checks -->
+    <bootstrappers>
+      <currentbuildstatusbootstrapper file="logs/spicswound_kunde/buildstatus.txt"/>
+    </bootstrappers>
+
+    <!-- Defines where cruise looks for changes, to decide whether to run the build -->
+    <modificationset quietperiod="10">
+        <svn localworkingcopy="checkout/spicswound_kunde"
+             repositoryLocation="svn://192.168.4.123/svnprojects/spics/Branch/Kunde"
+             username="svnadmin"
+             password="svn!IsItANadmin"/>
+    </modificationset>
+
+    <!-- Configures the actual build loop, how often and which build file/target -->
+    <schedule interval="3600">
+      <ant antscript="/usr/share/ant/bin/ant"
+           buildfile="build_spicswound_kunde.xml"
+           target="build"
+           uselogger="true"
+           usedebug="false"/>
+
+    </schedule>
+
+    <!-- directory to write build logs to -->
+    <log dir="logs/spicswound_kunde">
+        <merge file="checkout/spicswound_kunde/spicswound/bin/junitreport.xml" />
+    </log>
+   
+    <!-- more recent versions of CC should use the listener below, instead of the
+         currentbuildstatusbootstrapper, currentbuildstatuspublisher combination.
+         NOTE: Must match filename in CC reporting/jsp - override.properties: user.build.status.file -->
+    <!--
+    <listeners>
+        <currentbuildstatuslistener file="logs/spicswound/buildstatus.txt"/>
+    </listeners>
+    -->
+
+    <!-- Publishers are run *after* a build completes -->
+    <publishers>
+      <artifactspublisher dir="checkout/spicswound_kunde/Kunde/dist" dest="artifacts/spicswound_kunde"/>
+      <currentbuildstatuspublisher file="logs/spicswound_kunde/buildstatus.txt"/>
+    </publishers>
+  </project>
+  
+</cruisecontrol>

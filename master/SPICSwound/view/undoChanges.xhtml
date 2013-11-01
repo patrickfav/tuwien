@@ -1,0 +1,81 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:s="http://jboss.com/products/seam/taglib"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+                xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+                template="layout/studyDetailLayout.xhtml">
+                       
+<ui:define name="content">
+        
+        <div id="blatt">
+		<h:form id="TrialDataUndoForm">
+			<h:dataTable id="TrialDataUndoTable" value="#{changes}" var="change" headerClass="cl_header" styleClass="concrete_list" rowClasses="odd_el,even_el" preserveDataModel="true" cellspacing="0" cellpadding="2" border="0" width="100%">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.attribute']}"/>
+					</f:facet>
+					
+					<h:outputText value="#{TrialDataEditUndo.getAttributeName(change.attributeId)}" />
+				</h:column>
+				
+				<h:column>
+					<h:graphicImage title="type" alt="type" value="graphics/icon/#{TrialDataEditUndo.getEventIcon(change.eventtype)}"></h:graphicImage>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.timestamp']}"/>
+					</f:facet>
+					
+					<h:outputText value="#{change.timestamp}" >
+						<s:convertDateTime type="both" pattern="#{messages['dateformat']} #{messages['timeformatinclsec']}"/>
+					</h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.user']}"/>
+					</f:facet>
+					
+					<h:outputText value="#{change.user.screenname}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.oldValue']}"/>
+					</f:facet>
+					
+					<h:outputText value="#{change.oldValue}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.newValue']}"/>
+					</f:facet>
+					<h:outputText value="#{change.newValue}" />
+				</h:column>
+				<!-- Undo vorerst deaktiviert -->
+				<!-- 
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.undo']}"/>
+					</f:facet>
+					<h:commandLink action="#{TrialDataEditUndo.undo(change)}">
+						<h:outputText value="Undo" />
+					</h:commandLink>	
+				</h:column>
+				-->
+			</h:dataTable>
+			<br />
+			<h:commandButton id="backBtn" styleClass="button" value="#{messages['button.back']}" title="#{messages['button.back']}" action="#{TrialDataEditUndo.back}" immediate="true" >
+				<s:conversationPropagation type="none" />
+			</h:commandButton>
+        
+        </h:form>
+        </div>
+
+</ui:define>
+
+</ui:composition>
+

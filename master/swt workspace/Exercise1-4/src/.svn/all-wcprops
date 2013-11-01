@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tuwien-private-repo/!svn/ver/54/software-testen/Exercise1-4/src
+END
+RingBufferTestCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/55/software-testen/Exercise1-4/src/RingBufferTestCoverage.java
+END
+RingBufferIteratorStatesTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/55/software-testen/Exercise1-4/src/RingBufferIteratorStatesTest.java
+END
+RingBuffer.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/55/software-testen/Exercise1-4/src/RingBuffer.java
+END
+RingBufferTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/55/software-testen/Exercise1-4/src/RingBufferTest.java
+END
+RingBufferTestMutation.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/55/software-testen/Exercise1-4/src/RingBufferTestMutation.java
+END
+RingBufferStatesTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/55/software-testen/Exercise1-4/src/RingBufferStatesTest.java
+END

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: gdp3
+Build-Jdk: 1.6.0
+Main-Class: nz.ac.waikato.modeljunit.gui.ModelJUnitGUI
+

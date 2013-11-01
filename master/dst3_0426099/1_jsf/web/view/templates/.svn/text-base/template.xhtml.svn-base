@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>#{m['site_title']}</title>
+	<link href="/dst3/styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="document">
+	<div id="header">	
+		<h1 style="float:left">#{m['main_header']}</h1>
+		<div id="header_link">
+			<h:form>
+				<h:link outcome="login" value="#{m['link.login']}" rendered="#{not sessionManager.loggedIn}"/>
+				<h:commandLink value="#{m['logout']}" action="#{sessionManager.logout()}" 
+					rendered="#{sessionManager.loggedIn}" />
+			</h:form>
+		</div>
+		<div class="clearer" />
+	</div>
+	
+	<div id="nav"> 
+        <ui:include src="navigation.xhtml"/>   
+    </div>
+    
+	<div id="content">
+		<h:messages id="messages" styleClass="message" errorClass="error" infoClass="info" warnClass="warn"/>
+		<ui:insert name="content"/>
+	</div>
+	
+	<div class="clearer" />
+	
+	<div id="footer">
+		#{m['main_footer']}
+	</div>
+</div>
+</body>
+</html>

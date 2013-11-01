@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry externalArchive=&quot;C:/Program Files (x86)/eclipse helios SQS/plugins/jumble/jumble.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#13;&#10;"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="C:\Program Files (x86)\Java\jre6"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.reeltwo.jumble.Jumble"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-r -k -i -w -j --classpath &quot;C:\Users\PatrickF\eclipse workspaces\swt workspace\Exercise3-2\bin;C:\Program Files (x86)\Java\jre6\lib\resources.jar;C:\Program Files (x86)\Java\jre6\lib\rt.jar;C:\Program Files (x86)\Java\jre6\lib\jsse.jar;C:\Program Files (x86)\Java\jre6\lib\jce.jar;C:\Program Files (x86)\Java\jre6\lib\charsets.jar;C:\Program Files (x86)\Java\jre6\lib\ext\bcprov-ext-jdk16-144.jar;C:\Program Files (x86)\Java\jre6\lib\ext\dnsns.jar;C:\Program Files (x86)\Java\jre6\lib\ext\localedata.jar;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip;C:\Program Files (x86)\Java\jre6\lib\ext\sunjce_provider.jar;C:\Program Files (x86)\Java\jre6\lib\ext\sunmscapi.jar;C:\Program Files (x86)\Java\jre6\lib\ext\sunpkcs11.jar;C:\Program Files (x86)\eclipse helios SQS\plugins\org.junit_4.8.1.v4_8_1_v20100427-1100\junit.jar;C:\Program Files (x86)\eclipse helios SQS\plugins\org.hamcrest.core_1.1.0.v20090501071000.jar&quot;   randoop.RingBuffer"/>
+</launchConfiguration>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/aic_ass2/!svn/ver/17/OrderProcessApp/test
+END
+all-tests.properties
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/aic_ass2/!svn/ver/9/OrderProcessApp/test/all-tests.properties
+END
+selected-tests.properties
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/aic_ass2/!svn/ver/9/OrderProcessApp/test/selected-tests.properties
+END

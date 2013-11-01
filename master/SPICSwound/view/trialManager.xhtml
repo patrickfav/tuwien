@@ -1,0 +1,116 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a="http://richfaces.org/a4j" template="layout/studyLayout.xhtml">
+
+	<ui:define name="content">
+		<h:form id="ViewTrialsForm">
+			<f:facet name="header">
+				<h:outputText value="#{messages['label.mystudies']}" />
+			</f:facet>
+
+
+			<table border="0" cellpadding="0" cellspacing="0"
+				style="width: 100%;">
+				<tr>
+					<td class="contentarea" valign="top" width="*">
+					
+					<b><h:outputText value="#{messages['label.mystudies']}" /></b> <br />
+					<br />
+					<div class="info"><h:outputText
+						value="#{messages['overview.info']}" /></div>
+
+					<s:div rendered="#{trials.rowCount == 0}">
+						<h:outputText value="#{messages['nostudies.info']}" />
+					</s:div> 
+					
+					<a:repeat id="trialsDataList" value="#{trials}" var="tempTrial">
+						<rich:simpleTogglePanel id="toggle"	switchType="client" label="#{tempTrial.user.screenname}: #{tempTrial.name} - [#{tempTrial.localizedStatus}]">
+
+							<table border="0" cellpadding="0" cellspacing="0" width="99%"
+								align="center">
+								<tr>
+									<td valign="top" colspan="3" class="expanded">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="100" valign="top"><b><h:outputText
+												value="#{messages['label.label']}" />:</b></td>
+
+											<td><h:outputText value="#{tempTrial.fullName}" /></td>
+										</tr>
+
+										<tr>
+											<td width="100"><b><h:outputText
+												value="#{messages['label.studyowner']}" />:</b></td>
+
+											<td><img src="graphics/icon/owner.gif" alt="Partner" />&nbsp;<h:outputText
+												value="#{tempTrial.supervisor}" /></td>
+										</tr>
+										<tr>
+											<td width="100"><b><h:outputText
+												value="#{messages['label.studyadmin']}" />:</b></td>
+
+											<td><img src="graphics/icon/owner.gif" alt="Partner" />&nbsp;<h:outputText
+												value="#{tempTrial.user.screenname}" /></td>
+										</tr>														
+										<tr>
+											<td><b><h:outputText
+												value="#{messages['label.studybegin']}" />:</b></td>
+											<td><h:outputText value="#{tempTrial.beginDate}">
+												<f:convertDateTime type="date"
+													pattern="#{messages['dateformat']}"
+													timeZone="#{messages['timeZone']}" />
+											</h:outputText></td>
+										</tr>
+
+										<tr>
+											<td><b><h:outputText
+												value="#{messages['label.studyend']}" />:</b></td>
+											<td><h:outputText value="#{tempTrial.endDate}">
+												<f:convertDateTime type="date"
+													pattern="#{messages['dateformat']}"
+													timeZone="#{messages['timeZone']}" />
+											</h:outputText></td>
+										</tr>
+										
+										<tr>
+											<td><b><h:outputText
+												value="#{messages['label.numberpatients']}" />:</b></td>
+											<td><h:outputText value="#{participationDAO.getPatientCount(tempTrial)}" /></td>
+										</tr>
+									</table>
+									<br />
+										<b><h:outputText
+											value="#{messages['label.shortdescription']}" /></b>
+										<br />
+										<h:outputText value="#{tempTrial.description}"
+											escape="false" />
+									</td>
+								</tr>
+							</table>
+							
+							<h:commandButton id="viewTrialBtn" styleClass="button"
+								title="#{messages['button.view']}" value="#{messages['button.view']}"
+								action="#{trialManager.selectTrial}" />
+
+						</rich:simpleTogglePanel>
+						<br />
+					</a:repeat>
+					</td>
+
+				</tr>
+			</table>
+
+			<br />
+			<br />
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

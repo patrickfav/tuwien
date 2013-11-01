@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui
+END
+OptionPanelLookahead.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/OptionPanelLookahead.java
+END
+Log
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/Log
+END
+TestExeModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/TestExeModel.java
+END
+Toolbar.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/Toolbar.java
+END
+FileChooserFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/FileChooserFilter.java
+END
+ApplicationMenuBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/ApplicationMenuBar.java
+END
+Parameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/Parameter.java
+END
+PanelAbstract.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/PanelAbstract.java
+END
+IView.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/IView.java
+END
+ModelJUnitMenuBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/ModelJUnitMenuBar.java
+END
+OptionPanelGreedy.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/OptionPanelGreedy.java
+END
+PanelTestDesign.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/PanelTestDesign.java
+END
+OptionPanelAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/OptionPanelAdapter.java
+END
+PanelAnimator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/PanelAnimator.java
+END
+DialogAbout.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/DialogAbout.java
+END
+ClassFileLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/ClassFileLoader.java
+END
+IAlgorithmParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/IAlgorithmParameter.java
+END
+PanelExecuteActions.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/PanelExecuteActions.java
+END
+Project.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/Project.java
+END
+AlgorithmPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/AlgorithmPanel.java
+END
+OptionPanelRandomWalk.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/OptionPanelRandomWalk.java
+END
+OptionPanelCreator.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/OptionPanelCreator.java
+END
+PanelCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/PanelCoverage.java
+END
+InfoPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/InfoPanel.java
+END
+PanelCodeViewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/PanelCodeViewer.java
+END
+Indentation.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/Indentation.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/package.html
+END
+ModelJUnitGUI.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/ModelJUnitGUI.java
+END
+PanelResultViewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/PanelResultViewer.java
+END
+DialogCoverageLineColor.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/DialogCoverageLineColor.java
+END
+ToolBarPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/ToolBarPanel.java
+END
+ResultDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/ResultDetails.java
+END
+ProjectDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/ProjectDialog.java
+END
+LineColor.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/LineColor.java
+END
+OptionPanelDefault.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/OptionPanelDefault.java
+END
+ErrorMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/gui/ErrorMessage.java
+END

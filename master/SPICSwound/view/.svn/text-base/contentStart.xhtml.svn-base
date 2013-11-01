@@ -1,0 +1,159 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	template="layout/startLayout.xhtml">
+
+	<ui:define name="content">
+		
+					<h1>
+					<h:outputText value="#{messages['label.welcome']}"/>
+					<h:outputText
+						value=", #{ContentStart.arztName}!" /></h1>
+					<p><h:outputText value="#{messages['startpage.info']}"/></p>
+					<br />
+					<h2><h:outputText value="#{messages['label.invitations']}"/></h2>
+					<div class="info">
+						<h:outputText value="#{messages['invitations.info']}" escape="false" />
+					</div>
+
+				<!-- Below here it's dummy code only!!! -->
+
+					<table width="100%" cellspacing="0" cellpadding="0" border="0"
+						style="padding-top: 5px;" class="concrete_list">
+
+						<tbody>
+							<tr class="odd_el">
+								<td class="top_row" width="15"><a href="index_expand.html"><img
+									width="14" height="14" alt="Erweitern" title="Erweitern" src="graphics/icon/closed.gif" /></a></td>
+								<td class="top_row" width="15"><a
+									href="mystudies_onestudy_patients_results_onepatient.html">
+								<img src="graphics/icon/study.gif" alt="Detailansicht" title="Detailansicht" /> </a>
+								</td><td class="top_row"><a
+									href="index.html">Klinische Aspekt der Zuverlässigkeit <font
+									class="status_font">[Entwurfsmodus]</font></a></td>
+								<td align="right" class="top_row"><a href="index.html">
+								<img border="0" alt="Einladung annehmen"
+									title="Einladung annehmen"
+									src="graphics/button/accept_small.png" /> </a> <a
+									href="index.html"> <img border="0"
+									title="Einladung ablehnen" alt="Einladung ablehnen"
+									src="graphics/button/decline_small.png" /></a></td>
+							</tr>
+
+							<tr class="even_el">
+								<td class="border_underline"><a href=""><img width="14"
+									height="14" alt="Erweitern" title="Erweitern" src="graphics/icon/closed.gif" /></a></td>
+								<td class="border_underline"><img
+									alt="Detailansicht" title="Detailansicht"  src="./graphics/icon/study.gif" />
+									</td><td class="border_underline">
+								Medizinische
+								Beispielstudie zum Thema Wundheilung <font class="status_font">[Entwurfsmodus]</font></td>
+								<td align="right" class="border_underline"><a
+									href="index.html"><img border="0" alt="Einladung annehmen"
+									title="Einladung annehmen"
+									src="graphics/button/accept_small.png" /> </a><a href="index.html"><img
+									border="0" title="Einladung ablehnen" alt="Einladung ablehnen"
+									src="graphics/button/decline_small.png" /></a></td>
+							</tr>
+							<tr class="odd_el">
+								<td class="border_underline"><a href=""><img width="14"
+									height="14" alt="Erweitern" title="Erweitern" src="graphics/icon/closed.gif" /></a></td>
+								<td class="border_underline"><a
+									href="mystudies_onestudy_patients_results_onepatient.html"><img
+									alt="Detailansicht" title="Detailansicht"  src="graphics/icon/study.gif" /> </a></td><td class="border_underline"><a
+									href="index.html" /><a href="index.html">Indirekte
+								Auswirkungen von Antibiotika</a></td>
+								<td align="right" class="border_underline"><a
+									href="index.html"> <img border="0" alt="Einladung annehmen"
+									title="Einladung annehmen"
+									src="graphics/button/accept_small.png" /> </a><a href="index.html">
+								<img border="0" title="Einladung ablehnen"
+									alt="Einladung ablehnen"
+									src="graphics/button/decline_small.png" /></a></td>
+							</tr>
+						</tbody>
+					</table>
+
+
+					<br />
+					<h2><h:outputText value="#{messages['label.activestudies.part']}"/></h2>
+
+
+					<div class="info">
+						<h:outputText value="#{messages['participatetrials.info']}" escape="false" />
+					</div>
+
+					<table width="100%" cellspacing="0" cellpadding="0" border="0"
+						style="padding-top: 5px;" class="concrete_list">
+
+						<tbody>
+							<tr class="odd_el">
+								<td class="top_row" width="15"><a href="index_expand.html"><img
+									width="14" height="14" alt="Erweitern" title="Erweitern" src="graphics/icon/closed.gif" /></a></td>
+								<td class="top_row" width="15"><a
+									href="mystudies_onestudy_patients_results_onepatient.html"><img
+									alt="Detailansicht" title="Detailansicht" src="graphics/icon/study.gif" /> </a></td><td class="top_row"><a
+									href="index.html">Beispielstudie zum Thema Wundheilung </a></td>
+								<td align="right" class="top_row"><img alt="Studienleiter"
+									src="graphics/icon/owner.gif" /> <a href="index.html">Dr.
+								Wundheiler</a></td>
+							</tr>
+							<tr class="even_el">
+								<td class="border_underline"><a href=""><img width="14"
+									height="14" alt="Erweitern" title="Erweitern" src="graphics/icon/closed.gif" /></a></td>
+								<td class="border_underline"><a
+									href="mystudies_onestudy_patients_results_onepatient.html"><img
+									alt="Detailansicht" title="Detailansicht"  src="graphics/icon/study.gif" /> </a></td><td class="border_underline"><a
+									href="index.html" /><a href="mystudies_onestudy.html">Dauerhafte
+								Folgen der Behandlung mit Antibiotika </a></td>
+								<td align="right" class="border_underline"><img
+									alt="Studienleiter" src="graphics/icon/owner.gif" /> <a
+									href="index.html">Dr. Spics</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<br />
+					<h2><h:outputText value="#{messages['label.activestudies.own']}"/></h2>
+
+
+					<div class="info">
+						<h:outputText value="#{messages['owntrials.info']}" escape="false" />
+					</div>
+
+					<table width="100%" cellspacing="0" cellpadding="0" border="0"
+						style="padding-top: 5px;" class="concrete_list">
+						<tbody>
+							<tr class="odd_el">
+								<td class="top_row" width="15"><a href="index_expand.html"><img
+									width="14" height="14" alt="Erweitern" title="Erweitern" src="graphics/icon/closed.gif" /></a></td>
+								<td class="top_row" width="15"><a
+									href="mystudies_onestudy_patients_results_onepatient.html"><img
+									alt="Detailansicht" title="Detailansicht"  src="graphics/icon/study.gif" /> </a></td><td class="top_row"><a
+									href="index.html">Studie zum Thema Wundheilung </a></td>
+								<td align="right" class="top_row"><img alt="Studienleiter"
+									src="graphics/icon/owner.gif" /> <a href="index.html">Dr.
+								Muster</a></td>
+							</tr>
+							<tr class="even_el">
+								<td class="border_underline"><a href=""><img width="14"
+									height="14" alt="Erweitern" title="Erweitern" src="graphics/icon/closed.gif" /></a></td>
+								<td class="border_underline"><a
+									href="mystudies_onestudy_patients_results_onepatient.html"><img
+									alt="Detailansicht" title="Detailansicht"  src="graphics/icon/study.gif" /> </a></td><td class="border_underline"><a
+									href="index.html" /><a href="mystudies_onestudy.html">Musterstudie
+								der fachgerechten Wundheilung</a></td>
+								<td align="right" class="border_underline"><img
+									alt="Studienleiter" src="graphics/icon/owner.gif" /> <a
+									href="index.html">Dr. Muster</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+	</ui:define>
+</ui:composition>

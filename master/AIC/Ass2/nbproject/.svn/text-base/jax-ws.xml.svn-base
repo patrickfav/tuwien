@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="SupplierServiceImpl1">
+      <implementation-class>services.SupplierServiceImpl1</implementation-class>
+    </service>
+    <service name="SupplierServiceImpl2">
+      <implementation-class>services.SupplierServiceImpl2</implementation-class>
+    </service>
+    <service name="WarehouseServiceImpl">
+      <implementation-class>services.WarehouseServiceImpl</implementation-class>
+    </service>
+    <service name="CustomerWrapperServiceImpl">
+      <implementation-class>services.CustomerWrapperServiceImpl</implementation-class>
+    </service>
+    <service name="RegistryServiceImpl">
+      <implementation-class>services.RegistryServiceImpl</implementation-class>
+    </service>
+    <service name="ShippingServiceImpl">
+      <implementation-class>services.ShippingServiceImpl</implementation-class>
+    </service>
+  </services>
+  <clients/>
+  <jsr109>false</jsr109>
+</jax-ws>

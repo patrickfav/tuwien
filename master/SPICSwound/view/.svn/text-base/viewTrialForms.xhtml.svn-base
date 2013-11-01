@@ -1,0 +1,228 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:s="http://jboss.com/products/seam/taglib"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+                xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+                template="layout/studyDetailLayout.xhtml">
+                       
+<ui:define name="content">
+
+		<h:messages showDetail="true" layout="list" warnClass="warningMessage" errorClass="errorMessage" />
+
+    	<div id="blatt">
+        <h:form id="trialFormViewerForm">
+        	
+		<h1><h:outputText id="defineMasterDataLbl" value="#{messages['label.masterdata']}"/></h1>
+
+		<rich:simpleTogglePanel switchType="client" label="#{messages['label.masterdata']}">
+			<div class="info">
+				<h:outputText id="defineDataInfoLbl" value="#{messages['define_data.info']}"/>
+			</div>
+			<div class="attributeValuePair">
+			<table border="0" cellpadding="0" cellspacing="1">
+				<tr>
+					<td><b><h:outputText value="#{messages['label.patient']}" />:</b></td>
+					<td><i><h:outputText value="#{messages['label.codenumber']}" /></i></td>
+				</tr>
+				<tr>
+					<td><b><h:outputText value="#{messages['label.includeinmyexport']}" />:</b></td>
+					<td><h:selectBooleanCheckbox value="true" disabled="true" /></td>
+				</tr>
+				<tr>
+					<td><b><h:outputText value="#{messages['label.includeinfullexport']}" />:</b></td>
+					<td><h:selectBooleanCheckbox value="true" disabled="true" /></td>
+				</tr>
+			</table>
+			</div>
+		</rich:simpleTogglePanel>
+		<br />
+		
+		<h1><h:outputText id="defineTrialsLbl" value="#{TrialFormsViewer.editable ? messages['label.definetrials'] : messages['label.trial']}"/></h1>
+		
+		<div class="info">
+			<h:outputText id="defineOverviewLbl" value="#{TrialFormsViewer.editable ? messages['trialformlist_edit.info'] : messages['trialformlist_view.info']}"/>
+		</div>
+			<h:dataTable id="trialFormsDataTable" var="currentTF" headerClass="cl_header" styleClass="concrete_list" rowClasses="odd_el,even_el" columnClasses="cl_left" value="#{trialForms}" preserveDataModel="true" cellspacing="0" cellpadding="2" border="0" width="100%">
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.label']}"/>
+					</f:facet>
+					<h:commandLink id="nameLink" action="#{TrialFormsViewer.viewTrialForm}">
+						<h:outputText value="#{currentTF.name}" />
+					</h:commandLink>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.lastchange']}"/>
+					</f:facet>
+					<h:outputText value="#{currentTF.lastModified}" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.description']}"/>
+					</f:facet>
+					<h:outputText value="#{currentTF.description}" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.filltype']}"/>
+					</f:facet>
+					<h:graphicImage id="fillOnceImg" rendered="#{currentTF.fillOnce}" value="/graphics/icon/study.gif" alt="#{messages['option.fillonce']}" title="#{messages['option.fillonce']}"/>
+					<h:graphicImage id="fillMultImg" rendered="#{not currentTF.fillOnce}" value="/graphics/icon/fillMult.gif" alt="#{messages['option.fillmultiple']}" title="#{messages['option.fillmultiple']}"/>
+				</h:column>
+				
+				<h:column rendered="#{s:hasPermission(sessionInfo.trial,'editTrialForms')}">
+					<f:facet name="header">
+						<h:outputText value=""/>
+					</f:facet>
+
+					<f:subview id="ShowMoveTFUpButtonView" rendered="#{not currentTF.first}" >
+					<h:commandLink id="upLink" action="#{TrialFormsViewer.moveTfUp}">
+						<h:graphicImage id="upImg" alt="#{messages['button.moveup']}" title="#{messages['button.moveup']}" value="/graphics/button/up_small.png" onmouseout="this.src='./graphics/button/up_small.png'" onmouseover="this.src='./graphics/button/up_small_hover.png'" />
+					</h:commandLink>
+					</f:subview>
+					<f:subview id="DontShowMoveTFUpButtonView" rendered="#{currentTF.first}" ><h:outputText value="" /></f:subview>
+				</h:column>
+				
+				<h:column rendered="#{s:hasPermission(sessionInfo.trial,'editTrialForms')}">
+					<f:facet name="header">
+						<h:outputText value=""/>
+					</f:facet>
+					<f:subview id="ShowMoveTFDownButtonView" rendered="#{not currentTF.last}" >
+					<h:commandLink id="downLink" action="#{TrialFormsViewer.moveTfDown}">
+						<h:graphicImage id="downImg" alt="#{messages['button.movedown']}" title="#{messages['button.movedown']}" value="/graphics/button/down_small.png" onmouseout="this.src='./graphics/button/down_small.png'" onmouseover="this.src='./graphics/button/down_small_hover.png'" />
+					</h:commandLink>
+					</f:subview>
+					<f:subview id="DontShowMoveTFDownButtonView" rendered="#{currentTF.last}" ><h:outputText value="" /></f:subview>
+				</h:column>
+				<h:column rendered="#{s:hasPermission(sessionInfo.trial,'editTrialForms')}">
+					<f:facet name="header">
+						<h:outputText value=""/>
+					</f:facet>
+					<f:subview id="TrialFormEditableView" rendered="#{currentTF.editable}" >
+					<h:commandLink id="delLink" action="#{TrialFormsViewer.delete}" onclick="if (!confirm(' #{messages['deletetrialform.question']} ')) return false;">
+						<h:graphicImage id="delImg" alt="#{messages['button.delete']}" title="#{messages['button.delete']}" value="/graphics/button/delete_small.png" onmouseout="this.src='./graphics/button/delete_small.png'" onmouseover="this.src='./graphics/button/delete_small_hover.png'" />
+					</h:commandLink>
+					</f:subview>
+					<f:subview id="TrialFormNotEditableView" rendered="#{not currentTF.editable}" ><h:outputText value="" /></f:subview>
+				</h:column>
+				<h:column rendered="#{s:hasPermission(sessionInfo.trial,'editTrialForms')}">
+					<f:facet name="header">
+						<h:outputText value=""/>
+					</f:facet>
+					<h:commandLink id="editLink" action="#{TrialFormsViewer.viewTrialForm}">
+						<h:graphicImage id="editImg" alt="#{messages['button.edit']}" title="#{messages['button.edit']}" value="/graphics/button/edit_small.png" onmouseout="this.src='./graphics/button/edit_small.png'" onmouseover="this.src='./graphics/button/edit_small_hover.png'" />
+					</h:commandLink>
+				</h:column>	
+			</h:dataTable>
+			
+			<br />
+			<s:fragment id="archivedTrialFormsFragment" rendered="#{archivedTrialForms.rowCount > 0}">
+			<h1><h:outputText value="#{messages['label.oldtrials']}"/></h1>
+		
+			<div class="info">
+				<h:outputText value="#{messages['oldtrials_overview.info']}"/>
+			</div>
+			<h:dataTable id="archivedTrialFormsDataTable" value="#{archivedTrialForms}" var="currentATF" headerClass="cl_header" styleClass="concrete_list" rowClasses="odd_el,even_el" columnClasses="cl_left" preserveDataModel="true" cellspacing="0" cellpadding="2" border="0" width="100%">
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.label']}"/>
+					</f:facet>
+					<h:commandLink id="nameLink" action="#{TrialFormsViewer.viewTrialForm}">
+						<h:outputText value="#{currentATF.name}" />
+					</h:commandLink>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.lastchange']}"/>
+					</f:facet>
+					<h:outputText value="#{currentATF.lastModified}" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.filltype']}"/>
+					</f:facet>
+					<h:graphicImage id="fillOnceImg" rendered="#{currentTF.fillOnce}" value="/graphics/icon/study.gif" alt="#{messages['option.fillonce']}" title="#{messages['option.fillonce']}"/>
+					<h:graphicImage id="fillMultImg" rendered="#{not currentTF.fillOnce}" value="/graphics/icon/fillMult.gif" alt="#{messages['option.fillmultiple']}" title="#{messages['option.fillmultiple']}"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.archivedsince']}"/>
+					</f:facet>
+					<h:outputText value="#{currentATF.archivedSince}" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.description']}"/>
+					</f:facet>
+					<h:outputText value="#{currentATF.description}" />
+				</h:column>
+			</h:dataTable>
+			</s:fragment>
+			<br />
+			<br />
+			</h:form>
+	
+			
+			<f:subview id="CanCreateNewTrialFormView" rendered="#{sessionInfo.trial.editable and s:hasPermission(sessionInfo.trial,'editTrialForms')}">
+				<h:form id="newTrialFormForm">
+					<h1><h:outputText value="#{messages['label.addtrial']}"/></h1>
+					<div class="info">
+						<h:outputText value="#{messages['define_add.info']}"/>
+					</div>
+					
+					<table border="0" cellpadding="3" cellspacing="0">
+					<tr>
+						<td width="150">
+							<h:outputText id="createTFNameLbl" value="#{messages['label.label']}"/>: *
+						</td>
+						<td width="300">
+							<h:inputText id="createTFNameTf" value="#{TrialFormsViewer.newTrialForm.name}" converter="#{blankStringAwareConverter}" style="width:100%" />
+						</td>
+					</tr>
+					<tr>
+						<td width="150">
+							<h:outputText id="createTFfillOnceLbl" value="#{messages['label.filltype']}"/>: 
+						</td>
+						<td width="300">
+							<h:selectOneRadio id="createTFFillOnceRb" value="#{TrialFormsViewer.newTrialForm.fillOnce}" style="width:100%">
+								<f:selectItem itemValue="true" itemLabel="#{messages['option.fillonce']}" />
+								<f:selectItem itemValue="false" itemLabel="#{messages['option.fillmultiple']}" />
+								<f:converter converterId="javax.faces.Boolean" />
+							</h:selectOneRadio>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<h:outputText id="createTFDescrLbl" value="#{messages['label.description']}"/>:
+						</td>
+						<td>
+							<h:inputTextarea id="createTFDescrTa" value="#{TrialFormsViewer.newTrialForm.description}" rows="3" cols="40" style="width:100%" />
+						</td>
+					</tr>
+					</table>
+					<br />
+					<h:commandButton id="createTFbutton" styleClass="button" value="#{messages['button.add']}" title="#{messages['button.add']}" action="#{TrialFormsViewer.createTrialForm}"  />
+	   			</h:form>
+   			</f:subview>
+   			
+     
+        </div>
+
+</ui:define>
+
+</ui:composition>
+

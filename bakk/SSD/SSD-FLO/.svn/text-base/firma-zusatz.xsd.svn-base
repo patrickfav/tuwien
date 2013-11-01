@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+<!-- Dateiname: firma-ns.xsd -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	    targetNamespace="http://www.dbai.tuwien.ac.at/software/"
+	    xmlns:soft="http://www.dbai.tuwien.ac.at/software/"
+	    elementFormDefault="qualified"
+>
+   	
+	<!-- FIRMA -->
+	<xsd:element name="firma" type="soft:firmaType">
+		<xsd:key name="teamid">
+     			<xsd:selector xpath="team"/>
+      			<xsd:field xpath="@id"/>
+   		</xsd:key>
+		<xsd:keyref name="teamref" refer="soft:teamid">
+      			<xsd:selector xpath="projekt"/>
+      			<xsd:field xpath="@team"/>
+		</xsd:keyref>
+	</xsd:element>	
+	
+	<xsd:complexType name="firmaType">
+		<xsd:sequence>
+			<xsd:element name="team" type="soft:teamType" maxOccurs="unbounded">
+							
+			</xsd:element>
+			<xsd:element name="projekt"  type="soft:projektType" minOccurs="0" maxOccurs="unbounded">				
+				
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="nummer" type="xsd:NMTOKEN" fixed="e0604411"/>
+		
+	</xsd:complexType>
+
+	<!-- TEAM -->
+	<xsd:complexType name="teamType">
+		<xsd:sequence>
+			<xsd:element name="mitarbeiter" type="soft:mitarbeiterType" minOccurs="2" maxOccurs="6"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:NMTOKEN"/>
+	</xsd:complexType>
+	
+	<!-- MITARBEITER -->
+	<xsd:complexType name="mitarbeiterType" mixed="true">
+		<xsd:attribute name="position" type="soft:mitarbeiterPosition" default="mitglied"/>
+	</xsd:complexType>
+
+	<!-- PROJEKT -->	
+	<xsd:complexType name="projektType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="beschreibung" type="soft:beschreibungType" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="team" type="xsd:NMTOKEN"/>		
+		<xsd:attribute name="arbeitsstunden" type="soft:stunden"/>
+	</xsd:complexType>
+
+	<!-- BESCHREIBUNG -->	
+	<xsd:complexType name="beschreibungType" mixed="true">
+    		<xsd:choice minOccurs="1" maxOccurs="unbounded">
+      			<xsd:element name="schlagwort" minOccurs="0" maxOccurs="1" />
+      			<xsd:element name="index" minOccurs="1" maxOccurs="1" />
+    		</xsd:choice>
+		<xsd:attribute name="format" type="xsd:string"/>
+  	</xsd:complexType>
+
+	
+	<!-- MITARBEITER POSITION -->
+	<xsd:simpleType name="mitarbeiterPosition">
+  		<xsd:restriction base="xsd:string">
+    			<xsd:enumeration value="leiter"/>
+    			<xsd:enumeration value="mitglied"/>
+  		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- ARBEITSSTUNDEN MIN/MAX -->
+	<xsd:simpleType name="stunden"> 
+  		<xsd:restriction base="xsd:nonNegativeInteger">
+    			<xsd:minInclusive value="1"/>
+			<xsd:maxInclusive value="4000"/>
+  		</xsd:restriction> 
+	</xsd:simpleType>
+
+</xsd:schema>

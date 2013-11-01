@@ -1,0 +1,23 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax">
+
+	<rich:simpleTogglePanel switchType="client"
+		label="Aktuell verordnete Medikamente"
+		rendered="#{SoulMedicinePlugin.matches}">
+		<div class="info"><h:outputText
+			value="Hier können Sie sich eine Liste der Medikamente, die der Patient im Moment nimmt, anzeigen laasen." />
+		</div>
+		<h:commandButton action="#{SoulMedicinePlugin.showTable}"
+			styleClass="button" title="Anzeigen" value="Anzeigen" />
+	</rich:simpleTogglePanel>
+
+	<div id="heightspaces" style="height: 10px" />
+	<br />
+</ui:composition>

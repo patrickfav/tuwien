@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/swag/!svn/ver/43/trunk/swag/test/modeltest/testcases
+END
+BuildingTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/BuildingTypeTest.java
+END
+TroopTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/TroopTest.java
+END
+MessageTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/MessageTest.java
+END
+ResourceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/ResourceTest.java
+END
+BuildingCostsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/swag/!svn/ver/42/trunk/swag/test/modeltest/testcases/BuildingCostsTest.java
+END
+BaseTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/BaseTest.java
+END
+BaseSquareTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/BaseSquareTest.java
+END
+PlayerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/PlayerTest.java
+END
+BuildingTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/BuildingTest.java
+END
+MapTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/swag/!svn/ver/43/trunk/swag/test/modeltest/testcases/MapTest.java
+END
+MapSquareTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/swag/!svn/ver/39/trunk/swag/test/modeltest/testcases/MapSquareTest.java
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl
+END
+IRankingManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/IRankingManagement.java
+END
+ITestDataManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/ITestDataManagement.java
+END
+IBaseManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/IBaseManagement.java
+END
+ITickManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/ITickManagement.java
+END
+IConfigDBManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/IConfigDBManagement.java
+END
+IUtilizationManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/IUtilizationManagement.java
+END
+IBuildingManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/IBuildingManagement.java
+END
+IMapManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/IMapManagement.java
+END
+IUserManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/IUserManagement.java
+END
+ITroopManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/ITroopManagement.java
+END
+IResourceManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/183/swag/swag.api/src/swag/bl/IResourceManagement.java
+END

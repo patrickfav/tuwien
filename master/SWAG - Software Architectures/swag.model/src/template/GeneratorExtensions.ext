@@ -1,0 +1,43 @@
+import metamodel;
+
+extension metamodel::Extensions reexport;
+
+databaseUtil() :
+	"HibernateUtil.getEntityManager()";
+	
+listenerUtil() :
+	"DAOManager";
+	
+
+declaration(Feature this) :
+	switch(annotation.toString())
+	{		
+		case("OneToMany"): type() + " " + name + " = new LinkedList<" + type.name + ">();"
+		case("ManyToMany"): type() + " " + name + " = new LinkedList<" + type.name + ">();"
+		case("ManyToManyMapped"): type() + " " + name + " = new LinkedList<" + type.name + ">();"
+		default: type() + " " + name + ";"
+	};
+
+getter(Feature this) :
+	"get"+name.toFirstUpper();
+	
+setter(Feature this) :
+	"set"+name.toFirstUpper();
+	
+type(Feature this) :
+	switch(annotation.toString())
+	{		
+		case("OneToMany"): "List<" + type.name + ">"
+		case("ManyToMany"): "List<" + type.name + ">"
+		case("ManyToManyMapped"): "List<" + type.name + ">"
+		default: type.name
+	};
+	
+annotation(Feature this) :
+	switch(annotation.toString())
+	{		
+		case("None"): ""
+		case("Id"): "@Id @GeneratedValue"
+		case("ManyToManyMapped"): "@ManyToMany(mappedBy=\"" + mappedBy + "\")"
+		default: "@" + annotation.toString() + "()"
+	};

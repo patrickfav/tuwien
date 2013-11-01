@@ -1,0 +1,74 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="content">
+
+		<f:view>
+			<div id="blatt"><b><h:outputText
+				value="#{TrialFormEditor.formEditable ? messages['label.definetrialform'] : messages['label.viewtrialform']}" /></b>
+			<div class="info"><h:outputText
+				value="#{TrialFormEditor.formEditable ? messages['trialformdefine.info'] : messages['trialformview.info']}" /></div>
+			<h:form id="editTFinfo">
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr>
+						<td width="150"><h:outputText
+							value="#{messages['label.label']}" />: *</td>
+						<td width="300"><h:inputText
+							value="#{TrialFormEditor.trialForm.name}" style="width:100%"
+							disabled="#{not TrialFormEditor.formEditable}" /></td>
+					</tr>
+					<tr>
+						<td width="150"><h:outputText id="createTFfillOnceLbl"
+							value="#{messages['label.filltype']}" />:</td>
+						<td width="300"><h:selectOneRadio id="createTFFillOnceRb"
+							value="#{TrialFormEditor.trialForm.fillOnce}" style="width:100%" 
+							disabled="#{not TrialFormEditor.formEditable}">
+							<f:selectItem itemValue="true"
+								itemLabel="#{messages['option.fillonce']}" />
+							<f:selectItem itemValue="false"
+								itemLabel="#{messages['option.fillmultiple']}" />
+							<f:converter converterId="javax.faces.Boolean" />
+						</h:selectOneRadio></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{messages['label.description']}" />:
+						</td>
+						<td><h:inputTextarea
+							value="#{TrialFormEditor.trialForm.description}"
+							disabled="#{not TrialFormEditor.formEditable}" rows="3"
+							cols="40" style="width:100%" /></td>
+					</tr>
+				</table>
+				<br />
+				<f:subview id="EditTrialFormEnabledView"
+					rendered="#{TrialFormEditor.formEditable}">
+					<h:commandButton id="saveTF" styleClass="button"
+						value="#{messages['button.save']}"
+						title="#{messages['button.save']}"
+						action="#{TrialFormEditor.saveNameAndDescription}" />
+				</f:subview>
+			</h:form> <br />
+			<br />
+			<h:form id="TrialFormEditorForm">
+				<h:panelGrid id="generatedMainForm"
+					binding="#{TrialFormEditor.mainGrid}" />
+				<br />
+				<h:commandButton id="createTFbutton" styleClass="button"
+					value="#{messages['button.overview']}"
+					title="#{messages['button.overview']}"
+					action="#{TrialFormEditor.back}" />
+			</h:form></div>
+		</f:view>
+
+	</ui:define>
+
+</ui:composition>
+

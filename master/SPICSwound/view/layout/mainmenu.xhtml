@@ -1,0 +1,28 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax">
+
+	<h:form id="menu">
+		<h:panelGrid columns="4" width="100%" cellspacing="0" cellpadding="0"
+			border="0" columnClasses="left,centerleft,centerright,right">
+			<h:outputText value=""></h:outputText>
+			<h:panelGrid columns="20" cellspacing="0" cellpadding="0" border="0">
+				<a:repeat id="mainMenu" value="#{Menu.configuration.menuItems}" var="mi">
+				
+					<h:commandButton id="menuItem"
+						action="#{Menu.setActive(mi.itemId)}" 
+						value="#{mi.label}" title="#{mi.label}" 
+						class="#{mi.activeStyleClass}"/>
+				</a:repeat>
+			</h:panelGrid>
+			<h:outputText value=""></h:outputText>
+			<h:commandButton class="last" target="_top" id="logout"
+				action="#{identity.logout}" title="#{messages['button.logout']}"
+				value="#{messages['button.logout']}" />
+		</h:panelGrid>
+
+	</h:form>
+</ui:composition>

@@ -1,0 +1,306 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Element Defaults
+----------------------------------------------- */
+
+html {
+
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #494949;
+	height: 100%;
+	width: 100%;
+	color: #FFF;
+	font-family: 'Verdana','Arial','Helvetica',sans-serif;
+	font-size:13px;
+}
+
+form {
+	margin: 0;
+	padding: 0;	
+}
+fieldset {
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+/* Basic Layout
+----------------------------------------------- */
+
+#header {
+	background: url("../images/template/header_background.png") 0 0 repeat-x #000000;
+	width: 100%;
+	height: 50px;
+}
+	div#header div#header_logo {
+		float:left;
+	}
+	
+	div#header div#header_link {
+		float:right;
+		margin-top:15px;
+		margin-right:15px;
+		font-size:120%;
+	}
+#content {
+	width: 100%;
+	top: 50px;
+	bottom: 200px;
+	position: fixed;
+	overflow: scroll;
+}
+
+#footer {
+	background: url("../images/template/info_back.png") 0 0 repeat-x #000000;
+	bottom: 0;
+	height: 200px;
+	position: fixed;
+	width: 100%;	
+}
+
+#menu_column {
+	float:left;
+	width:24%;
+}
+#content_column {
+	float:right;
+	width:74%;
+}
+
+/* Navigation Style
+----------------------------------------------- */
+
+div#left_menu_wrapper {
+		float:left;
+		width:95%;
+		margin-left:0px;
+		padding-right:0px;
+		
+	}
+		div#left_menu_wrapper ul{
+			list-style-type:none;
+			margin:0;
+			padding:0 7px 0 0;
+			margin-top:0px;
+			background:url(../images/template/layout_box_r.png) repeat-y right;
+		}
+		div#left_menu_wrapper ul li{
+			margin-left:0px;
+			border-top:1px solid #585858;
+			border-bottom:1px solid #454545;
+		}
+		div#left_menu_wrapper ul li a{
+			display:block;
+			height:30px;
+			color:#fff;
+			font-size:110%;
+			font-weight:strong;
+			text-decoration:none;
+			padding: 5px 5px 0 7px;	
+			background:#4d4d4d url(../images/template/r_arrow.png) 97% 50% no-repeat;
+			
+		}
+			div#left_menu_wrapper ul li a:hover{
+				color:#e89c28;
+				background:#454545 url(../images/template/r_arrow_hover.png) 97% 50% no-repeat;
+			}
+			
+			div#left_menu_wrapper ul li.current a {
+				color:#e89c28;
+				background:#454545 url(../images/template/r_arrow_hover.png) 97% 50% no-repeat;
+			}
+		
+		div#left_menu_wrapper ul li.last {
+			border-bottom:2px solid #414141;
+		}
+			div#left_menu_wrapper ul li.corners {
+				border:none;
+				margin-right:0px;
+				background:url(../images/template/lmenu_rcorner.png) right bottom no-repeat;
+			}
+			div#left_menu_wrapper ul li.corners div{
+				dispaly:block;
+				background:#4d4d4d;
+				margin-right:10px;
+				height:9px;
+			}
+		div#left_menu_wrapper ul li.spacer {
+			height:40px;
+			display:block;
+			background:#4d4d4d;
+		}	
+		/* SUBMENUS */
+		div#left_menu_wrapper ul li ul {
+			border-top:1px solid #454545;
+		}
+		div#left_menu_wrapper ul li ul {
+			border-top:1px solid #454545;
+		}
+		div#left_menu_wrapper ul li ul li a{
+			height:20px;
+			padding: 5px 5px 0 15%;	
+			font-size:85%;
+			background:#565555;
+		}
+			div#left_menu_wrapper ul li.current ul li a{
+				color:#fff;
+				background:#565555;
+			}
+			div#left_menu_wrapper ul li ul li a:hover{
+				color:#e89c28;
+				text-decoration:underline;
+				background:#565555;
+			}
+		div#left_menu_wrapper ul li ul li.current a{
+			color:#e89c28;
+			background:#565555;
+		}
+
+/* Link style
+----------------------------------------------- */
+
+a:link {
+	color: #FFF;
+}
+a:visited {
+	color: #FFF;
+}
+a:hover {
+	color: #CCC;
+}
+a:active {
+	color: #FFF;
+}
+
+/* Forms
+----------------------------------------------- */
+
+div.entry {
+	display: inline-block;
+	margin: 2px auto;
+	padding: 4px;
+	width: 99%;
+}
+
+div.oddDark {
+	background-color: #5E5E5E;
+}
+
+div.oddBright {
+	background-color: #EDEDED;
+}
+
+div.entry label {
+	float: left;
+	margin-top: 4px;
+	width:100px;
+	text-align: right;
+	margin-right:5px;
+}
+
+div.entry input, div.entry select, div.entry textarea {
+	margin: 0px 5px;
+}
+
+/* Forms & Co
+----------------------------------------------- */
+.primefaces_form_box {
+	font-size: 95%;
+	width: 500px;
+}
+.standard_form_box {
+	font-size: 110%;
+	width: 500px;
+}
+
+/* Text Styles
+----------------------------------------------- */
+
+.infoBoxHeadline {
+	font-size: 16px;
+	color: black;
+}
+
+.infoBoxText {
+	font-size: 12px;
+	color: black;
+}
+
+
+/* Misc Styles
+----------------------------------------------- */
+div#home_bg {
+	background:url(../images/template/start_bg.jpg) right bottom no-repeat;
+	width:800px;
+	height: 688px;
+}	
+#header_table td {
+		padding: 0 5px 0 5px;
+	}
+
+.header_form {
+	margin: auto 0 auto 0;
+}
+
+.info_field {
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.info_field p {
+	float: left;
+	padding: 10px;
+}
+
+.info_field a {
+	color: #009;	
+}
+
+div.clearer {
+	clear:both;	
+}
+
+.ui-datagrid {
+ 	width: 100%;
+}
+
+.ui-datagrid-content {
+	width: 100%;
+}
+
+.ui-datagrid-data {
+	width: auto;
+	margin: auto 0 auto 0;	
+}
+
+.ui-datagrid-data tr, .ui-datagrid-data td {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;	
+}
+
+.ui-datagrid-row {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ui-datagrid-column img {
+	border: none;
+	padding: 0px;
+	margin: 0px;	
+}
+
+.ui-datagrid-column:hover {
+	background: orange;	
+}
+
+

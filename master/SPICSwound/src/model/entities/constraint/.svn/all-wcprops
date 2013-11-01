@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/constraint
+END
+DateConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/constraint/DateConstraint.java
+END
+IntegerConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/constraint/IntegerConstraint.java
+END
+DecimalConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/constraint/DecimalConstraint.java
+END
+Constraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/constraint/Constraint.java
+END
+CONSTRAINTTYPE.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/constraint/CONSTRAINTTYPE.java
+END
+StringConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/tuwien-private-repo/!svn/ver/184/swwe/SPICSwound/src/model/entities/constraint/StringConstraint.java
+END

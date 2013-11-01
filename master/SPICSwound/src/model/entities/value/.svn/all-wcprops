@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value
+END
+LongstringValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/LongstringValue.java
+END
+StringValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/StringValue.java
+END
+IntegerValueSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/IntegerValueSet.java
+END
+FileValueSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/FileValueSet.java
+END
+DateValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/DateValue.java
+END
+IntegerValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/IntegerValue.java
+END
+DecimalValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/DecimalValue.java
+END
+BooleanValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/BooleanValue.java
+END
+FileValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/FileValue.java
+END
+Value.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/src/model/entities/value/Value.java
+END

@@ -1,0 +1,493 @@
+<config>
+	<!-- Define in what sequence the tables should be filled -->
+	<tablesequence>
+		Ort;Ticketcard;Veranstaltung;Kuenstler;Engagement;Saal;Auffuehrung;Artikel;Kategorie;Bestellung
+	</tablesequence>
+	<!-- the default prefix for a mapping file -->
+	<mapping-file-prefix>hbm/</mapping-file-prefix>
+
+	<!--
+		Define how many testdata should be generated
+	-->
+
+	<quantity>
+		<table name='Ort' qty='20' />
+		<table name='Ticketcard' qty='100' />
+		<table name='Veranstaltung' qty='30' />
+		<table name='Kuenstler' qty='20' />
+		<table name='Engagement' qty='40' />
+		<table name='Saal' qty='30' />
+		<table name='Auffuehrung' qty='100' />
+		<table name='Artikel' qty='20' />
+		<table name='Kategorie' qty='100' />
+		<table name='Bestellung' qty='20' />
+	</quantity>
+
+	<!-- built in Data Types :
+
+		RandIntXXX - Random Integer from 0 to XXX
+		RandStringXXX - RandomString with the length XXX
+		RandBool - Random Boolean
+		RandDAteXXXX$Y - Random date starting from XXXX varying by Y
+		KEYID - Auto increment ID
+		List[X;Y;Z] - Choose between X Y or Z
+		RandTimestamp1990$10 - see RandDAte
+
+
+
+	-->
+	<type>
+		<name>artikelkurzbezeichnung</name>
+		<file>testdata/Artikelkurzbezeichnung.txt</file>
+	</type>
+	<type>
+		<name>artikelbeschreibung</name>
+		<file>testdata/Artikelbeschreibung.txt</file>
+	</type>
+	<type>
+		<name>artikelkategorie</name>
+		<file>testdata/Artikelkategorie.txt</file>
+	</type>
+	<type>
+		<name>besitzer</name>
+		<file>testdata/Besitzer.txt</file>
+	</type>
+	<type>
+		<name>bewertung</name>
+		<file>testdata/Bewertung.txt</file>
+	</type>
+
+	<type>
+		<name>bilder</name>
+		<file>testdata/Bilder.txt</file>
+	</type>
+	<type>
+		<name>biographie</name>
+		<file>testdata/Biographie.txt</file>
+	</type>
+	<type>
+		<name>bundesland</name>
+		<file>testdata/Bundesland.txt</file>
+	</type>
+	<type>
+		<name>email</name>
+		<file>testdata/Email.txt</file>
+	</type>
+	<type>
+		<name>freigabe</name>
+		<file>testdata/Freigabe.txt</file>
+	</type>
+	<type>
+		<name>funktion</name>
+		<file>testdata/Funktion.txt</file>
+	</type>
+	<type>
+		<name>hinweis</name>
+		<file>testdata/Hinweis.txt</file>
+	</type>
+	<type>
+		<name>inhalt</name>
+		<file>testdata/Inhalt.txt</file>
+	</type>
+	<type>
+		<name>kartengruppe</name>
+		<file>testdata/Kartengruppe.txt</file>
+	</type>
+	<type>
+		<name>kritik</name>
+		<file>testdata/Kritik.txt</file>
+	</type>
+	<type>
+		<name>nname</name>
+		<file>testdata/Nname.txt</file>
+	</type>
+	<type>
+		<name>oeffnungszeiten</name>
+		<file>testdata/Oeffnungszeiten.txt</file>
+	</type>
+	<type>
+		<name>ortkategorie</name>
+		<file>testdata/Ortkategorie.txt</file>
+	</type>
+	<type>
+		<name>saal</name>
+		<file>testdata/Saal.txt</file>
+	</type>
+	<type>
+		<name>saaltyp</name>
+		<file>testdata/Saaltyp.txt</file>
+	</type>
+	<type>
+		<name>titel</name>
+		<file>testdata/Titel.txt</file>
+	</type>
+	<type>
+		<name>vname</name>
+		<file>testdata/Vname.txt</file>
+	</type>
+
+	<type>
+		<name>vorlieben</name>
+		<file>testdata/Vorlieben.txt</file>
+	</type>
+
+	<type>
+		<name>zahlungsart</name>
+		<file>testdata/Zahlungsart.txt</file>
+	</type>
+
+	<type>
+		<name>stadt</name>
+		<file>testdata/Stadt.txt</file>
+	</type>
+
+	<type>
+		<name>strasse</name>
+		<file>testdata/Strasse.txt</file>
+	</type>
+
+	<type>
+		<name>ortbezeichnung</name>
+		<file>testdata/Ortbezeichnung.txt</file>
+	</type>
+
+	<type>
+		<name>sprache</name>
+		<file>testdata/Sprache.txt</file>
+	</type>
+
+	<type>
+		<name>veranstaltungbezeichnung</name>
+		<file>testdata/Veranstaltungbezeichnung.txt</file>
+	</type>
+
+	<type>
+		<name>veranstaltungkategorie</name>
+		<file>testdata/Veranstaltungkategorie.txt</file>
+	</type>
+
+	<type>
+		<name>veranstaltungsubkategorie</name>
+		<file>testdata/Veranstaltungsubkategorie.txt</file>
+	</type>
+
+	<type>
+		<name>kategoriebezeichnung</name>
+		<file>testdata/Kategoriebezeichnung.txt</file>
+	</type>
+
+	<!--
+		<type>
+		<name>username</name>
+		<file>testdata/Username.txt</file>
+		</type>
+	-->
+
+	<file>
+		<id>Bestellung</id>
+		<name>hbm/Bestellung.hbm.xml</name>
+		<field name='datumuhrzeit' type='RandDate2000$5'
+			nullable='false' />
+		<field name='artikelnr' type='' nullable='false' />
+		<field name='kartennr' type='' nullable='false' />
+		<field name='menge' type='RandInt1$9' nullable='false' />
+		<field name='zahlart' type='List[bar;VISA;Rechnung]'
+			nullable='false' />
+	</file>
+
+
+	<file>
+		<id>Ort</id>
+		<name>hbm/Ort.hbm.xml</name>
+		<field name='bezeichnung' type='ortbezeichnung'
+			nullable='false' />
+		<field name='ort' type='stadt' nullable='false' />
+		<field name='kategorie' type='ortkategorie' nullable='false' />
+		<field name='strasse' type='strasse' nullable='false' />
+		<field name='plz' type='RandInt1000$8999' nullable='false' />
+		<field name='bundesland' type='bundesland' nullable='false' />
+		<field name='telnr' type='RandInt9000000$1000000'
+			nullable='false' />
+		<field name='besitzer' type='besitzer' nullable='false' />
+		<field name='oeffnungszeiten' type='oeffnungszeiten'
+			nullable='false' />
+		<field name='kiosk' type='List[true;false]' nullable='false' />
+		<field name='verkaufsstelle' type='List[true;false]'
+			nullable='false' />
+		<field name='auffuehrungsort' type='List[true;false]'
+			nullable='false' />
+	</file>
+
+	<file>
+		<id>Kuenstler</id>
+		<name>hbm/Kuenstler.hbm.xml</name>
+		<field name='kuenstlernr' type='KEYID' nullable='false' />
+		<field name='nname' type='nname' nullable='false' />
+		<field name='vname' type='vname' nullable='false' />
+		<field name='titel' type='titel' nullable='false' />
+		<field name='geschlecht' type='List[M;W]' nullable='false' />
+		<field name='geburtsdatum' type='RandDate1980$-30'
+			nullable='false' />
+		<field name='biographie' type='biographie' nullable='false' />
+	</file>
+
+	<file>
+		<id>Veranstaltung</id>
+		<name>hbm/Veranstaltung.hbm.xml</name>
+		<field name='bezeichnung' type='veranstaltungbezeichnung'
+			nullable='false' />
+		<field name='kategorie' type='veranstaltungkategorie'
+			nullable='false' />
+		<field name='subkategorie' type='veranstaltungsubkategorie'
+			nullable='false' />
+		<field name='jahrerstellung' type='RandInt2000$4'
+			nullable='false' />
+		<field name='spracheton' type='sprache' nullable='false' />
+		<field name='spracheut' type='sprache' nullable='false' />
+		<field name='dauer' type='RandInt60$120' nullable='false' />
+		<field name='freigabe' type='freigabe' nullable='false' />
+		<field name='abbildung' type='bilder' nullable='false' />
+		<field name='inhalt' type='inhalt' nullable='false' />
+		<field name='kritik' type='kritik' nullable='false' />
+		<field name='bewertung' type='bewertung' nullable='false' />
+		<field name='hinweis' type='hinweis' nullable='false' />
+	</file>
+
+	<file>
+		<id>Engagement</id>
+		<name>hbm/Engagement.hbm.xml</name>
+		<field name='kuenstlernr' type='KEYID' nullable='false' />
+		<field name='bezeichnung' type='FOREIGNKEY' nullable='false' />
+		<field name='kategorie' type='FOREIGNKEY' nullable='false' />
+		<field name='funktion' type='funktion' nullable='false' />
+		<field name='gage' type='RandInt1000$5000' nullable='false' />
+	</file>
+
+	<file>
+		<id>Saal</id>
+		<name>hbm/Saal.hbm.xml</name>
+		<field name='bezeichnung' type='saal' nullable='false' />
+		<field name='ortbez' type='' nullable='false' />
+		<field name='ort' type='' nullable='false' />
+		<field name='typ' type='saaltyp' nullable='false' />
+		<field name='anzplaetze' type='RandInt20$500' nullable='false' />
+		<field name='kostenprotag' type='RandInt100$5000'
+			nullable='false' />
+	</file>
+
+	<file>
+		<id>Artikel</id>
+		<name>hbm/Artikel.hbm.xml</name>
+		<field name='artikelnr' type='KEYID' nullable='false' />
+		<field name='kurzbezeichnung' type='artikelkurzbezeichnung'
+			nullable='false' />
+		<field name='beschreibung' type='artikelbeschreibung'
+			nullable='false' />
+		<field name='kategorie' type='artikelkategorie'
+			nullable='false' />
+		<field name='preis' type='RandInt1$100' nullable='false' />
+		<field name='abbildung' type='bilder' nullable='false' />
+		<field name='veranstbez' type='FOREINKEY' nullable='false' />
+		<field name='veranstkat' type='FOREINKEY' nullable='false' />
+	</file>
+
+	<file>
+		<id>Auffuehrung</id>
+		<name>hbm/Auffuehrung.hbm.xml</name>
+		<field name='datumuhrzeit' type='RandDate1990$10'
+			nullable='false' />
+		<field name='storniert' type='List[true;false]'
+			nullable='false' />
+		<field name='preis' type='List[0;1;2]' nullable='false' />
+		<field name='hinweis' type='hinweis' nullable='false' />
+	</file>
+
+
+	<file>
+		<id>Kategorie</id>
+		<name>hbm/Kategorie.hbm.xml</name>
+		<field name='bezeichnung' type='kategoriebezeichnung'
+			nullable='false' />
+		<field name='preismin' type='RandInt1$10' nullable='false' />
+		<field name='preisstd' type='RandInt10$20' nullable='false' />
+		<field name='preismax' type='RandInt20$30' nullable='false' />
+	</file>
+
+	<file>
+		<id>Kunde</id>
+		<name>hbm/Kunde.hbm.xml</name>
+		<field name='blz' type='RandInt1000$9000' nullable='false' />
+		<field name='kontonr' type='RandInt1000000$5000000'
+			nullable='false' />
+		<field name='ermaechtigung' type='List[true;false]'
+			nullable='false' />
+		<field name='kreditkartennr' type='RandInt5000000$1000000'
+			nullable='false' />
+		<field name='kkgueltigbis' type='RandDate2005$1'
+			nullable='false' />
+		<field name='kontostand' type='RandInt10$100' nullable='false' />
+		<field name='kontolimit' type='RandInt10$1000' nullable='false' />
+		<field name='ermaessigung'
+			type='List[0;0.1;0.2;0.3;0.4;0.5;0.6;0.7]' nullable='false' />
+		<field name='tkgueltigbis' type='RandDate2005$1'
+			nullable='false' />
+		<field name='gesperrt' type='List[true;false]' nullable='false' />
+		<field name='onlinepwd' type='RandString7' nullable='false' />
+		<field name='gruppe' type='List[Standard;VIP;Gold;Premium]'
+			nullable='false' />
+		<field name='vorlieben' type='vorlieben' nullable='false' />
+		<!-- Super Class ticketCard -->
+		<field name='kartennr' type='KEYID' nullable='false' />
+		<field name='ort_ort' type='FOREIGNKEY' nullable='false' />
+		<field name='ort_bezeichnung' type='FOREIGNKEY'
+			nullable='false' />
+		<field name='typ' type='List[K]' nullable='false' />
+		<field name='nname' type='nname' nullable='false' />
+		<field name='vname' type='vname' nullable='false' />
+		<field name='titel' type='titel' nullable='false' />
+		<field name='geschlecht' type='List[W;M;J]' nullable='false' />
+		<field name='geburtsdatum' type='RandDate1950$30'
+			nullable='false' />
+		<field name='strasse' type='strasse' nullable='false' />
+		<field name='plz' type='RandInt1000$8999' nullable='false' />
+		<field name='ort' type='stadt' nullable='false' />
+		<field name='telnr' type='RandInt1000000$999999'
+			nullable='false' />
+		<field name='email' type='email' nullable='false' />
+	</file>
+
+	<file>
+		<id>Mitarbeiter</id>
+		<name>hbm/Mitarbeiter.hbm.xml</name>
+		<field name='kartennr' type='' />
+		<field name='blz' type='RandInt1000$8999' nullable='false' />
+		<field name='kontonr' type='RandInt1000000$8999999'
+			nullable='false' />
+		<field name='pin' type='RandInt1000$8000' nullable='false' />
+		<field name='passwort' type='RandString5' nullable='false' />
+		<field name='berechtigung' type='List[VK;MK;VAdm;Sys;RegUsr,GF]'
+			nullable='false' />
+		<field name='username' type='RandString10' nullable='false' />
+		<!-- username aus liste generieren -->
+		<!-- <field name='username' type='username' nullable='false'/> -->
+
+		<!-- Super Class ticketCard -->
+		<field name='kartennr' type='KEYID' nullable='false' />
+		<field name='ort_ort' type='FOREIGNKEY' nullable='false' />
+		<field name='ort_bezeichnung' type='FOREIGNKEY'
+			nullable='false' />
+		<field name='typ' type='List[M]' nullable='false' />
+		<field name='nname' type='nname' nullable='false' />
+		<field name='vname' type='vname' nullable='false' />
+		<field name='titel' type='titel' nullable='false' />
+		<field name='geschlecht' type='List[W;M;J]' nullable='false' />
+		<field name='geburtsdatum' type='RandDate1950$30'
+			nullable='false' />
+		<field name='strasse' type='strasse' nullable='false' />
+		<field name='plz' type='RandInt1000$8999' nullable='false' />
+		<field name='ort' type='stadt' nullable='false' />
+		<field name='telnr' type='RandInt100000$899999'
+			nullable='false' />
+		<field name='email' type='email' nullable='false' />
+	</file>
+
+	<!--
+
+		<file>
+		<id>Reihe</id>
+		<name>hbm/Reihe.hbm.xml</name>
+		<field name='bezeichnung' type=''/>
+		<field name='kategoriebez' type=''/>
+		<field name='saalbez' type=''/>
+		<field name='ortbez' type=''/>
+		<field name='ort' type=''/>
+		<field name='startplatz' type=''/>
+		<field name='anzplaetze' type=''/>
+		<field name='sitzplatz' type=''/>
+		</file>
+
+		<file>
+		<id>Belegung</id>
+		<name>hbm/Belegung.hbm.xml</name>
+		<field name='reihebez' type=''/>
+		<field name='kategoriebez' type=''/>
+		<field name='saalbez' type=''/>
+		<field name='ortbez' type=''/>
+		<field name='ort' type=''/>
+		<field name='datumuhrzeit' type=''/>
+		<field name='belegung' type=''/>
+		<field name='anzfrei' type=''/>
+		<field name='anzres' type=''/>
+		<field name='anzverk' type=''/>
+		</file>
+
+		<file>
+		<id>Transaktion</id>
+		<name>hbm/Transaktion.hbm.xml</name>
+		<field name='datumuhrzeit' type=''/>
+		<field name='kundennr' type=''/>
+		<field name='mitarbeiternr' type=''/>
+		<field name='reihebez' type=''/>
+		<field name='kategoriebez' type=''/>
+		<field name='saalbez' type=''/>
+		<field name='ortbez' type=''/>
+		<field name='ort' type=''/>
+		<field name='auffdatumuhrzeit' type=''/>
+		<field name='verkaufsstelle' type=''/>
+		<field name='verkaufsort' type=''/>
+		<field name='verkauft' type=''/>
+		<field name='storniert' type=''/>
+		<field name='resnr' type=''/>
+		<field name='preis' type=''/>
+		<field name='startplatz' type=''/>
+		<field name='anzplaetze' type=''/>
+		<field name='zahlart' type=''/>
+		</file>
+
+
+	-->
+	<!-- Define the joined sub class structure (if there is one)-->
+	<superclass name='Ticketcard'>
+		<subclass name='Kunde' />
+		<subclass name='Mitarbeiter' />
+	</superclass>
+
+	<!--Define what foreing key columns should be mapped to what "native" columns -->
+	<method-mapping>
+		<class name='Engagement'>
+			<method name='bezeichnung' mapto='bezeichnung' />
+			<method name='kategorie' mapto='kategorie' />
+			<method name='kuenstlernr' mapto='kuenstlernr' />
+		</class>
+
+		<class name='Saal'>
+			<method name='ortbez' mapto='bezeichnung' />
+			<method name='ort' mapto='ort' />
+		</class>
+
+		<class name='Auffuehrung'>
+			<method name='veranstbez' mapto='bezeichnung' />
+			<method name='veranstkat' mapto='kategorie' />
+			<method name='saalbez' mapto='bezeichnung' />
+			<method name='ortbez' mapto='ortbez' />
+			<method name='ort' mapto='ort' />
+		</class>
+
+		<class name='Kategorie'>
+			<method name='saalbez' mapto='bezeichnung' />
+			<method name='ortbez' mapto='ortbez' />
+			<method name='ort' mapto='ort' />
+		</class>
+
+		<class name='Bestellung'>
+			<method name='artikelnr' mapto='artikelnr' />
+			<method name='kartennr' mapto='kartennr' />
+		</class>
+
+	</method-mapping>
+
+
+	<configfile>hibernate.cfg.xml</configfile>
+
+
+</config>

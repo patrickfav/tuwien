@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT firma (team+, projekt*)>
+    <!ATTLIST  firma 
+        name CDATA #REQUIRED
+        nummer NMTOKEN #FIXED "e0426099" >
+
+<!ELEMENT team (mitarbeiter,mitarbeiter+)>
+    <!ATTLIST  team id ID #REQUIRED>
+    
+<!ELEMENT mitarbeiter (#PCDATA) >
+    <!ATTLIST mitarbeiter position (leiter|mitglied) "mitglied">
+    
+<!ELEMENT projekt (name,beschreibung?) >
+    <!ATTLIST projekt 
+        team IDREF #REQUIRED 
+        arbeitsstunden NMTOKEN #IMPLIED >
+    
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT beschreibung (#PCDATA|schlagwort)* >
+<!ELEMENT schlagwort (#PCDATA) >

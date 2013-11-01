@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/tuwien-private-repo/!svn/ver/39/sepm/einzelbeispiel
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/.project
+END
+mydb.properties
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/mydb.properties
+END
+cabdriver.properties
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/cabdriver.properties
+END
+mydb.script
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tuwien-private-repo/!svn/ver/40/sepm/einzelbeispiel/mydb.script
+END

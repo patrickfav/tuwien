@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage
+END
+AbstractCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage/AbstractCoverage.java
+END
+CoverageMetric.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage/CoverageMetric.java
+END
+TransitionPairCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage/TransitionPairCoverage.java
+END
+TransitionCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage/TransitionCoverage.java
+END
+ActionCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage/ActionCoverage.java
+END
+StateCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage/StateCoverage.java
+END
+CoverageHistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage/CoverageHistory.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/coverage/package.html
+END

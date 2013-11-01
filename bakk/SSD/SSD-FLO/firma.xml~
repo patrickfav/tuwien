@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE firma SYSTEM "firma.dtd">
+
+<!-- Dateiname: firma.xml -->
+
+<firma name="Rauscha" nummer="e0604411">
+	<!-- TEAMS -->
+	<team id="A100">
+		<mitarbeiter position="leiter"></mitarbeiter>
+		<mitarbeiter></mitarbeiter>
+		<mitarbeiter></mitarbeiter>
+	</team>
+	<team id="A200">
+		<mitarbeiter position="leiter"></mitarbeiter>
+		<mitarbeiter></mitarbeiter>
+		<mitarbeiter></mitarbeiter>
+	</team>
+	
+	<!-- PROJEKTE -->
+	<projekt team="A100" arbeitsstunden="5">
+		<name>Projekt 1</name>
+		<beschreibung>Semistrukturierte Daten: Projekt 1</beschreibung>
+	</projekt>	
+	<projekt team="A100" arbeitsstunden="4">
+		<name>Projekt 2</name>
+		<beschreibung>
+			<schlagwort>Daten</schlagwort>
+		</beschreibung>
+	</projekt>	
+	<projekt team="A200">
+		<name>Projekt 3</name>
+	</projekt>
+</firma>

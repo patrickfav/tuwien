@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/local
+END
+BrokerRegisterBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/local/BrokerRegisterBean.java
+END
+ClientMessageManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/local/ClientMessageManagementBean.java
+END
+StartUpBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/local/StartUpBean.java
+END
+TestDataManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/local/TestDataManagementBean.java
+END
+TickManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/local/TickManagementBean.java
+END
+ConfigDBManagementBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/tuwien-private-repo/!svn/ver/179/swag/swag.gameserver/ejbModule/swag/ejb/local/ConfigDBManagementBean.java
+END

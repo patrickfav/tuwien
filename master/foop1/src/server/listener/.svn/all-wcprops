@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/fooprog2011/!svn/ver/32/trunk/foop1/src/server/listener
+END
+CommandListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/fooprog2011/!svn/ver/41/trunk/foop1/src/server/listener/CommandListener.java
+END
+PacmanListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/fooprog2011/!svn/ver/41/trunk/foop1/src/server/listener/PacmanListener.java
+END

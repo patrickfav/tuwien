@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples
+END
+SpecialFSMNoLoops.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/SpecialFSMNoLoops.java
+END
+QuiDonc.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/QuiDonc.java
+END
+SimpleSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/SimpleSet.java
+END
+TrafficLight.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/TrafficLight.java
+END
+LargeSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/LargeSet.java
+END
+AlarmClock.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/AlarmClock.java
+END
+SimpleSetWithAdaptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/SimpleSetWithAdaptor.java
+END
+SmartSetAdaptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/SmartSetAdaptor.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/package.html
+END
+StringSetBuggy.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/StringSetBuggy.java
+END
+StringSetTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/StringSetTest.java
+END
+StringSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/StringSet.java
+END
+FSM.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/FSM.java
+END
+SpecialFSM.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/SpecialFSM.java
+END
+SizeExperiments.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/modeljunit/!svn/ver/7130/tags/modeljunit-2.0beta1/modeljunit/src/main/java/nz/ac/waikato/modeljunit/examples/SizeExperiments.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/annotations/interceptors
+END
+DeleteInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/annotations/interceptors/DeleteInterceptor.java
+END
+UpdateInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/annotations/interceptors/UpdateInterceptor.java
+END
+CreateInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/annotations/interceptors/CreateInterceptor.java
+END
+SearchInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/annotations/interceptors/SearchInterceptor.java
+END
+InterceptorForService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/annotations/interceptors/InterceptorForService.java
+END
+ReadInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/annotations/interceptors/ReadInterceptor.java
+END

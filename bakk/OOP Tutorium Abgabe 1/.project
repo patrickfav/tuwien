@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>OOP Tutorium Abgabe 1</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>oop109</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop109</location>
+		</link>
+		<link>
+			<name>oop112</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop112</location>
+		</link>
+		<link>
+			<name>oop117 (Mail Abgabe)</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop117 (Mail Abgabe)</location>
+		</link>
+		<link>
+			<name>oop136</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop136</location>
+		</link>
+		<link>
+			<name>oop153</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop153</location>
+		</link>
+		<link>
+			<name>oop158</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop158</location>
+		</link>
+		<link>
+			<name>oop162</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop162</location>
+		</link>
+		<link>
+			<name>oop190</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop190</location>
+		</link>
+		<link>
+			<name>oop193</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop193</location>
+		</link>
+		<link>
+			<name>oop194</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop194</location>
+		</link>
+		<link>
+			<name>oop197</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop197</location>
+		</link>
+		<link>
+			<name>oop198</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop198</location>
+		</link>
+		<link>
+			<name>oop202</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop202</location>
+		</link>
+		<link>
+			<name>oop214 (keine Abgabe)</name>
+			<type>2</type>
+			<location>C:/Users/PatrickF/Studium - Informatik - E534/OOP Tutor/Abgabe 1/oop214 (keine Abgabe)</location>
+		</link>
+	</linkedResources>
+</projectDescription>

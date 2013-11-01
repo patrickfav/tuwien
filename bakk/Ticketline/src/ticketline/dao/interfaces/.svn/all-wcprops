@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces
+END
+KuenstlerDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/KuenstlerDAO.java
+END
+TicketcardDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/TicketcardDAO.java
+END
+DAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/DAO.java
+END
+AuffuehrungDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/AuffuehrungDAO.java
+END
+SaalDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/SaalDAO.java
+END
+BelegungDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/BelegungDAO.java
+END
+ArtikelDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/ArtikelDAO.java
+END
+ReiheDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/ReiheDAO.java
+END
+TransaktionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/TransaktionDAO.java
+END
+VeranstaltungDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/VeranstaltungDAO.java
+END
+OrtDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/OrtDAO.java
+END
+BestellungDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/BestellungDAO.java
+END
+KundeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/KundeDAO.java
+END
+MitarbeiterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/MitarbeiterDAO.java
+END
+KategorieDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/KategorieDAO.java
+END
+EngagementDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/interfaces/EngagementDAO.java
+END

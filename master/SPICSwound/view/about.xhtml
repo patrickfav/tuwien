@@ -1,0 +1,34 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a="http://richfaces.org/a4j"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="trialHead">
+		<f:subview id="StudyDetailNewTrialHeaderView">
+			<h:outputText value="#{messages['button.about']}" />
+		</f:subview>
+	</ui:define>
+
+	<ui:define name="leftMenu">
+
+	</ui:define>
+
+	<ui:define name="content">	
+	<h1>Über SPICS</h1>
+	
+	<p>
+		Die Plattform SPICS (Secure Plattform for Integrating Clinical Studies) ist in 1,5 Jahren Entwicklung der Technischen Universiät Wien (Projektleitung Univ.Prof. DI Dr. techn. Thomas Grechenig) in enger Kooperation mit zahlreichen medizinischen Fachexperten (unter anderem der Medizinischen Universität Wien) entstanden. Der Produktstand wurde ausgiebig mit Ärtzen ausgetestet und stellt damit sicher, dass die Bedürfnisse einer Plattform „von Ärtzen für Ärzte“ erfüllt sind. Bei der Entwicklung wurde der State-of-the-Art der sicheren modernen webbasierten Softwareerzeugung angewandt. 
+	</p>
+	<p>	
+		Bei der Konzeption und Entwicklung der Plattform wurde allerhöchster Wert auf eine sichere Implementierung nach aktuellen Stand der Softwaretechnik unter Berücksichtung der österreichischen und europäischen Datenschutzbestimmungen gelegt. Daten werden ausschliesslich in pseudonymer Form gespeichert. Alle Daten werden vollständig verschlüsselt übertragen und gespeichert. Ein authentifizierter und authorisierter Arzt kann ausschließlich auf die von ihm verwalteten Patienten zugreifen und über sein persönliches lokales Patientenregister re-identifizieren. Gesamtabfragen sind ausschließlich an anonymisierten Daten möglich. Die Protokollierung aller Datenänderungen und Abfragen erfolgt revisionssicher laut DSG2000 §10. Die Verwaltung der Studiendaten für einen Patienten in der SPICS Plattform ist jederzeit widerrufbar. 
+	</p>
+
+	</ui:define>
+
+</ui:composition>

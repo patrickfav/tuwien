@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/crudhandler
+END
+DeleteHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/crudhandler/DeleteHandler.java
+END
+UpdateHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/crudhandler/UpdateHandler.java
+END
+CreateHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/crudhandler/CreateHandler.java
+END
+SearchHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/crudhandler/SearchHandler.java
+END
+ReadHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/crudhandler/ReadHandler.java
+END
+SimpleSearchHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/187/evs/evs2_framework/src/server/handler/crudhandler/SimpleSearchHandler.java
+END

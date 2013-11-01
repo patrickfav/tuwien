@@ -1,0 +1,91 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.ajax4jsf.org/rich"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax"
+	template="layout/studyDetailLayout.xhtml">
+
+	<ui:define name="content">
+
+		<f:view>
+
+			<h:messages layout="list" showDetail="true"
+				warnClass="warningMessage" errorClass="errorMessage" />
+
+			<div id="blatt">
+			<b><h:outputText value="#{messages['label.definetrialform']} - #{attributeGroupEditor.trialFormName}" /></b>
+			<div class="info">
+				<h:outputText value="#{messages['recommendedflag.info']}" />
+			</div>
+			
+			<h:panelGrid columns="1" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<h:form id="agEditForm">
+					<h:panelGrid id="genereatedpart"
+						binding="#{attributeGroupEditor.attributeGroupEditPanel}"
+						cellpadding="0" cellspacing="0" border="0" width="100%" />
+				</h:form>
+
+				<rich:modalPanel id="fileUploadMP" width="450" height="400">
+					<f:facet name="header">
+						<h:outputText value="#{messages['label.addImgCommentHeader']}" />
+					</f:facet>
+					<f:facet name="controls">
+					</f:facet>
+					<h:form id="agEditFileUpForm">
+						<h:messages for="imageCommentUpload" errorClass="errorMessage" fatalClass="errorMessage" infoClass="infoMessage" warnClass="warningMessage"/>
+						<s:fragment	rendered="#{not attributeGroupEditor.attHasImageComment()}">
+							<rich:fileUpload id="imageCommentUpload"
+								uploadData="#{attributeGroupEditor.uploads}"
+								immediateUpload="true" maxFilesQuantity="1"
+								acceptedTypes="jpg,png,gif" listHeight="100"
+								locale="#{localeSelector.locale}" >
+								<a:support event="ontyperejected" action="#{FileUploadUtils.typeRejected('jpg,png,gif','imageCommentUpload')}" reRender="agEditFileUpForm" />
+								<a:support event="onuploadcomplete" action="#{attributeGroupEditor.processImgUpload}" reRender="agEditFileUpForm" />
+								<a:support event="onsizerejected" action="#{FileUploadUtils.sizeRejected('imageCommentUpload')}" reRender="agEditFileUpForm" />
+							</rich:fileUpload>
+							<br />
+							<a:commandButton
+								action="#{attributeGroupEditor.cancelUpload}"
+								styleClass="button"
+								title="#{messages['button.close']}"
+								value="#{messages['button.close']}" 
+								oncomplete="Richfaces.hideModalPanel('fileUploadMP')"/>
+						</s:fragment>
+						<s:fragment	rendered="#{attributeGroupEditor.attHasImageComment()}">
+							<s:graphicImage value="#{attributeGroupEditor.imageCommentPreview}" >
+								<s:transformImageSize width="350"  maintainRatio="true" />
+							</s:graphicImage>
+							<br />
+							<rich:spacer height="20"></rich:spacer>
+							<br />
+							<a:commandButton
+								action="#{attributeGroupEditor.deleteImageComment}"
+								reRender="agEditFileUpForm" styleClass="button"
+								title="#{messages['button.delete']}"
+								value="#{messages['button.delete']}" />
+							<a:commandButton
+								action="#{attributeGroupEditor.cancelUpload}"
+								styleClass="button"
+								title="#{messages['button.close']}"
+								value="#{messages['button.close']}" 
+								oncomplete="Richfaces.hideModalPanel('fileUploadMP')"/>
+						</s:fragment>
+						<br />
+					</h:form>
+				</rich:modalPanel>
+				
+				
+			</h:panelGrid></div>
+
+			<a:log></a:log>
+		</f:view>
+
+
+	</ui:define>
+
+</ui:composition>
+

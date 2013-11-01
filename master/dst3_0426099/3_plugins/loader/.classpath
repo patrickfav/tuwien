@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/PatrickF/eclipse workspaces/master workspace/dst3_0426099/lib/javassist.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

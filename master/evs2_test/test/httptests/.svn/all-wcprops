@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests
+END
+AbstractRestTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/AbstractRestTest.java
+END
+DeleteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/DeleteTest.java
+END
+UpdateTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/UpdateTest.java
+END
+CreateTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/CreateTest.java
+END
+SearchTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/SearchTest.java
+END
+ReadTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tuwien-private-repo/!svn/ver/188/evs/evs2_test/test/httptests/ReadTest.java
+END

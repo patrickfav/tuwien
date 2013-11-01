@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="randoop.plugin.core.launching.gentestsType">
+<listAttribute key="randoop.AVAILABLE_TYPES">
+<listEntry value="Exercise3-2%3%/Exercise3-2/src%randoop.RingBuffer"/>
+</listAttribute>
+<listAttribute key="randoop.CHECKED_TYPES">
+<listEntry value="Exercise3-2%3%/Exercise3-2/src%randoop.RingBuffer"/>
+</listAttribute>
+<listAttribute key="randoop.GRAYED_TYPES"/>
+<stringAttribute key="randoop.INPUT_LIMIT" value="1000"/>
+<stringAttribute key="randoop.JUNIT_CLASS_NAME" value="RingBufferTest"/>
+<stringAttribute key="randoop.JUNIT_PACKAGE_NAME" value="randoop"/>
+<stringAttribute key="randoop.MAXIMUM_TESTS_PER_FILE" value="500"/>
+<stringAttribute key="randoop.MAXIMUM_TEST_SIZE" value="100"/>
+<stringAttribute key="randoop.NULL_RATIO" value=""/>
+<stringAttribute key="randoop.OUTPUT_DIRECTORY" value="src"/>
+<stringAttribute key="randoop.PROJECT_NAME" value="Exercise3-2"/>
+<stringAttribute key="randoop.RANDOM_SEED" value="0"/>
+<stringAttribute key="randoop.TEST_KINDS" value="all"/>
+<stringAttribute key="randoop.THREAD_TIMEOUT" value="5000"/>
+<stringAttribute key="randoop.TIME_LIMIT" value="200"/>
+<stringAttribute key="randoop.USE_NULL" value="false"/>
+<stringAttribute key="randoop.USE_THREADS" value="true"/>
+</launchConfiguration>

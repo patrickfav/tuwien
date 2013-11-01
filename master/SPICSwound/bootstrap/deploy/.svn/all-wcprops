@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deploy
+END
+hsqldb-ds.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deploy/hsqldb-ds.xml
+END
+remoting-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deploy/remoting-service.xml
+END
+jboss-xa-jdbc.rar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deploy/jboss-xa-jdbc.rar
+END
+jboss-local-jdbc.rar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deploy/jboss-local-jdbc.rar
+END
+jms-ra.rar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deploy/jms-ra.rar
+END
+ejb3-interceptors-aop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/tuwien-private-repo/!svn/ver/138/swwe/SPICSwound/bootstrap/deploy/ejb3-interceptors-aop.xml
+END

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="models.Resources"/>
+<fullyQualifiedTypeName name="util.HibernateUtil"/>
+<fullyQualifiedTypeName name="daos.ResourcesDAO"/>
+<fullyQualifiedTypeName name="models.Map"/>
+<fullyQualifiedTypeName name="daos.MapDAO"/>
+<fullyQualifiedTypeName name="models.MapSquare"/>
+<fullyQualifiedTypeName name="daos.MapSquareDAO"/>
+<fullyQualifiedTypeName name="daos.BuildingDAO"/>
+<fullyQualifiedTypeName name="daos.BaseSquareDAO"/>
+<fullyQualifiedTypeName name="models.BaseSquare"/>
+<fullyQualifiedTypeName name="models.Building"/>
+<fullyQualifiedTypeName name="models.BuildingType"/>
+</qualifiedTypeNameHistroy>

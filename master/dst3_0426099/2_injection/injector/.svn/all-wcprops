@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tuwien-private-repo/!svn/ver/150/dst/dst3_0426099/2_injection/injector
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tuwien-private-repo/!svn/ver/152/dst/dst3_0426099/2_injection/injector/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tuwien-private-repo/!svn/ver/152/dst/dst3_0426099/2_injection/injector/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tuwien-private-repo/!svn/ver/152/dst/dst3_0426099/2_injection/injector/build.xml
+END

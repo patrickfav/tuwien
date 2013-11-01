@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate
+END
+ArtikelDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/ArtikelDAOHibernate.java
+END
+ReiheDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/ReiheDAOHibernate.java
+END
+TransaktionDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/TransaktionDAOHibernate.java
+END
+VeranstaltungDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/VeranstaltungDAOHibernate.java
+END
+OrtDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/OrtDAOHibernate.java
+END
+BestellungDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/BestellungDAOHibernate.java
+END
+KundeDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/KundeDAOHibernate.java
+END
+MitarbeiterDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/MitarbeiterDAOHibernate.java
+END
+KategorieDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/KategorieDAOHibernate.java
+END
+HibernateInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/HibernateInterceptor.java
+END
+EngagementDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/EngagementDAOHibernate.java
+END
+KuenstlerDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/KuenstlerDAOHibernate.java
+END
+TicketcardDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/TicketcardDAOHibernate.java
+END
+AuffuehrungDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/AuffuehrungDAOHibernate.java
+END
+SaalDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/SaalDAOHibernate.java
+END
+HibernateSessionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/HibernateSessionFactory.java
+END
+BelegungDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/tuwien-private-repo/!svn/ver/32/sepm/Ticketline/src/ticketline/dao/hibernate/BelegungDAOHibernate.java
+END

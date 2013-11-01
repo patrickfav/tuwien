@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <algorithm>0</algorithm>
+    <configuration>
+        <entry>
+            <key>Blah</key>
+            <value>Baz</value>
+        </entry>
+        <entry>
+            <key>Foo</key>
+            <value>Bar</value>
+        </entry>
+        <entry>
+            <key>Foobar</key>
+            <value>Bang</value>
+        </entry>
+    </configuration>
+    <coverageOptions>false</coverageOptions>
+    <coverageOptions>false</coverageOptions>
+    <coverageOptions>false</coverageOptions>
+    <coverageOptions>false</coverageOptions>
+    <coverageOptions>false</coverageOptions>
+    <failureVerbosity>false</failureVerbosity>
+    <fileName>test.mju</fileName>
+    <generateGraph>false</generateGraph>
+    <lastModified>2011-06-02T19:33:25.930+02:00</lastModified>
+    <name>Test Project</name>
+    <parameter/>
+    <resetProbability>0.05</resetProbability>
+    <version>2.0</version>
+    <walkLength>10</walkLength>
+</project>
