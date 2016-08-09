@@ -1,7 +1,5 @@
 # Tu Wien Student Workspace
 
-========
-
 Miscellaneous projects done during my studies in Vienna University of Technology from about 2009 to 2011.
 
 ## BSc (Software Engineering)
