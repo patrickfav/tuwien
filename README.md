@@ -1,6 +1,6 @@
 # Tu Wien Student Workspace
 
-Miscellaneous projects done during my studies in Vienna University of Technology from about 2009 to 2011.
+Miscellaneous projects done during my studies at the Vienna University of Technology from about 2009 to 2011.
 
 ## BSc (Software Engineering)
 It includes exercises of the following lecutres and courses for my bachelors:
@@ -17,12 +17,12 @@ It includes exercises of the following lecutres and courses for my masters:
 * 184.159	VL	Software Architekturen 17.05.2011 (Dustdar)
 * 188.280	VL	Software Testen 01.07.2011 (Ramler)
 * 184.260	VL	Distributed Systems Technologies 21.10.2011 (Dustdar)
-* 184.153	VL	Entwurfsmethoden für verteilte Systeme 07.06.2011 (Weidl-Rektenwald)
+* 184.153	VL	Entwurfsmethoden fÃ¼r verteilte Systeme 07.06.2011 (Weidl-Rektenwald)
 * 183.134	VU	Software Wartung und Evolution 04.07.2011 (Bernhart)
 * 185.211	VL	Fortgeschrittene objektorientierte Programmierung 07.07.2011 (Puntigam)
 * 184.269	VL	Advanced Internet Computing 24.01.2011 (Dustdar)
 * 188.280	VL	Software Testen 01.07.2011 (Ramler)
-* 185.226	VL	Verteiltes Programmieren mit Space Based Computing Middleware 20.01.2011 (Kühn)
+* 185.226	VL	Verteiltes Programmieren mit Space Based Computing Middleware 20.01.2011 (KÃ¼hn)
 
 ## Tech Stack
 
