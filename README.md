@@ -28,7 +28,7 @@ It includes exercises of the following lecutres and courses for my masters:
 
 * Java 6/7  
 * Maven, Ant
-* junit, REST, xml, Reflections, REST, Sockets, UDP
+* junit, REST, xml, reflections, sockets, UDP
 * JavaEE 6, JPA, EJB 3, JSF 2
 * Smalltalk, Eiffel, PL/1
 
