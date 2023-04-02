@@ -1,8 +1,8 @@
-# Tu Wien Student Workspace
+# TU Wien / Vienna University of Technolgy Student Workspace
 
 Miscellaneous projects done during my studies at the Vienna University of Technology from about 2009 to 2011.
 
-## BSc (Software Engineering)
+## Bachelor of Science (Software Engineering)
 It includes exercises of the following lecutres and courses for my bachelors:
 
 * 185.162	VL	Objektorientierte Programmierung 22.01.2009	(Puntigam)
@@ -10,7 +10,7 @@ It includes exercises of the following lecutres and courses for my bachelors:
 * 184.167	LU	Verteilte Systeme 20.01.2010 (Brandic)
 * 181.135	VL	Semistrukturierte Daten	19.06.2009	(Woltran)
 
-## MSc (Software Engineering)
+## Master of Science (Software Engineering)
 It includes exercises of the following lecutres and courses for my masters:
 
 * 184.269	VL	Advanced Internet Computing	24.01.2011 (Dustdar)
